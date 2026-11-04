@@ -1,0 +1,146 @@
+{
+  "methodology": "Hand-labelled from original source before comparison with schema-v2 index. Five backend and five frontend files selected by route/client style; not a random sample.",
+  "backend": [
+    {
+      "suffix": "/api/LogController.java",
+      "prefix": "/api/v1/amhs/amos/log",
+      "routes": [
+        [
+          "GET",
+          "/transport-analysis/fabs"
+        ],
+        [
+          "GET",
+          "/transport-analysis"
+        ]
+      ]
+    },
+    {
+      "suffix": "/common/controller/CommonController.java",
+      "prefix": "/api/v1/amhs/amos",
+      "routes": [
+        [
+          "GET",
+          "/fabs/mappings"
+        ],
+        [
+          "GET",
+          "/menus"
+        ]
+      ]
+    },
+    {
+      "suffix": "/config/cache/CacheController.java",
+      "prefix": "/api/v1/amhs/amos/cache",
+      "routes": [
+        [
+          "DELETE",
+          "/{name}"
+        ]
+      ]
+    },
+    {
+      "suffix": "/custommonitoring/api/CustomMonitoringController.java",
+      "prefix": "/api/v1/amhs/amos/custom-monitoring",
+      "routes": [
+        [
+          "GET",
+          "/metrics"
+        ],
+        [
+          "GET",
+          "/metrics/recommendations"
+        ],
+        [
+          "GET",
+          "/metrics/recommendations/combos"
+        ],
+        [
+          "POST",
+          "/metrics/history"
+        ],
+        [
+          "PUT",
+          "/metrics"
+        ]
+      ]
+    },
+    {
+      "suffix": "/domain/agent/AgentChatController.java",
+      "prefix": "/api/v1/amhs/amos/agent/chats",
+      "routes": [
+        [
+          "GET",
+          ""
+        ],
+        [
+          "GET",
+          "/{threadId}"
+        ]
+      ]
+    }
+  ],
+  "frontend": [
+    {
+      "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+      "calls": {
+        "axios.get": 5,
+        "axios.post": 1
+      },
+      "methods": {
+        "axios.get": "GET",
+        "axios.post": "POST"
+      }
+    },
+    {
+      "file": "src/pages/llm/useAgentModels.ts",
+      "calls": {
+        "axios.get": 1
+      },
+      "methods": {
+        "axios.get": "GET"
+      }
+    },
+    {
+      "file": "src/components/SSOAuth.tsx",
+      "calls": {
+        "axios.post": 2
+      },
+      "methods": {
+        "axios.post": "POST"
+      }
+    },
+    {
+      "file": "src/lib/sseStream.ts",
+      "calls": {
+        "fetch": 1
+      },
+      "methods": {
+        "fetch": "GET"
+      }
+    },
+    {
+      "file": "src/stores/chatStore.ts",
+      "calls": {
+        "fetch": 1
+      },
+      "methods": {
+        "fetch": "POST"
+      }
+    }
+  ],
+  "negativeApi": [
+    {
+      "file": "check-nav.pw.ts",
+      "needle": "menuRoot.getBoundingClientRect()"
+    },
+    {
+      "file": "kubb.config.ts",
+      "needle": "pluginClient("
+    },
+    {
+      "file": "public/mockServiceWorker.js",
+      "needle": "self.clients.claim()"
+    }
+  ]
+}

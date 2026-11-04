@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 2,
+  "stale": false,
+  "added": [],
+  "changed": [],
+  "deleted": [],
+  "limitations": [
+    "Syntax is observed; resolved imports, local calls, React components and HTTP boundaries are static inferences, not runtime guarantees.",
+    "Java calls resolve only unique unqualified/this methods in the same class. Overloads, receiver types, inheritance, reflection and dependency injection remain unknown.",
+    "Spring literal annotation paths and class prefixes are supported; constants, composed annotations and conditional routing remain unknown. Interface routes are not propagated.",
+    "TypeScript relative imports and local tsconfig paths/baseUrl/extends/references are supported. No external config reads, package exports, Vite aliases or runtime module resolution.",
+    "Gradle/package manifests are inventoried as evidence only, never executed. No dependency graph evaluation or complete dead-code analysis.",
+    "HTTP candidates require axios/fetch or a request config with method/url. Wrappers and dynamic URLs may be missed. Equal literal paths only suggest cross-language boundaries.",
+    "Hidden, dependency/build, generated directories, declaration files, environment/credential-like files and symlinks are excluded. Tracked generated code outside these rules may be included.",
+    "Keyword context is deterministic lexical retrieval, not semantic question answering. Source must be checked before changes."
+  ],
+  "parseErrors": 0,
+  "total": 99,
+  "truncated": true,
+  "results": [
+    {
+      "name": "build.gradle.kts",
+      "files": [
+        "build.gradle.kts"
+      ],
+      "symbols": 0,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 0
+    },
+    {
+      "name": "datasource-common",
+      "files": [
+        "datasource-common/build.gradle.kts"
+      ],
+      "symbols": 0,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 0
+    },
+    {
+      "name": "com.skhynix.amhs.amos.config.persistence",
+      "files": [
+        "datasource-common/src/main/java/com/skhynix/amhs/amos/config/persistence/AppProperties.java",
+        "datasource-common/src/main/java/com/skhynix/amhs/amos/config/persistence/DataSourceConfig.java",
+        "datasource-common/src/main/java/com/skhynix/amhs/amos/config/persistence/MyBatisConfig.java",
+        "datasource-common/src/test/java/com/skhynix/amhs/amos/config/persistence/AppPropertiesTest.java",
+        "datasource-common/src/test/java/com/skhynix/amhs/amos/config/persistence/DataSourceConfigTest.java",
+        "src/test/java/com/skhynix/amhs/amos/config/persistence/ApplicationYamlConfigTest.java"
+      ],
+      "symbols": 21,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 297
+    },
+    {
+      "name": "com.skhynix.amhs.amos.datasource",
+      "files": [
+        "datasource-common/src/main/java/com/skhynix/amhs/amos/datasource/DataSourceKey.java",
+        "datasource-common/src/main/java/com/skhynix/amhs/amos/datasource/DataSourceRegistry.java",
+        "datasource-common/src/main/java/com/skhynix/amhs/amos/datasource/MyBatisRegistry.java",
+        "datasource-common/src/main/java/com/skhynix/amhs/amos/datasource/SqlCommentDataSource.java",
+        "datasource-common/src/test/java/com/skhynix/amhs/amos/datasource/DataSourceRegistryTest.java",
+        "datasource-core/src/main/java/com/skhynix/amhs/amos/datasource/DataSourceGroup.java",
+        "datasource-core/src/main/java/com/skhynix/amhs/amos/datasource/DataSourceLocation.java"
+      ],
+      "symbols": 55,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 303
+    },
+    {
+      "name": "datasource-core",
+      "files": [
+        "datasource-core/build.gradle.kts"
+      ],
+      "symbols": 0,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 0
+    },
+    {
+      "name": "mongo-common",
+      "files": [
+        "mongo-common/build.gradle.kts"
+      ],
+      "symbols": 0,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 0
+    },
+    {
+      "name": "com.skhynix.amhs.amos.mongo",
+      "files": [
+        "mongo-common/src/main/java/com/skhynix/amhs/amos/mongo/MongoClientHolder.java",
+        "mongo-common/src/main/java/com/skhynix/amhs/amos/mongo/MongoConfig.java",
+        "mongo-common/src/main/java/com/skhynix/amhs/amos/mongo/MongoFailureLogService.java",
+        "mongo-common/src/main/java/com/skhynix/amhs/amos/mongo/MongoKey.java",
+        "mongo-common/src/main/java/com/skhynix/amhs/amos/mongo/MongoProperties.java",
+        "mongo-common/src/main/java/com/skhynix/amhs/amos/mongo/MongoRegistry.java",
+        "mongo-common/src/test/java/com/skhynix/amhs/amos/mongo/MongoConfigTest.java",
+        "mongo-common/src/test/java/com/skhynix/amhs/amos/mongo/MongoPropertiesTest.java",
+        "mongo-common/src/test/java/com/skhynix/amhs/amos/mongo/MongoRegistryTest.java",
+        "src/test/java/com/skhynix/amhs/amos/mongo/MongoFailureLoggingTest.java"
+      ],
+      "symbols": 95,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 782
+    },
+    {
+      "name": "com.skhynix.amhs.amos.mongo.example",
+      "files": [
+        "mongo-common/src/test/java/com/skhynix/amhs/amos/mongo/example/CarrierDocument.java",
+        "mongo-common/src/test/java/com/skhynix/amhs/amos/mongo/example/CarrierMongoRepository.java",
+        "mongo-common/src/test/java/com/skhynix/amhs/amos/mongo/example/CarrierMongoService.java",
+        "mongo-common/src/test/java/com/skhynix/amhs/amos/mongo/example/CarrierMongoServiceTest.java"
+      ],
+      "symbols": 19,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 127
+    },
+    {
+      "name": "observability-logging",
+      "files": [
+        "observability-logging/build.gradle.kts"
+      ],
+      "symbols": 0,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 0
+    },
+    {
+      "name": "com.skhynix.amhs.amos.observability",
+      "files": [
+        "observability-logging/src/main/java/com/skhynix/amhs/amos/observability/HttpRequestLoggingFilter.java",
+        "observability-logging/src/main/java/com/skhynix/amhs/amos/observability/LogOnlyObservabilityAutoConfiguration.java"
+      ],
+      "symbols": 4,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 30
+    },
+    {
+      "name": "package.json",
+      "files": [
+        "package.json"
+      ],
+      "symbols": 0,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 0
+    },
+    {
+      "name": "settings.gradle.kts",
+      "files": [
+        "settings.gradle.kts"
+      ],
+      "symbols": 0,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 0
+    },
+    {
+      "name": "com.skhynix.amhs.amos",
+      "files": [
+        "src/main/java/com/skhynix/amhs/amos/BackendApplication.java"
+      ],
+      "symbols": 2,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 10
+    },
+    {
+      "name": "com.skhynix.amhs.amos.api",
+      "files": [
+        "src/main/java/com/skhynix/amhs/amos/api/LogController.java",
+        "src/test/java/com/skhynix/amhs/amos/api/LogControllerTest.java",
+        "src/test/java/com/skhynix/amhs/amos/api/OpenApiOperationMetadataTest.java"
+      ],
+      "symbols": 12,
+      "routes": 2,
+      "apiCandidates": 0,
+      "unresolved": 150
+    },
+    {
+      "name": "com.skhynix.amhs.amos.common",
+      "files": [
+        "src/main/java/com/skhynix/amhs/amos/common/ApiStatus.java",
+        "src/main/java/com/skhynix/amhs/amos/common/GlobalExceptionHandler.java",
+        "src/main/java/com/skhynix/amhs/amos/common/SseEmitterRegistry.java",
+        "src/main/java/com/skhynix/amhs/amos/common/SseRegistrar.java",
+        "src/test/java/com/skhynix/amhs/amos/common/CommonControllerTest.java",
+        "src/test/java/com/skhynix/amhs/amos/common/GlobalExceptionHandlerTest.java"
+      ],
+      "symbols": 28,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 227
+    },
+    {
+      "name": "com.skhynix.amhs.amos.common.config",
+      "files": [
+        "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java"
+      ],
+      "symbols": 4,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 43
+    },
+    {
+      "name": "com.skhynix.amhs.amos.common.controller",
+      "files": [
+        "src/main/java/com/skhynix/amhs/amos/common/controller/CommonController.java"
+      ],
+      "symbols": 3,
+      "routes": 2,
+      "apiCandidates": 0,
+      "unresolved": 15
+    },
+    {
+      "name": "com.skhynix.amhs.amos.common.domain",
+      "files": [
+        "src/main/java/com/skhynix/amhs/amos/common/domain/AlarmDisplayConfigEntity.java",
+        "src/main/java/com/skhynix/amhs/amos/common/domain/AtlasFabMappingEntity.java",
+        "src/main/java/com/skhynix/amhs/amos/common/domain/FabMappingEntity.java",
+        "src/main/java/com/skhynix/amhs/amos/common/domain/MenuDepth1Entity.java",
+        "src/main/java/com/skhynix/amhs/amos/common/domain/MenuEntity.java",
+        "src/main/java/com/skhynix/amhs/amos/common/domain/MenuId.java"
+      ],
+      "symbols": 6,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 53
+    },
+    {
+      "name": "com.skhynix.amhs.amos.common.dto",
+      "files": [
+        "src/main/java/com/skhynix/amhs/amos/common/dto/FabMappingDto.java",
+        "src/main/java/com/skhynix/amhs/amos/common/dto/MenuDto.java",
+        "src/main/java/com/skhynix/amhs/amos/common/dto/MenuListResponse.java"
+      ],
+      "symbols": 6,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 13
+    },
+    {
+      "name": "com.skhynix.amhs.amos.common.repository",
+      "files": [
+        "src/main/java/com/skhynix/amhs/amos/common/repository/AlarmDisplayConfigRepository.java",
+        "src/main/java/com/skhynix/amhs/amos/common/repository/AtlasFabMappingRepository.java",
+        "src/main/java/com/skhynix/amhs/amos/common/repository/FabMappingRepository.java",
+        "src/main/java/com/skhynix/amhs/amos/common/repository/MenuDepth1Repository.java",
+        "src/main/java/com/skhynix/amhs/amos/common/repository/MenuRepository.java"
+      ],
+      "symbols": 6,
+      "routes": 0,
+      "apiCandidates": 0,
+      "unresolved": 6
+    }
+  ]
+}

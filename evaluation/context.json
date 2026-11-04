@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 2,
+  "stale": false,
+  "added": [],
+  "changed": [],
+  "deleted": [],
+  "limitations": [
+    "Syntax is observed; resolved imports, local calls, React components and HTTP boundaries are static inferences, not runtime guarantees.",
+    "Java calls resolve only unique unqualified/this methods in the same class. Overloads, receiver types, inheritance, reflection and dependency injection remain unknown.",
+    "Spring literal annotation paths and class prefixes are supported; constants, composed annotations and conditional routing remain unknown. Interface routes are not propagated.",
+    "TypeScript relative imports and local tsconfig paths/baseUrl/extends/references are supported. No external config reads, package exports, Vite aliases or runtime module resolution.",
+    "Gradle/package manifests are inventoried as evidence only, never executed. No dependency graph evaluation or complete dead-code analysis.",
+    "HTTP candidates require axios/fetch or a request config with method/url. Wrappers and dynamic URLs may be missed. Equal literal paths only suggest cross-language boundaries.",
+    "Hidden, dependency/build, generated directories, declaration files, environment/credential-like files and symlinks are excluded. Tracked generated code outside these rules may be included.",
+    "Keyword context is deterministic lexical retrieval, not semantic question answering. Source must be checked before changes."
+  ],
+  "parseErrors": 0,
+  "seedTotal": 890,
+  "unmatchedWords": [],
+  "relations": [
+    {
+      "kind": "call",
+      "from": "n1683",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/SseRegistrar.java",
+      "line": 13,
+      "callee": "list.add",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1684",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/SseRegistrar.java",
+      "line": 14,
+      "callee": "emitter.onCompletion",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1685",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/SseRegistrar.java",
+      "line": 14,
+      "callee": "list.remove",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1686",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/SseRegistrar.java",
+      "line": 15,
+      "callee": "emitter.onTimeout",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1687",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/SseRegistrar.java",
+      "line": 15,
+      "callee": "list.remove",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1688",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/SseRegistrar.java",
+      "line": 16,
+      "callee": "emitter.onError",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1689",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/SseRegistrar.java",
+      "line": 16,
+      "callee": "list.remove",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1690",
+      "to": "n1691",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/SseRegistrar.java",
+      "line": 17,
+      "callee": "flush",
+      "evidence": "inferred"
+    },
+    {
+      "kind": "call",
+      "from": "n1692",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/SseRegistrar.java",
+      "line": 23,
+      "callee": "emitter.send",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1693",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/SseRegistrar.java",
+      "line": 23,
+      "callee": "SseEmitter.event",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1694",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/SseRegistrar.java",
+      "line": 23,
+      "callee": ".comment",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1778",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/controller/CommonController.java",
+      "line": 39,
+      "callee": "ResponseEntity.ok",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1779",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/controller/CommonController.java",
+      "line": 39,
+      "callee": "fabService.getFabMappings",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1782",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/controller/CommonController.java",
+      "line": 54,
+      "callee": "ResponseEntity.ok",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1783",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/controller/CommonController.java",
+      "line": 54,
+      "callee": "menuService.getMenus",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1854",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/dto/FabMappingDto.java",
+      "line": 25,
+      "callee": "entity.getTypVal",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1855",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/dto/FabMappingDto.java",
+      "line": 25,
+      "callee": "entity.getCtnDesc",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1856",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/dto/FabMappingDto.java",
+      "line": 25,
+      "callee": "entity.getTypVal",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1905",
+      "to": "n1907",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/service/FabCatalog.java",
+      "line": 24,
+      "callee": "canonical",
+      "evidence": "inferred"
+    },
+    {
+      "kind": "call",
+      "from": "n1906",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/service/FabCatalog.java",
+      "line": 24,
+      "callee": ".isPresent",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    }
+  ],
+  "relationsTotal": 1919,
+  "depth": 1,
+  "total": 2200,
+  "truncated": true,
+  "results": [
+    {
+      "id": "n2203",
+      "kind": "method",
+      "name": "evict",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheAdminService.java",
+      "line": 17,
+      "hash": "339fafc780b5bb25a7003b63c206014d849a4a1e4c72a50d1a15ce2ddd1413d9",
+      "evidence": "observed",
+      "owner": "n2202",
+      "score": 2
+    },
+    {
+      "id": "n2255",
+      "kind": "method",
+      "name": "evictCache",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 20,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "owner": "n2254",
+      "score": 2
+    },
+    {
+      "id": "n2257",
+      "kind": "call",
+      "name": "cacheAdminService.evict",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 23,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "owner": "n2255",
+      "classOwner": "n2254",
+      "score": 2
+    },
+    {
+      "id": "n7963",
+      "kind": "import",
+      "name": "org.springframework.cache.annotation.CacheEvict",
+      "file": "src/main/java/com/skhynix/amhs/amos/fablayout/AgvMapService.java",
+      "line": 4,
+      "hash": "ee90a16e57214fa487c85dacc43cc9ca2e15654fb64eda3c7f35c2c1cdaf89fa",
+      "evidence": "observed",
+      "language": "java",
+      "score": 2
+    },
+    {
+      "id": "n8460",
+      "kind": "method",
+      "name": "evictAgvMapCache",
+      "file": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java",
+      "line": 347,
+      "hash": "26243a02ec8b98a16c0b05fa61ca84e77b029e3866a43ed6665a1040e8903eab",
+      "evidence": "observed",
+      "owner": "n8275",
+      "score": 2
+    },
+    {
+      "id": "n12328",
+      "kind": "method",
+      "name": "evictClearsTheNamedCache",
+      "file": "src/test/java/com/skhynix/amhs/amos/config/cache/CacheAdminServiceTest.java",
+      "line": 13,
+      "hash": "84ab560376533c532062b1c034ba6c50dc20ce1a6b9896e8e72fe2c0f2398f6b",
+      "evidence": "observed",
+      "owner": "n12327",
+      "score": 2
+    },
+    {
+      "id": "n12334",
+      "kind": "call",
+      "name": ".evict",
+      "file": "src/test/java/com/skhynix/amhs/amos/config/cache/CacheAdminServiceTest.java",
+      "line": 19,
+      "hash": "84ab560376533c532062b1c034ba6c50dc20ce1a6b9896e8e72fe2c0f2398f6b",
+      "evidence": "observed",
+      "owner": "n12328",
+      "classOwner": "n12327",
+      "score": 2
+    },
+    {
+      "id": "n12337",
+      "kind": "method",
+      "name": "evictDoesNothingWhenCacheIsNotRegistered",
+      "file": "src/test/java/com/skhynix/amhs/amos/config/cache/CacheAdminServiceTest.java",
+      "line": 24,
+      "hash": "84ab560376533c532062b1c034ba6c50dc20ce1a6b9896e8e72fe2c0f2398f6b",
+      "evidence": "observed",
+      "owner": "n12327",
+      "score": 2
+    },
+    {
+      "id": "n12342",
+      "kind": "call",
+      "name": ".evict",
+      "file": "src/test/java/com/skhynix/amhs/amos/config/cache/CacheAdminServiceTest.java",
+      "line": 29,
+      "hash": "84ab560376533c532062b1c034ba6c50dc20ce1a6b9896e8e72fe2c0f2398f6b",
+      "evidence": "observed",
+      "owner": "n12337",
+      "classOwner": "n12327",
+      "score": 2
+    },
+    {
+      "id": "n1927",
+      "kind": "import",
+      "name": "org.springframework.cache.annotation.Cacheable",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/service/FabService.java",
+      "line": 10,
+      "hash": "d47bcafdba46854c4c85f4c1d647f17360fccbc91c23abb15148c2b4e0199387",
+      "evidence": "observed",
+      "language": "java",
+      "score": 1
+    },
+    {
+      "id": "n2196",
+      "kind": "package",
+      "name": "com.skhynix.amhs.amos.config.cache",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheAdminService.java",
+      "line": 1,
+      "hash": "339fafc780b5bb25a7003b63c206014d849a4a1e4c72a50d1a15ce2ddd1413d9",
+      "evidence": "observed",
+      "score": 1
+    },
+    {
+      "id": "n2197",
+      "kind": "import",
+      "name": "lombok.RequiredArgsConstructor",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheAdminService.java",
+      "line": 3,
+      "hash": "339fafc780b5bb25a7003b63c206014d849a4a1e4c72a50d1a15ce2ddd1413d9",
+      "evidence": "observed",
+      "language": "java",
+      "score": 1
+    },
+    {
+      "id": "n2198",
+      "kind": "import",
+      "name": "lombok.extern.slf4j.Slf4j",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheAdminService.java",
+      "line": 4,
+      "hash": "339fafc780b5bb25a7003b63c206014d849a4a1e4c72a50d1a15ce2ddd1413d9",
+      "evidence": "observed",
+      "language": "java",
+      "score": 1
+    },
+    {
+      "id": "n2199",
+      "kind": "import",
+      "name": "org.springframework.cache.Cache",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheAdminService.java",
+      "line": 5,
+      "hash": "339fafc780b5bb25a7003b63c206014d849a4a1e4c72a50d1a15ce2ddd1413d9",
+      "evidence": "observed",
+      "language": "java",
+      "score": 1
+    },
+    {
+      "id": "n2200",
+      "kind": "import",
+      "name": "org.springframework.cache.CacheManager",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheAdminService.java",
+      "line": 6,
+      "hash": "339fafc780b5bb25a7003b63c206014d849a4a1e4c72a50d1a15ce2ddd1413d9",
+      "evidence": "observed",
+      "language": "java",
+      "score": 1
+    },
+    {
+      "id": "n2201",
+      "kind": "import",
+      "name": "org.springframework.stereotype.Service",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheAdminService.java",
+      "line": 7,
+      "hash": "339fafc780b5bb25a7003b63c206014d849a4a1e4c72a50d1a15ce2ddd1413d9",
+      "evidence": "observed",
+      "language": "java",
+      "score": 1
+    },
+    {
+      "id": "n2202",
+      "kind": "type",
+      "name": "CacheAdminService",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheAdminService.java",
+      "line": 12,
+      "hash": "339fafc780b5bb25a7003b63c206014d849a4a1e4c72a50d1a15ce2ddd1413d9",
+      "evidence": "observed",
+      "qualifiedName": "com.skhynix.amhs.amos.config.cache.CacheAdminService",
+      "score": 1
+    },
+    {
+      "id": "n2204",
+      "kind": "call",
+      "name": "cacheManager.getCache",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheAdminService.java",
+      "line": 18,
+      "hash": "339fafc780b5bb25a7003b63c206014d849a4a1e4c72a50d1a15ce2ddd1413d9",
+      "evidence": "observed",
+      "owner": "n2203",
+      "classOwner": "n2202",
+      "score": 1
+    },
+    {
+      "id": "n2205",
+      "kind": "call",
+      "name": "name.cacheName",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheAdminService.java",
+      "line": 18,
+      "hash": "339fafc780b5bb25a7003b63c206014d849a4a1e4c72a50d1a15ce2ddd1413d9",
+      "evidence": "observed",
+      "owner": "n2203",
+      "classOwner": "n2202",
+      "score": 1
+    },
+    {
+      "id": "n2206",
+      "kind": "call",
+      "name": "log.error",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheAdminService.java",
+      "line": 20,
+      "hash": "339fafc780b5bb25a7003b63c206014d849a4a1e4c72a50d1a15ce2ddd1413d9",
+      "evidence": "observed",
+      "owner": "n2203",
+      "classOwner": "n2202",
+      "score": 1
+    }
+  ]
+}

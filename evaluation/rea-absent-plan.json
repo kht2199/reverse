@@ -1,0 +1,23 @@
+{
+  "available": false,
+  "executable": null,
+  "executed": false,
+  "autoInstall": false,
+  "evidenceCommand": null,
+  "viewRequest": {
+    "source": {
+      "kind": "evidence-file",
+      "path": "/Volumes/DAS/projects/reverse/evaluation/rea-amos-not-executed.json"
+    },
+    "view": {
+      "kind": "summary"
+    }
+  },
+  "viewCommand": null,
+  "notes": [
+    "Plan only: commands are argv arrays, not shell strings. Save viewRequest as JSON and replace the viewCommand request path.",
+    "Use --source-path FILE on the REA command to select exact inventoried files if required; no implicit dependencies.",
+    "Confirmed against REA 6.8.0 help and a JS fixture; no Java source support claim; React/TS coverage requires separate checks.",
+    "Absent local REA: continue reverse index/search/context/map/flow; no download or agent configuration changes."
+  ]
+}

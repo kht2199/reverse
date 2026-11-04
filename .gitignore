@@ -1,0 +1,10 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.reverse-cache/
+
+# 로컬 프로젝트의 재생성 가능한 분석 인덱스
+/evaluation/backend.json
+/evaluation/frontend.json
+/evaluation/rea-temp-path.txt

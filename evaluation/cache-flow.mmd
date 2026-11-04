@@ -1,0 +1,14 @@
+flowchart TD
+ n2255["method: evictCache src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java:20"]
+ n2256["route: /api/v1/amhs/amos/cache/_name_ src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java:20"]
+ n2257["call: cacheAdminService.evict src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java:23"]
+ n2258["call: ResponseEntity.noContent src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java:24"]
+ n2259["call: .build src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java:24"]
+ n2255 --> n2256
+ n2255 --> n2257
+ n2255 --> n2258
+ n2255 --> n2259
+ n2257 -.-> un2257["unknown target"]
+ n2258 -.-> un2258["unknown target"]
+ n2259 -.-> un2259["unknown target"]
+%% stale=false; selected=5; limit=30; inferred targets require source verification

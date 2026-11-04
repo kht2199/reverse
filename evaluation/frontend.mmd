@@ -1,0 +1,131 @@
+graph LR
+ n0["alarm-integration.pw.ts"]
+ n1["check-nav.pw.ts"]
+ n2["header-check.pw.ts"]
+ n3["kubb.config.ts"]
+ n4["package.json"]
+ n5["playwright.config.ts"]
+ n6["public"]
+ n7["scripts"]
+ n8["src/App.tsx"]
+ n9["src/api/clients"]
+ n10["src/api/hooks"]
+ n11["src/api/index.ts"]
+ n12["src/api/models"]
+ n13["src/components/GlobalModal.tsx"]
+ n14["src/components/SSOAuth.tsx"]
+ n15["src/components/chat"]
+ n16["src/components/echarts"]
+ n17["src/components/typos"]
+ n18["src/features/FabDetail"]
+ n19["src/features/alarm"]
+ n20["src/features/bridge-monitoring"]
+ n21["src/features/fab-custom"]
+ n22["src/features/fab-layout"]
+ n23["src/features/fab"]
+ n24["src/features/main"]
+ n25["src/features/server-monitoring"]
+ n26["src/features/user-settings"]
+ n27["src/features/voc"]
+ n28["src/hooks/layoutStreamStats.ts"]
+ n29["src/hooks/useAgvStream.ts"]
+ n30["src/hooks/useConveyorStream.ts"]
+ n31["src/hooks/useFabLayoutStream.ts"]
+ n32["src/hooks/useFabMappings.ts"]
+ n33["src/hooks/useGlobalModal.ts"]
+ n34["src/hooks/useHidoffAlertStream.ts"]
+ n35["src/hooks/useLayoutTypedAlertStream.ts"]
+ n36["src/hooks/useRailcutAlertStream.ts"]
+ n37["src/layouts/DefaultLayout.tsx"]
+ n38["src/lib/antd.ts"]
+ n39["src/lib/authHeaders.ts"]
+ n40["src/lib/i18n.ts"]
+ n41["src/lib/loaders.ts"]
+ n42["src/lib/sseStream.ts"]
+ n43["src/lib/ssoConfig.ts"]
+ n44["src/main.tsx"]
+ n45["src/mocks/api"]
+ n46["src/mocks/browser.ts"]
+ n47["src/mocks/handlers.ts"]
+ n48["src/pages/alarm"]
+ n49["src/pages/alert-history"]
+ n8 --> n13
+ n8 --> n14
+ n9 --> n12
+ n10 --> n12
+ n10 --> n9
+ n11 --> n10
+ n13 --> n33
+ n14 --> n39
+ n14 --> n43
+ n15 --> n38
+ n18 --> n26
+ n18 --> n32
+ n18 --> n12
+ n19 --> n38
+ n20 --> n42
+ n20 --> n9
+ n20 --> n12
+ n21 --> n33
+ n21 --> n12
+ n21 --> n9
+ n21 --> n38
+ n21 --> n17
+ n21 --> n32
+ n21 --> n26
+ n22 --> n12
+ n22 --> n17
+ n22 --> n38
+ n22 --> n10
+ n22 --> n29
+ n22 --> n31
+ n22 --> n34
+ n22 --> n36
+ n23 --> n26
+ n23 --> n32
+ n23 --> n11
+ n23 --> n10
+ n23 --> n12
+ n24 --> n45
+ n24 --> n32
+ n24 --> n42
+ n24 --> n41
+ n25 --> n23
+ n25 --> n26
+ n25 --> n32
+ n26 --> n33
+ n26 --> n32
+ n26 --> n38
+ n27 --> n38
+ n27 --> n39
+ n27 --> n10
+ n27 --> n12
+ n29 --> n32
+ n29 --> n28
+ n29 --> n42
+ n30 --> n12
+ n30 --> n28
+ n30 --> n42
+ n31 --> n32
+ n31 --> n28
+ n31 --> n42
+ n32 --> n9
+ n32 --> n12
+ n34 --> n32
+ n34 --> n35
+ n35 --> n32
+ n35 --> n28
+ n35 --> n42
+ n36 --> n32
+ n36 --> n35
+ n37 --> n26
+ n42 --> n39
+ n44 --> n8
+ n44 --> n39
+ n44 --> n40
+ n46 --> n47
+ n47 --> n12
+ n47 --> n45
+ n48 --> n19
+ n48 --> n49
+%% stale=false; inferred imports; selected=50; total=185; parseErrors=0

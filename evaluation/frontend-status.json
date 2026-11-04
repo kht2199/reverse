@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "stale": false,
+  "added": [],
+  "changed": [],
+  "deleted": [],
+  "limitations": [
+    "Syntax is observed; resolved imports, local calls, React components and HTTP boundaries are static inferences, not runtime guarantees.",
+    "Java calls resolve only unique unqualified/this methods in the same class. Overloads, receiver types, inheritance, reflection and dependency injection remain unknown.",
+    "Spring literal annotation paths and class prefixes are supported; constants, composed annotations and conditional routing remain unknown. Interface routes are not propagated.",
+    "TypeScript relative imports and local tsconfig paths/baseUrl/extends/references are supported. No external config reads, package exports, Vite aliases or runtime module resolution.",
+    "Gradle/package manifests are inventoried as evidence only, never executed. No dependency graph evaluation or complete dead-code analysis.",
+    "HTTP candidates require axios/fetch or a request config with method/url. Wrappers and dynamic URLs may be missed. Equal literal paths only suggest cross-language boundaries.",
+    "Hidden, dependency/build, generated directories, declaration files, environment/credential-like files and symlinks are excluded. Tracked generated code outside these rules may be included.",
+    "Keyword context is deterministic lexical retrieval, not semantic question answering. Source must be checked before changes."
+  ],
+  "parseErrors": 0,
+  "createdAt": "2026-11-04T22:33:19.710Z",
+  "files": 1173,
+  "errors": [],
+  "errorsTruncated": false
+}

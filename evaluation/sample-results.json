@@ -1,0 +1,177 @@
+{
+  "backend": {
+    "tp": 12,
+    "fp": 0,
+    "fn": 0,
+    "checks": [
+      {
+        "file": "src/main/java/com/skhynix/amhs/amos/api/LogController.java",
+        "line": 25,
+        "method": "GET",
+        "path": "/api/v1/amhs/amos/log/transport-analysis/fabs",
+        "annotationAtEvidence": true
+      },
+      {
+        "file": "src/main/java/com/skhynix/amhs/amos/api/LogController.java",
+        "line": 44,
+        "method": "GET",
+        "path": "/api/v1/amhs/amos/log/transport-analysis",
+        "annotationAtEvidence": true
+      },
+      {
+        "file": "src/main/java/com/skhynix/amhs/amos/common/controller/CommonController.java",
+        "line": 29,
+        "method": "GET",
+        "path": "/api/v1/amhs/amos/fabs/mappings",
+        "annotationAtEvidence": true
+      },
+      {
+        "file": "src/main/java/com/skhynix/amhs/amos/common/controller/CommonController.java",
+        "line": 42,
+        "method": "GET",
+        "path": "/api/v1/amhs/amos/menus",
+        "annotationAtEvidence": true
+      },
+      {
+        "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+        "line": 20,
+        "method": "DELETE",
+        "path": "/api/v1/amhs/amos/cache/{name}",
+        "annotationAtEvidence": true
+      },
+      {
+        "file": "src/main/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringController.java",
+        "line": 33,
+        "method": "GET",
+        "path": "/api/v1/amhs/amos/custom-monitoring/metrics",
+        "annotationAtEvidence": true
+      },
+      {
+        "file": "src/main/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringController.java",
+        "line": 43,
+        "method": "GET",
+        "path": "/api/v1/amhs/amos/custom-monitoring/metrics/recommendations",
+        "annotationAtEvidence": true
+      },
+      {
+        "file": "src/main/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringController.java",
+        "line": 53,
+        "method": "GET",
+        "path": "/api/v1/amhs/amos/custom-monitoring/metrics/recommendations/combos",
+        "annotationAtEvidence": true
+      },
+      {
+        "file": "src/main/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringController.java",
+        "line": 72,
+        "method": "POST",
+        "path": "/api/v1/amhs/amos/custom-monitoring/metrics/history",
+        "annotationAtEvidence": true
+      },
+      {
+        "file": "src/main/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringController.java",
+        "line": 83,
+        "method": "PUT",
+        "path": "/api/v1/amhs/amos/custom-monitoring/metrics",
+        "annotationAtEvidence": true
+      },
+      {
+        "file": "src/main/java/com/skhynix/amhs/amos/domain/agent/AgentChatController.java",
+        "line": 30,
+        "method": "GET",
+        "path": "/api/v1/amhs/amos/agent/chats",
+        "annotationAtEvidence": true
+      },
+      {
+        "file": "src/main/java/com/skhynix/amhs/amos/domain/agent/AgentChatController.java",
+        "line": 42,
+        "method": "GET",
+        "path": "/api/v1/amhs/amos/agent/chats/{threadId}",
+        "annotationAtEvidence": true
+      }
+    ]
+  },
+  "frontend": {
+    "tp": 11,
+    "fp": 0,
+    "fn": 0,
+    "checks": [
+      {
+        "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+        "line": 13,
+        "callee": "axios.get",
+        "httpMethod": "GET",
+        "path": null
+      },
+      {
+        "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+        "line": 27,
+        "callee": "axios.get",
+        "httpMethod": "GET",
+        "path": null
+      },
+      {
+        "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+        "line": 37,
+        "callee": "axios.get",
+        "httpMethod": "GET",
+        "path": null
+      },
+      {
+        "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+        "line": 52,
+        "callee": "axios.get",
+        "httpMethod": "GET",
+        "path": null
+      },
+      {
+        "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+        "line": 65,
+        "callee": "axios.get",
+        "httpMethod": "GET",
+        "path": null
+      },
+      {
+        "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+        "line": 80,
+        "callee": "axios.post",
+        "httpMethod": "POST",
+        "path": null
+      },
+      {
+        "file": "src/pages/llm/useAgentModels.ts",
+        "line": 34,
+        "callee": "axios.get",
+        "httpMethod": "GET",
+        "path": null
+      },
+      {
+        "file": "src/components/SSOAuth.tsx",
+        "line": 156,
+        "callee": "axios.post",
+        "httpMethod": "POST",
+        "path": null
+      },
+      {
+        "file": "src/components/SSOAuth.tsx",
+        "line": 190,
+        "callee": "axios.post",
+        "httpMethod": "POST",
+        "path": null
+      },
+      {
+        "file": "src/lib/sseStream.ts",
+        "line": 95,
+        "callee": "fetch",
+        "httpMethod": "GET",
+        "path": null
+      },
+      {
+        "file": "src/stores/chatStore.ts",
+        "line": 357,
+        "callee": "fetch",
+        "httpMethod": "POST",
+        "path": null
+      }
+    ]
+  }
+}

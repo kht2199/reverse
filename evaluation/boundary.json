@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "stale": false,
+  "added": [],
+  "changed": [],
+  "deleted": [],
+  "limitations": [
+    "Syntax is observed; resolved imports, local calls, React components and HTTP boundaries are static inferences, not runtime guarantees.",
+    "Java calls resolve only unique unqualified/this methods in the same class. Overloads, receiver types, inheritance, reflection and dependency injection remain unknown.",
+    "Spring literal annotation paths and class prefixes are supported; constants, composed annotations and conditional routing remain unknown. Interface routes are not propagated.",
+    "TypeScript relative imports and local tsconfig paths/baseUrl/extends/references are supported. No external config reads, package exports, Vite aliases or runtime module resolution.",
+    "Gradle/package manifests are inventoried as evidence only, never executed. No dependency graph evaluation or complete dead-code analysis.",
+    "HTTP candidates require axios/fetch or a request config with method/url. Wrappers and dynamic URLs may be missed. Equal literal paths only suggest cross-language boundaries.",
+    "Hidden, dependency/build, generated directories, declaration files, environment/credential-like files and symlinks are excluded. Tracked generated code outside these rules may be included.",
+    "Keyword context is deterministic lexical retrieval, not semantic question answering. Source must be checked before changes."
+  ],
+  "parseErrors": 0,
+  "otherStatus": {
+    "stale": false,
+    "added": [],
+    "changed": [],
+    "deleted": []
+  },
+  "routes": 79,
+  "apis": 182,
+  "unknownApiPaths": 176,
+  "total": 1,
+  "truncated": false,
+  "results": [
+    {
+      "backend": {
+        "id": "n3487",
+        "kind": "route",
+        "name": "/api/v1/amhs/amos/alarm/history",
+        "file": "src/main/java/com/skhynix/amhs/amos/domain/alarm/AlarmController.java",
+        "line": 53,
+        "hash": "afeb43ca625d359cef84bc0350b4f39c865cd09ce09565704a49aa4a9fe7385d",
+        "evidence": "inferred",
+        "httpMethod": "GET",
+        "path": "/api/v1/amhs/amos/alarm/history",
+        "annotation": "GetMapping",
+        "owner": "n3486"
+      },
+      "frontend": {
+        "id": "n22806",
+        "kind": "api-candidate",
+        "name": "apiClient",
+        "file": "src/stores/alertHistoryStore.ts",
+        "line": 239,
+        "hash": "e5ae21f588377c87afbb7e4d93c73f92cc5e1339fd4a5dcd50e3aeb94eb7f5f3",
+        "evidence": "inferred",
+        "httpMethod": "GET",
+        "path": "/api/v1/amhs/amos/alarm/history",
+        "expression": "apiClient<AlarmHistoryItem[]>({\n        method: 'GET',\n        url: '/api/v1/amhs/amos/alarm/history',\n        params,\n      })"
+      },
+      "evidence": "inferred",
+      "reason": "literal method/path candidate; base URL, auth and runtime unverified"
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@chevrotain/cst-dts-gen": {
+      "name": "@chevrotain/cst-dts-gen",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@chevrotain/gast",
+        "lodash-es"
+      ],
+      "effects": [
+        "chevrotain"
+      ],
+      "range": "11.0.0 - 11.2.0",
+      "nodes": [
+        "node_modules/@chevrotain/cst-dts-gen"
+      ],
+      "fixAvailable": {
+        "name": "java-parser",
+        "version": "0.3.2",
+        "isSemVerMajor": true
+      }
+    },
+    "@chevrotain/gast": {
+      "name": "@chevrotain/gast",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "lodash-es"
+      ],
+      "effects": [
+        "@chevrotain/cst-dts-gen",
+        "chevrotain"
+      ],
+      "range": "11.0.0 - 11.2.0",
+      "nodes": [
+        "node_modules/@chevrotain/gast"
+      ],
+      "fixAvailable": {
+        "name": "java-parser",
+        "version": "0.3.2",
+        "isSemVerMajor": true
+      }
+    },
+    "chevrotain": {
+      "name": "chevrotain",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@chevrotain/cst-dts-gen",
+        "@chevrotain/gast",
+        "lodash-es"
+      ],
+      "effects": [
+        "chevrotain-allstar",
+        "java-parser"
+      ],
+      "range": "11.0.0 - 11.2.0",
+      "nodes": [
+        "node_modules/chevrotain"
+      ],
+      "fixAvailable": {
+        "name": "java-parser",
+        "version": "0.3.2",
+        "isSemVerMajor": true
+      }
+    },
+    "chevrotain-allstar": {
+      "name": "chevrotain-allstar",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "chevrotain"
+      ],
+      "effects": [
+        "java-parser"
+      ],
+      "range": "0.3.0 - 0.3.1",
+      "nodes": [
+        "node_modules/chevrotain-allstar"
+      ],
+      "fixAvailable": {
+        "name": "java-parser",
+        "version": "0.3.2",
+        "isSemVerMajor": true
+      }
+    },
+    "java-parser": {
+      "name": "java-parser",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "chevrotain",
+        "chevrotain-allstar",
+        "lodash"
+      ],
+      "effects": [],
+      "range": ">=0.4.0",
+      "nodes": [
+        "node_modules/java-parser"
+      ],
+      "fixAvailable": {
+        "name": "java-parser",
+        "version": "0.3.2",
+        "isSemVerMajor": true
+      }
+    },
+    "lodash": {
+      "name": "lodash",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1115806,
+          "name": "lodash",
+          "dependency": "lodash",
+          "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+          "url": "https://github.com/advisories/GHSA-r5fr-rjxr-66jc",
+          "severity": "high",
+          "cwe": [
+            "CWE-94"
+          ],
+          "cvss": {
+            "score": 8.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          },
+          "range": ">=4.0.0 <=4.17.23"
+        },
+        {
+          "source": 1244531,
+          "name": "lodash",
+          "dependency": "lodash",
+          "title": "Lodash has Prototype Pollution Vulnerability in `_.unset`, `_.omit`, and `_.pullAt` functions",
+          "url": "https://github.com/advisories/GHSA-xxjr-mmjv-4gpg",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 6.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+          },
+          "range": ">=4.0.0 <=4.17.22"
+        }
+      ],
+      "effects": [
+        "java-parser"
+      ],
+      "range": "4.0.0 - 4.17.23",
+      "nodes": [
+        "node_modules/lodash"
+      ],
+      "fixAvailable": {
+        "name": "java-parser",
+        "version": "0.3.2",
+        "isSemVerMajor": true
+      }
+    },
+    "lodash-es": {
+      "name": "lodash-es",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1115805,
+          "name": "lodash-es",
+          "dependency": "lodash-es",
+          "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+          "url": "https://github.com/advisories/GHSA-r5fr-rjxr-66jc",
+          "severity": "high",
+          "cwe": [
+            "CWE-94"
+          ],
+          "cvss": {
+            "score": 8.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          },
+          "range": ">=4.0.0 <=4.17.23"
+        },
+        {
+          "source": 1244542,
+          "name": "lodash-es",
+          "dependency": "lodash-es",
+          "title": "Lodash has Prototype Pollution Vulnerability in `_.unset`, `_.omit`, and `_.pullAt` functions",
+          "url": "https://github.com/advisories/GHSA-xxjr-mmjv-4gpg",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 6.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+          },
+          "range": ">=4.0.0 <4.17.23"
+        }
+      ],
+      "effects": [
+        "@chevrotain/cst-dts-gen",
+        "@chevrotain/gast",
+        "chevrotain"
+      ],
+      "range": "4.0.0 - 4.17.23",
+      "nodes": [
+        "node_modules/lodash-es"
+      ],
+      "fixAvailable": {
+        "name": "java-parser",
+        "version": "0.3.2",
+        "isSemVerMajor": true
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 7,
+      "critical": 0,
+      "total": 7
+    },
+    "dependencies": {
+      "prod": 12,
+      "dev": 0,
+      "optional": 0,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 11
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "available": true,
+  "executable": "/var/folders/bm/5kn4tpd90vl3l9j35kk9d6k40000gn/T/reverse-rea-1p118x35/node_modules/.bin/rea",
+  "executed": false,
+  "autoInstall": false,
+  "evidenceCommand": [
+    "/var/folders/bm/5kn4tpd90vl3l9j35kk9d6k40000gn/T/reverse-rea-1p118x35/node_modules/.bin/rea",
+    "analyze-javascript-application",
+    "/private/var/folders/bm/5kn4tpd90vl3l9j35kk9d6k40000gn/T/reverse-rea-1p118x35/fixture",
+    "--detail",
+    "summary",
+    "--evidence_output",
+    "/Volumes/DAS/projects/reverse/evaluation/rea-future.json",
+    "--json"
+  ],
+  "viewRequest": {
+    "source": {
+      "kind": "evidence-file",
+      "path": "/Volumes/DAS/projects/reverse/evaluation/rea-future.json"
+    },
+    "view": {
+      "kind": "summary"
+    }
+  },
+  "viewCommand": [
+    "/var/folders/bm/5kn4tpd90vl3l9j35kk9d6k40000gn/T/reverse-rea-1p118x35/node_modules/.bin/rea",
+    "inspect-analysis-view",
+    "/absolute/path/to/saved-view-request.json",
+    "--json"
+  ],
+  "notes": [
+    "Plan only: commands are argv arrays, not shell strings. Save viewRequest as JSON and replace the viewCommand request path.",
+    "Use --source-path FILE on the REA command to select exact inventoried files if required; no implicit dependencies.",
+    "Confirmed against REA 6.8.0 help and a JS fixture; no Java source support claim; React/TS coverage requires separate checks.",
+    "Absent local REA: continue reverse index/search/context/map/flow; no download or agent configuration changes."
+  ]
+}

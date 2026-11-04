@@ -1,0 +1,19 @@
+{
+  "name": "reverse-static-cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "reverse": "cli.mjs"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "java-parser": "3.0.1",
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "lodash": "4.18.1",
+    "lodash-es": "4.18.1"
+  }
+}

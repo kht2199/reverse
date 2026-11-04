@@ -1,0 +1,16 @@
+✔ CST routes use annotations, combine class path/method arrays; local calls remain qualified unknown (37.780333ms)
+✔ TS alias, exports and HTTP positives/negatives (4.065417ms)
+✔ updates, config staleness, deleted files and exclusions (5.790208ms)
+✔ CLI limits, stale strings, bounded expansion, output guard and boundary (3995.490458ms)
+✔ parse failures are explicit; no invented routes from comments or strings (5.118125ms)
+✔ local tsconfig extends works, external/symlink configs are never loaded; ambiguous aliases stay unknown (8.985875ms)
+✔ REA optional plan never installs or executes; missing and present binary paths (717.214541ms)
+✔ all command helps describe source verification and offline stages (3229.972125ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8390.022084
