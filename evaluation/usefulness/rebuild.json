@@ -1,0 +1,40 @@
+{
+  "backend": {
+    "wallMs": 8711,
+    "out": "/Volumes/DAS/projects/reverse/evaluation/backend-v3.rvx",
+    "files": 519,
+    "nodes": 27284,
+    "errors": 0,
+    "elapsedMs": 7408,
+    "rebuildMode": "full",
+    "rebuildMs": 8364,
+    "bytes": 4382720,
+    "storageVersion": 3,
+    "encodingRevision": 2,
+    "roundtrip": {
+      "verified": true,
+      "integrityIssues": 0,
+      "sourceDigest": "5cbf1145d6cccf77366005fa3d47ad38e0473574ad881329536d298e3836e442",
+      "restoredDigest": "5cbf1145d6cccf77366005fa3d47ad38e0473574ad881329536d298e3836e442"
+    }
+  },
+  "frontend": {
+    "wallMs": 4547,
+    "out": "/Volumes/DAS/projects/reverse/evaluation/frontend-v3.rvx",
+    "files": 1173,
+    "nodes": 35617,
+    "errors": 0,
+    "elapsedMs": 2486,
+    "rebuildMode": "full",
+    "rebuildMs": 4205,
+    "bytes": 6377472,
+    "storageVersion": 3,
+    "encodingRevision": 2,
+    "roundtrip": {
+      "verified": true,
+      "integrityIssues": 0,
+      "sourceDigest": "82e8983173065a309b88d21f8f808f4ab27064dab3d7a626ab3de63befea578d",
+      "restoredDigest": "82e8983173065a309b88d21f8f808f4ab27064dab3d7a626ab3de63befea578d"
+    }
+  }
+}

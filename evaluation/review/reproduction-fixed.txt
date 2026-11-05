@@ -1,0 +1,23 @@
+✔ H1 lexical destructuring, for-of, catch and destructured locals shadow outer URLs (9.056083ms)
+✔ H2 imported let and mutable/escaping object properties remain unknown (2.970417ms)
+✔ H3 inherited overloads and lambda/catch receivers do not resolve to field declarations (8.968125ms)
+✔ H4 default reverse-call context reaches caller of caller at depth two (709.954084ms)
+✔ M1 default search and flow see all 40 matching files before output paging (733.436958ms)
+✔ M2 400 parse failures return bounded metadata with exact totals (436.036208ms)
+✔ M3 helper arguments cannot substitute identifiers inside outer constant definitions (1.992ms)
+✔ M4 imported calls shadowed by parameters/destructuring do not link (1.108125ms)
+✔ M5 anonymous class methods have distinct owner and never become outer service methods (2.317375ms)
+✔ M6 config spread is a conditional pathname candidate, never an effective literal path (0.829583ms)
+✔ L1 case-alias and symlink output parents inside root are rejected before writing (681.343417ms)
+✔ L2 external imports and imported calls have kind-specific unknown reasons (2.15725ms)
+✔ L3 roundtrip compares actual fields, null/empty presence, proofs and unknown reasons (5.444208ms)
+✔ L4 engines, distributable modules and friendly unsupported-Node startup (31.682667ms)
+✔ UA small improvement: dangling edges fail validation; failed roundtrip leaves prior baseline byte-identical (9.384916ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2999.165875

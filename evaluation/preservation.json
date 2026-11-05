@@ -1,17 +1,12 @@
 {
-  "checkedAt": "2026-11-04T22:33:36.242Z",
-  "scope": "dependency override regression: complete snapshot/nodes/edges/errors; source/config hashes and git porcelain",
+  "checkedAt": "2026-11-05T00:16:44.563Z",
   "repositories": {
     "backend": {
-      "analysisHash": "00d354b6f202f6ebc83b96402ed5a3826c37504e55194e53d29e72fbd485b712",
-      "analysisUnchanged": true,
       "sourceAndConfigUnchanged": true,
       "gitStatusUnchanged": true,
       "stale": false
     },
     "frontend": {
-      "analysisHash": "25bf47cdd6be900465751d6d9b36b9e14d12dde96453e8b518aca2775acb8133",
-      "analysisUnchanged": true,
       "sourceAndConfigUnchanged": true,
       "gitStatusUnchanged": true,
       "stale": false

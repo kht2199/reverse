@@ -1,0 +1,79 @@
+{
+  "id": "reverse-static-cli@0.1.0",
+  "name": "reverse-static-cli",
+  "version": "0.1.0",
+  "size": 37772,
+  "unpackedSize": 109108,
+  "shasum": "226186376f0f47f8aea0ee5a376eb1027883219f",
+  "integrity": "sha512-wz0+j9TO1zx6i2RHgEBx3wkjy2SZD0kWBz9/6vXOgNm3QdcWvVxqrRB0ENF3jbnv4NmuzeBkaeYjLpSgHcG3EQ==",
+  "filename": "reverse-static-cli-0.1.0.tgz",
+  "files": [
+    {
+      "path": "AGENT_GUIDE.md",
+      "size": 3556,
+      "mode": 420
+    },
+    {
+      "path": "DEPENDENCIES.md",
+      "size": 3387,
+      "mode": 420
+    },
+    {
+      "path": "REA.md",
+      "size": 5057,
+      "mode": 420
+    },
+    {
+      "path": "README.md",
+      "size": 19888,
+      "mode": 420
+    },
+    {
+      "path": "bindings.mjs",
+      "size": 3719,
+      "mode": 420
+    },
+    {
+      "path": "cli-main.mjs",
+      "size": 19804,
+      "mode": 420
+    },
+    {
+      "path": "cli.mjs",
+      "size": 509,
+      "mode": 493
+    },
+    {
+      "path": "context.mjs",
+      "size": 7767,
+      "mode": 420
+    },
+    {
+      "path": "engine.mjs",
+      "size": 18189,
+      "mode": 420
+    },
+    {
+      "path": "enrich.mjs",
+      "size": 14061,
+      "mode": 420
+    },
+    {
+      "path": "package.json",
+      "size": 597,
+      "mode": 420
+    },
+    {
+      "path": "paths.mjs",
+      "size": 1156,
+      "mode": 420
+    },
+    {
+      "path": "store.mjs",
+      "size": 11418,
+      "mode": 420
+    }
+  ],
+  "entryCount": 13,
+  "bundled": []
+}

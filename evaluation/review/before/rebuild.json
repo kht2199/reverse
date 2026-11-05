@@ -1,0 +1,26 @@
+{
+  "backend": {
+    "wallMs": 6849,
+    "out": "/Volumes/DAS/projects/reverse/evaluation/backend-v3.rvx",
+    "files": 519,
+    "nodes": 27279,
+    "errors": 0,
+    "elapsedMs": 6076,
+    "rebuildMode": "full",
+    "rebuildMs": 6502,
+    "bytes": 4206592,
+    "storageVersion": 3
+  },
+  "frontend": {
+    "wallMs": 6641,
+    "out": "/Volumes/DAS/projects/reverse/evaluation/frontend-v3.rvx",
+    "files": 1173,
+    "nodes": 35617,
+    "errors": 0,
+    "elapsedMs": 5405,
+    "rebuildMode": "full",
+    "rebuildMs": 6296,
+    "bytes": 5304320,
+    "storageVersion": 3
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "items": {
+    "R1": {
+      "problem": "필드 lambda/field initializer/static/instance block의 repo 가려짐 4건",
+      "fix": "모든 초기화 실행 문맥에서 call별 shadowNames를 보존하고 owner가 없어도 검사한다. this.repo는 별도로 취급한다. 완전한 Java 타입/제어 흐름 모델은 아니다.",
+      "reproducedBefore": true,
+      "regressionPassed": true
+    },
+    "R2": {
+      "problem": "axios.post/put/patch 본문 url/method/spread 오인",
+      "fix": "공유 httpShape가 URL·data·config 인수 위치를 구분한다. bound axios 메서드는 첫 URL과 고정 verb를 사용하며 body는 설정으로 읽지 않는다. fetch/config-call도 별도 위치를 쓴다.",
+      "reproducedBefore": true,
+      "regressionPassed": true
+    },
+    "R3": {
+      "problem": "loadall/svc.loadall의 기본 search/flow가 --all보다 작음",
+      "fix": "사전 선택은 원래 이름과 CamelCase 분리 이름을 모두 포함해 실제 대소문자 무시 부분 일치를 덮는 superset이다. fixture에서 default/--all 결과 배열과 합계를 비교한다.",
+      "reproducedBefore": true,
+      "regressionPassed": true
+    },
+    "R4": {
+      "problem": "roundtrip 실패 후 전체 temp DB가 남음",
+      "fix": "핸들된 실패 시 해당 writer가 만든 temp DB/-journal/-wal/-shm만 정리하고 원래 인덱스를 보존한다. synchronous=FULL과 파일 fsync 후 rename을 쓰지만 전원 차단/디렉터리 내구성은 미검증이다. 강제 kill에서는 cleanup handler가 실행되지 않을 수 있다.",
+      "reproducedBefore": true,
+      "regressionPassed": true
+    },
+    "R5": {
+      "problem": "개발 머신 patch를 최소 Node 버전으로 주장",
+      "fix": "공식 Node 24.0.0 arm64 Darwin 파일을 SHA 검증 후 임시 경로에서 실제 실행했다. 전체 33개 fixture가 통과한 Node 24.0.0을 지원 floor로 사용한다. 모든 Node/OS 버전 검증이나 API가 오직 24부터 가능하다는 주장은 아니다.",
+      "reproducedBefore": true,
+      "regressionPassed": true
+    },
+    "R6": {
+      "problem": "context crossLanguage에 조건부 분류가 없고 boundary 96건의 분모 불명확",
+      "fix": "context/boundary/evaluation에 resolution/conditional/effectivePath/requestOverrideUnknown을 함께 표시한다. matched-pair 분모, API/route scope 및 conditional 비율을 별도 기록한다. 실제 요청 성공률이 아니다.",
+      "reproducedBefore": true,
+      "regressionPassed": true
+    }
+  },
+  "repositories": {
+    "backend": {
+      "calls": 18901,
+      "resolvedBefore": 2946,
+      "resolvedAfter": 2946,
+      "ownerlessResolvedBefore": 0,
+      "ownerlessShadowConnectionsWithdrawn": 0,
+      "withdrawnExamples": [],
+      "apisBefore": 0,
+      "apisAfter": 0,
+      "directAxiosBodyVerbs": 0,
+      "changedApiDeclarations": [],
+      "roundtripVerified": true,
+      "sourceDigest": "5cbf1145d6cccf77366005fa3d47ad38e0473574ad881329536d298e3836e442",
+      "restoredDigest": "5cbf1145d6cccf77366005fa3d47ad38e0473574ad881329536d298e3836e442",
+      "integrityIssues": [],
+      "bytesBefore": 4374528,
+      "bytesAfter": 4382720
+    },
+    "frontend": {
+      "calls": 20620,
+      "resolvedBefore": 3849,
+      "resolvedAfter": 3849,
+      "ownerlessResolvedBefore": 712,
+      "ownerlessShadowConnectionsWithdrawn": 0,
+      "withdrawnExamples": [],
+      "apisBefore": 182,
+      "apisAfter": 182,
+      "directAxiosBodyVerbs": 4,
+      "changedApiDeclarations": [],
+      "roundtripVerified": true,
+      "sourceDigest": "82e8983173065a309b88d21f8f808f4ab27064dab3d7a626ab3de63befea578d",
+      "restoredDigest": "82e8983173065a309b88d21f8f808f4ab27064dab3d7a626ab3de63befea578d",
+      "integrityIssues": [],
+      "bytesBefore": 6369280,
+      "bytesAfter": 6377472
+    }
+  },
+  "rereviewState": "fixes completed; awaiting user next review",
+  "runtime": {
+    "version": "v24.0.0",
+    "status": 0,
+    "officialDigestMatched": true,
+    "scope": "complete fixture regression suite on official Node 24.0.0 arm64 Darwin"
+  },
+  "boundary": {
+    "matchedPairTotal": 96,
+    "classifications": {
+      "conditional": 86,
+      "symbolic": 7,
+      "literal": 3
+    },
+    "conditionalPairs": 86,
+    "denominator": {
+      "indexedRoutes": 79,
+      "indexedApis": 182,
+      "apisWithPath": 175,
+      "apisWithUnknownPath": 7,
+      "interpretation": "matched method/path candidate pairs; no runtime requests or correctness denominator"
+    },
+    "interpretation": "conditional/total matched static method-path pairs, not validated requests or accuracy"
+  }
+}

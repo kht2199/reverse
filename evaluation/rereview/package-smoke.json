@@ -1,0 +1,37 @@
+{
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "files": [
+    "AGENT_GUIDE.md",
+    "DEPENDENCIES.md",
+    "REA.md",
+    "README.md",
+    "bindings.mjs",
+    "cli-main.mjs",
+    "cli.mjs",
+    "context.mjs",
+    "engine.mjs",
+    "enrich.mjs",
+    "http-shape.mjs",
+    "package.json",
+    "paths.mjs",
+    "store.mjs"
+  ],
+  "checks": [
+    {
+      "version": "v24.0.0",
+      "help": true,
+      "indexRoundtrip": true,
+      "zeroSearchTotal": 0
+    },
+    {
+      "version": "v24.22.2",
+      "help": true,
+      "indexRoundtrip": true,
+      "zeroSearchTotal": 0
+    }
+  ],
+  "remoteGitInstallTested": false,
+  "dependencies": "existing local node_modules; no network install"
+}

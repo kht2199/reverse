@@ -1,0 +1,116 @@
+# Opus 5.5 독립 리뷰 결과: `/Volumes/DAS/projects/reverse` 미커밋 변경
+
+임시 fixture로 직접 재현해 보니 **높음 4건, 중간 6건, 낮음 4건**의 결함이 있습니다. 가장 큰 문제는 틀린 URL과 호출 대상을 `literal`이나 `inferred`로 확정하는 경우가 여러 개라는 점과, 기본 `context`가 결과를 빠뜨리면서도 누락이 없다고 표시하는 점입니다.
+
+- **수정하지 않은 것:** 프로젝트 파일과 Amos는 건드리지 않았습니다. 재현용 fixture는 `/tmp/revrev-*`에만 만들었습니다. Amos는 기존 인덱스와 Kubb 클라이언트 원본만 읽었습니다.
+- **실행하지 않은 것:** 지시에 따라 `npm test`와 평가 스크립트는 다시 돌리지 않았습니다.
+
+## 높음
+
+**H1. TS URL 해석이 lexical scope를 무시하고 바깥 상수로 확정함**
+- 위치: `/Volumes/DAS/projects/reverse/enrich.mjs:13`, `:19`
+- 원인: 초기값이 있는 식별자 선언만 `defs`에 모으고, 매개변수 검사는 단순 식별자 매개변수만 봅니다.
+- 재현: `const url='/api/default'`가 최상위에 있을 때 다음 네 경우 모두 `GET "/api/default"`, `pathResolution:"literal"`이 나왔습니다.
+  - `function m2({url}){axios.get(url)}`
+  - `for (const url of list) axios.get(url)`
+  - `const {url}=props; fetch(url)`
+  - `catch (url) { fetch(url) }`
+- 영향: 실제와 다른 경로가 확정값으로 표시되어 boundary 후보도 틀어집니다. Amos frontend에서는 식별자 인수로 확정된 후보가 0건이라 현재 Amos 표본에는 영향이 확인되지 않았습니다.
+
+**H2. 변경 가능한 값과 객체 변경을 상수로 취급함**
+- 위치: `enrich.mjs:13`, `:19`
+- 원인 1: import로 가져온 binding은 `const`인지 검사하지 않습니다.
+- 원인 2: 변경 감지가 파일 안의 대입 구문만 봅니다.
+- 재현 (각각 `literal`로 나옴):
+  - `export let BASE='/api/v1'`과 `setBase()`가 있을 때 → `axios.get(BASE+'/x')`가 `/api/v1/x`
+  - `Object.assign(cfg,{url:'/api/b'})` 이후 → `axios.get(cfg.url)`이 `/api/a`
+  - 다른 파일에서 `PATHS.users='/api/admins'`로 바꾼 뒤 → `/api/users`
+- 영향: README의 "mutable binding은 unknown" 주장과 다릅니다.
+
+**H3. Java 호출이 상속 오버로드와 람다·catch 변수 가려짐을 무시하고 확정됨**
+- 위치: `enrich.mjs:7-8`, `engine.mjs:35`
+- 원인 1: 후보를 대상 타입 자신의 메서드로만 찾고, 같은 프로젝트에 있는 상위 타입은 보지 않습니다.
+  - 재현: `Base.run(Integer)`와 `Child extends Base { run(String) }`가 있을 때, `child.run(5)`가 `Child.run(String)`으로 `inferred` 연결됩니다. 실제 Java가 고르는 대상은 `Base.run(Integer)`입니다.
+- 원인 2: `shadowNames`에 람다 매개변수와 catch 매개변수가 들어가지 않습니다.
+  - 재현: `list.forEach(repo -> repo.save(1))`와 `catch (RuntimeException repo) { repo.save(3) }`가 둘 다 필드 `Repo.save`로 확정됩니다. try-with-resources 경우는 정상적으로 unknown이었습니다.
+- Amos에서의 영향: 확정 호출 3077건 중 43건이 "같은 프로젝트의 상위 타입에 같은 이름의 메서드가 있는" 경우입니다. 대부분 override로 보이며, 실제로 틀린 연결인지는 **미확인**입니다.
+
+**H4. 기본 `context`가 호출자의 호출자를 조용히 빠뜨림**
+- 위치: `store.mjs:12`, `context.mjs:7`
+- 원인: 선택 로딩의 확장 쿼리(`e.fid OR e.tf OR e.sf`)가 들어오는 호출을 따라가지 않습니다. 또 `featureContext`는 출발 노드가 로드되지 않은 관계를 `if(!call)continue`로 버립니다.
+- 재현 fixture: `Ctl.handle → svc.loadAll → repo.findChartsByUserId`, 질의 `--query findChartsByUserId --depth 2`
+
+  | 실행 방식 | 결과 파일 | 관계 |
+  |---|---|---|
+  | 기본 | Repo, Svc | 1개 |
+  | `--all` | Repo, Svc, Ctl | 2개 |
+
+- 기본 실행 결과에도 `partial:false`, `omittedFiles:0`, `truncated:false`가 표시됩니다.
+- 영향: README의 "생략은 수량과 이유를 표시한다"는 주장과 다릅니다. AGENT_GUIDE의 Controller→Service→Repository 근거도 어휘가 우연히 겹칠 때만 성립합니다.
+
+## 중간
+
+**M1. `search`와 `flow`가 기본적으로 24개 파일만 보고도 잘림이 없다고 표시함**
+- 위치: `store.mjs:12`, `cli.mjs:30`, `:35-40`
+- 재현: 메서드 40개, `search --kind method --query widget --limit 1000`
+  - 결과는 `total 24`, `truncated false`, `nextOffset null`이었습니다. `--all`로 실행하면 40건입니다.
+  - `flow`도 같은 방식으로 24건만 나오고 잘림이 없다고 표시됩니다.
+  - 누락을 알려주는 신호는 `loadCoverage.partial`뿐입니다.
+- README의 "`--limit`에 고정 최대값 없음"과도 어긋납니다.
+
+**M2. 파싱 실패 파일이 많으면 기본 `context`가 실패함**
+- 위치: `cli.mjs:30`, `context.mjs:13`
+- 원인: 출력에 들어가는 `coverage.parseFailureFiles`와 `unknownApiReasons`는 길이 제한이 없고, 바이트 예산 축소 대상도 아닙니다.
+- 재현: 깨진 `.ts` 파일 400개 → `reverse: max-bytes too small for required metadata`, exit 1.
+
+**M3. URL helper 평가 환경이 다른 정의 안으로 새어 들어감**
+- 위치: `enrich.mjs:19`, `:27`
+- 재현: `const id='static'; const ITEM='/api/items/'+id; function itemUrl(id){return ITEM}`
+  - `itemUrl(n)`이 `/api/items/{id}`로 나옵니다. 올바른 값은 `/api/items/static`입니다.
+
+**M4. import 함수 호출 연결이 매개변수 가려짐을 무시함**
+- 위치: `enrich.mjs:32`
+- 재현: `function m8(fetchUser){ fetchUser(); }`의 호출이 import한 `config.ts:4`로 `inferred` 연결됩니다.
+
+**M5. 익명 클래스의 메서드가 바깥 클래스 소유로 기록됨**
+- 위치: `engine.mjs:33-35`
+- 재현: `Svc` 안의 `new Runnable(){ run(){} }`가 있을 때 `svc.run()`이 그 익명 클래스의 `run`으로 확정됩니다.
+- 영향: 바깥 클래스에 같은 이름의 메서드가 있으면 거꾸로 거짓 "ambiguous"가 생기고, `summary`/`context`의 소유 관계도 오염됩니다.
+
+**M6. spread config로 덮어쓰일 수 있는데도 `literal`로 표시됨**
+- 위치: `enrich.mjs:30`
+- 원인: spread 가정을 `pathResolution`이 정해진 뒤에 추가합니다.
+- Amos frontend에서 `literal` 123건 중 115건이 `requestOverrideUnknown:true`인데도 `literal`입니다. 따라서 평가의 symbolic 수가 실제보다 적게 잡힙니다.
+
+## 낮음
+
+**L1. 출력 경로를 대소문자만 바꿔 대상 루트 안에 쓸 수 있음** (이전 커밋부터 존재)
+- 위치: `cli.mjs:29`
+- 재현: `--root …/root --out …/ROOT/inside.rvx`로 실행하면 `root/inside.rvx`가 생성됩니다.
+- 원인: `realpathSync`가 대소문자를 정규화하지 않기 때문입니다. Amos 읽기 전용 원칙을 깰 수 있는 경로입니다.
+
+**L2. unknown 이유 라벨이 틀림**
+- 위치: `engine.mjs:56`, `:58`
+- Java 외부 import edge에 호출용 이유("dynamic receiver, chained expression…")가 붙습니다.
+- TS에서 외부 import 함수 호출(예: `useState`)도 "overload or unknown receiver/target"으로 분류되어, frontend 5742건의 이유 해석이 왜곡됩니다.
+
+**L3. 저장 roundtrip이 완전히 같지 않고, 평가가 이를 검증하지 못함**
+- 위치: `store.mjs:9`, `:15`, `measure-completeness.mjs`
+- fixture에서 `analyze()` 결과와 전체 로드 결과를 비교한 차이:
+  - 빈 `candidates`가 사라짐
+  - import edge에 원래 없던 `file`이 추가됨
+  - `owner:null`이 사라짐
+  - 빈 callee가 `'unknown'`으로 바뀜
+- 근거 손실은 없었습니다. 다만 `measure-completeness`는 같은 SQLite에서 읽은 결과끼리 비교하므로, "저장 수와 정확히 일치"는 쓰기 충실도의 증거가 되지 못합니다.
+
+**L4. 배포와 실행 환경 위험**
+- 새 의존 모듈 `store.mjs`, `context.mjs`, `enrich.mjs`가 아직 untracked입니다. 이대로 push하면 npx Git 설치가 모듈 누락으로 실패합니다.
+- `node:sqlite`를 무조건 import하는데 `engines` 필드가 없어, 오래된 Node에서는 `--help`부터 실패합니다.
+- 사용자 npx/npm 블록 자체는 `readme-user.diff`와 동일하게 보존된 것을 확인했습니다. 다만 그 블록의 예시가 v2 커밋인 `#6da74ec`와 `.json` 출력명을 쓰고 있어, v3 문서와 의미가 어긋납니다.
+
+## 미확인·참고
+
+- **표본 고정 시점:** "질문과 표본을 구현 전에 고정했다"는 주장은 확인할 수 없습니다. 해당 파일이 untracked이고 수정 시각(08:10)만 남아 있습니다.
+- **정상 확인:** map 페이지를 모두 모은 관계 수는 `--all` 결과와 일치했습니다.
+- **Amos 표본 범위:** Amos의 URL 확정은 Kubb 생성 클라이언트 패턴에 한정되어 있어, H1·H2 유형이 표본 정확도에 영향을 주지는 않았습니다. 대신 평가가 이런 음성 사례를 다루지 못합니다.
+- **보존:** Amos 소스와 Git 상태는 변경하지 않았습니다.

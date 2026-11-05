@@ -8,3 +8,14 @@ __pycache__/
 /evaluation/backend.json
 /evaluation/frontend.json
 /evaluation/rea-temp-path.txt
+# 이번 기능 평가에서 만든 재생성 가능한 대용량 기준선 복사본
+/evaluation/usefulness/before/backend.json
+/evaluation/usefulness/before/frontend.json
+/evaluation/usefulness/legacy-tool/
+# 재생성 가능한 compact 인덱스와 실패/중단 시 임시 파일
+/evaluation/*-v3.rvx
+/evaluation/*.rvx.tmp-*
+# 리뷰 전 재생성 가능한 대용량 비교 인덱스
+/evaluation/review/before/*.rvx
+# 재리뷰 비교용으로만 보관하는 재생성 가능한 인덱스
+/evaluation/rereview/before/*.rvx

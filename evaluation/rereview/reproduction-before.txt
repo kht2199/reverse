@@ -1,0 +1,218 @@
+✖ R1 field lambda/initializer/static/instance blocks preserve shadow evidence without method owner (16.874ms)
+✖ R2 axios post/put/patch body method/url/spread do not override transport arguments (6.561125ms)
+✖ R3 default search/flow insensitive raw-substring matches equal --all for loadall and svc.loadall (721.096875ms)
+✖ R4 failed temp DB and sidecars are removed while the prior baseline survives (11.210625ms)
+✖ R5 runtime baseline uses tested Node 24.0.0 floor rather than developer patch (0.226541ms)
+✖ R6 context crossLanguage carries the same conditional classification as boundary (374.961791ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1492.501958
+
+✖ failing tests:
+
+test at test/rereview.test.mjs:12:1
+✖ R1 field lambda/initializer/static/instance blocks preserve shadow evidence without method owner (16.874ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(calls.every(e=>!e.to&&e.reason.includes('shadow')))
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/rereview.test.mjs:12:630)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test/rereview.test.mjs:13:1
+✖ R2 axios post/put/patch body method/url/spread do not override transport arguments (6.561125ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      [
+        'POST',
+  +     '/docs/page'
+  -     '/api/links'
+      ],
+      [
+  +     'EMAIL',
+  -     'POST',
+        '/api/jobs'
+      ],
+      [
+  +     'DELETE',
+  +     '/wrong'
+  -     'PUT',
+  -     '/api/put'
+      ],
+      [
+        'PATCH',
+  +     '/wrong'
+  -     '/api/patch'
+      ],
+      [
+  +     'DELETE',
+  +     '/override'
+  -     'POST',
+  -     '/api/x'
+      ],
+      [
+  +     'POST',
+  +     '/other'
+  -     'GET',
+  -     '/api/g'
+      ],
+      [
+        'POST',
+        '/api/config'
+      ],
+      [
+        'PATCH',
+  +     '/wrong'
+  -     '/api/f'
+      ]
+    ]
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/rereview.test.mjs:13:620)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ [ 'POST', '/docs/page' ], [ 'EMAIL', '/api/jobs' ], [ 'DELETE', '/wrong' ], [ 'PATCH', '/wrong' ], [ 'DELETE', '/override' ], [ 'POST', '/other' ], [ 'POST', '/api/config' ], [ 'PATCH', '/wrong' ] ],
+    expected: [ [ 'POST', '/api/links' ], [ 'POST', '/api/jobs' ], [ 'PUT', '/api/put' ], [ 'PATCH', '/api/patch' ], [ 'POST', '/api/x' ], [ 'GET', '/api/g' ], [ 'POST', '/api/config' ], [ 'PATCH', '/api/f' ] ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at test/rereview.test.mjs:14:1
+✖ R3 default search/flow insensitive raw-substring matches equal --all for loadall and svc.loadall (721.096875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + []
+  - [
+  -   {
+  -     arity: 0,
+  -     classOwner: 'n0',
+  -     evidence: 'observed',
+  -     file: 'Ctl.java',
+  -     hash: 'f7c1e6bf5c7919ae20dad47f72c73c0dfbbe765941f646c80563b1e4a6ba0c19',
+  -     id: 'n3',
+  -     kind: 'call',
+  -     line: 1,
+  -     name: 'svc.loadAll',
+  -     owner: 'n2',
+  -     score: 1
+  -   },
+  -   {
+  -     arity: 0,
+  -     evidence: 'observed',
+  -     file: 'Svc.java',
+  -     hash: '783342e3f8c3253b58e58a005cbd7431bf2917ad0456cd41a25cc5c98979f453',
+  -     id: 'n5',
+  -     kind: 'method',
+  -     line: 1,
+  -     name: 'loadAll',
+  -     owner: 'n4',
+  -     score: 1,
+  -     shadowNames: []
+  -   }
+  - ]
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/rereview.test.mjs:14:542)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ { id: 'n3', file: 'Ctl.java', line: 1, hash: 'f7c1e6bf5c7919ae20dad47f72c73c0dfbbe765941f646c80563b1e4a6ba0c19', kind: 'call', name: 'svc.loadAll', owner: 'n2', evidence: 'observed', classOwner: 'n0', arity: 0, score: 1 }, { id: 'n5', file: 'Svc.java', line: 1, hash: '783342e3f8c3253b58e58a005cbd7431bf2917ad0456cd41a25cc5c98979f453', kind: 'method', name: 'loadAll', owner: 'n4', evidence: 'observed', arity: 0, shadowNames: [], score: 1 } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at test/rereview.test.mjs:15:1
+✖ R4 failed temp DB and sidecars are removed while the prior baseline survives (11.210625ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(!fs.readdirSync(base).some(p=>p.startsWith('keep.rvx.tmp-')))
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/rereview.test.mjs:15:522)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test/rereview.test.mjs:16:1
+✖ R5 runtime baseline uses tested Node 24.0.0 floor rather than developer patch (0.226541ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '>=24.22.2'
+  - '>=24.0.0'
+          ^
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/rereview.test.mjs:16:152)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '>=24.22.2',
+    expected: '>=24.0.0',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/rereview.test.mjs:17:1
+✖ R6 context crossLanguage carries the same conditional classification as boundary (374.961791ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'conditional'
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/rereview.test.mjs:17:580)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'conditional',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

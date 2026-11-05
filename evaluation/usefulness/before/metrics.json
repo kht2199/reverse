@@ -1,0 +1,96 @@
+{
+  "backend": {
+    "bytes": 17147222,
+    "elapsedMs": 3979,
+    "calls": 18901,
+    "resolved": 1614,
+    "apis": 0,
+    "unknownPaths": 0,
+    "contexts": [
+      {
+        "query": "evictCache",
+        "bytes": 10825,
+        "tokenEstimate": 2707,
+        "ms": 498.80845800000003,
+        "found": [
+          "config/cache/CacheController.java"
+        ],
+        "wanted": 2
+      },
+      {
+        "query": "getMetrics",
+        "bytes": 15781,
+        "tokenEstimate": 3946,
+        "ms": 440.868833,
+        "found": [
+          "custommonitoring/api/CustomMonitoringController.java",
+          "custommonitoring/service/CustomMonitoringService.java"
+        ],
+        "wanted": 3
+      },
+      {
+        "query": "getMetricHistory",
+        "bytes": 15792,
+        "tokenEstimate": 3948,
+        "ms": 456.971583,
+        "found": [
+          "custommonitoring/api/CustomMonitoringController.java",
+          "custommonitoring/service/CustomMonitoringService.java"
+        ],
+        "wanted": 2
+      },
+      {
+        "query": "fab-layout layout",
+        "bytes": 18380,
+        "tokenEstimate": 4595,
+        "ms": 447.7070000000001,
+        "found": [
+          "fablayout/api/FabLayoutController.java"
+        ],
+        "wanted": 2
+      }
+    ]
+  },
+  "frontend": {
+    "bytes": 18631596,
+    "elapsedMs": 4620,
+    "calls": 20620,
+    "resolved": 2958,
+    "apis": 182,
+    "unknownPaths": 176,
+    "contexts": [
+      {
+        "query": "evictCache",
+        "bytes": 14393,
+        "tokenEstimate": 3599,
+        "ms": 645.789458,
+        "found": [],
+        "wanted": 0
+      },
+      {
+        "query": "getMetrics",
+        "bytes": 14512,
+        "tokenEstimate": 3628,
+        "ms": 459.2942500000004,
+        "found": [],
+        "wanted": 0
+      },
+      {
+        "query": "getMetricHistory",
+        "bytes": 1651,
+        "tokenEstimate": 413,
+        "ms": 453.3086250000001,
+        "found": [],
+        "wanted": 2
+      },
+      {
+        "query": "fab-layout layout",
+        "bytes": 13443,
+        "tokenEstimate": 3361,
+        "ms": 472.72749999999996,
+        "found": [],
+        "wanted": 1
+      }
+    ]
+  }
+}

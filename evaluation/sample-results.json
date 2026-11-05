@@ -100,42 +100,42 @@
         "line": 13,
         "callee": "axios.get",
         "httpMethod": "GET",
-        "path": null
+        "path": "/api/v1/amhs/amos/fab-layout/layout"
       },
       {
         "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
         "line": 27,
         "callee": "axios.get",
         "httpMethod": "GET",
-        "path": null
+        "path": "/api/v1/amhs/amos/fab-layout/agv/rails/fabs"
       },
       {
         "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
         "line": 37,
         "callee": "axios.get",
         "httpMethod": "GET",
-        "path": null
+        "path": "/api/v1/amhs/amos/fab-layout/agv/rails"
       },
       {
         "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
         "line": 52,
         "callee": "axios.get",
         "httpMethod": "GET",
-        "path": null
+        "path": "/api/v1/amhs/amos/fab-layout/ftp/status"
       },
       {
         "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
         "line": 65,
         "callee": "axios.get",
         "httpMethod": "GET",
-        "path": null
+        "path": "/api/v1/amhs/amos/fab-layout/ftp/history"
       },
       {
         "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
         "line": 80,
         "callee": "axios.post",
         "httpMethod": "POST",
-        "path": null
+        "path": "/api/v1/amhs/amos/fab-layout/ftp/trigger"
       },
       {
         "file": "src/pages/llm/useAgentModels.ts",

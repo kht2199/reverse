@@ -1,0 +1,82 @@
+# Opus 5.5 재리뷰 결과: H1~L4 수정 확인
+
+이전 fixture를 재사용하고 새 fixture를 추가해 다시 재현했습니다. 이전 지적은 대부분 해결됐습니다. 다만 **H3은 일부만 해결**됐고, **새 결함 2건**(높음 1, 중간 1)과 낮음 3건이 있습니다. 원본, Amos, 프로젝트 파일은 수정하지 않았고, 새 fixture는 `/tmp/revrev-*` 아래에만 만들었습니다.
+
+## 해결 확인 (재현 통과)
+
+| 항목 | 재현 결과 |
+|---|---|
+| H1 | 구조 분해 매개변수·로컬, for-of, catch 변수 4건 모두 unknown(가려짐 이유 표시) |
+| H2 | 다른 모듈의 `export let`, `Object.assign`, 다른 파일의 객체 변경이 모두 unknown |
+| H4 | 기본 `context`에서도 Repo, Svc, Ctl이 모두 반환됨 |
+| M1 | 40개 파일 `search`에서 `total 40`, `totalIsExact:true` |
+| M2 | 파싱 실패 400건에서 6.3KB로 축약되어 정상 출력되고, 실패 건수 400이 보존됨 |
+| M3 | `/api/items/static`으로 올바르게 해석됨 |
+| M4 | 매개변수 `fetchUser`가 import에 연결되지 않음 |
+| M5 | 익명 클래스가 별도 type(상위 타입 `Runnable`)으로 기록되고, `svc.run`은 unknown |
+| M6 | spread가 있으면 `conditional`, `effectivePath=null` |
+| L1 | 대소문자만 다른 `ROOT/…` 출력 경로가 거부되고 파일이 생성되지 않음 |
+| L3 | roundtrip 불일치를 주입하면 기존 인덱스가 바이트 단위로 그대로 보존됨 |
+| L4 | `files` allowlist에 런타임 모듈 8개가 모두 있고, `engines`도 추가됨 |
+
+H3 중 상속 오버로드, 람다·catch 가려짐, 향상된 for, instanceof·switch 패턴은 모두 unknown으로 바뀐 것을 확인했습니다.
+
+## 남은 문제와 새 결함
+
+**1. [높음] H3 일부 미해결: 메서드 밖에서 생긴 가려짐이 여전히 확정됨**
+- 위치: `/Volumes/DAS/projects/reverse/engine.mjs:35`, `/Volumes/DAS/projects/reverse/enrich.mjs:9`
+- 원인: `shadowNames`가 메서드와 생성자 노드에만 기록됩니다. 그래서 필드 초기화식이나 초기화 블록 안의 호출은 `call.owner`가 없어 가려짐 검사를 건너뜁니다.
+- 재현 (`/tmp/revrev-java.*/root/demo/Caller3.java`): 필드 `Repo2 repo`가 있을 때 아래 네 경우가 모두 `Repo2.save`로 `inferred` 확정됩니다. 실제로는 로컬 변수나 람다 매개변수(`Other repo`)를 가리킵니다.
+  - `private Runnable r = () -> { Other repo = …; repo.save(3); }`
+  - `static { Other repo = …; repo.save(4); }`
+  - `{ Other repo = …; repo.save(5); }`
+  - `Consumer<Other> c = repo -> repo.save(6)`
+
+**2. [높음, 새로 발견했지만 원래 있던 동작] POST 본문 객체의 `url`/`method` 키를 요청 설정으로 오인**
+- 위치: `engine.mjs:46-48`, `enrich.mjs:32`
+- 원인: 첫 번째 객체 리터럴 인수를 무조건 요청 설정으로 취급합니다.
+- 재현 1: `axios.post('/api/links', { url: '/docs/page' })`
+  - 결과는 `path "/docs/page"`, `literal`, `effectivePath=/docs/page`입니다. 실제 요청 경로는 `/api/links`입니다.
+- 재현 2: `axios.post('/api/jobs', { method: 'email' })`
+  - 결과는 httpMethod `EMAIL`입니다.
+- Amos frontend에는 `axios.post/put/patch` 직접 호출이 0건이라 Amos 결과에는 영향이 없습니다.
+
+**3. [중간, 새 결함] `search`·`flow`의 사전 필터가 대소문자 무시 부분 일치보다 좁음**
+- 위치: `store.mjs:16`과 `cli-main.mjs:36-41`
+- 원인: 파일 사전 선택은 CamelCase를 분리한 이름에 `queryTerms`를 대보는 방식입니다. 반면 명령의 실제 매칭은 `file+' '+name`에 대한 대소문자 무시 부분 일치입니다. 앞의 결과가 뒤의 부분집합이 아니어서, 실제로는 맞는 노드가 있는 파일이 로드되지 않습니다.
+- 재현 (메서드 이름 `loadAll`):
+
+  | 명령 | 결과 |
+  |---|---|
+  | `search --kind method --query loadall` | `total 0`, `totalIsExact:true`, `truncated:false` |
+  | 같은 명령 + `--all` | 1건 |
+  | `flow --query svc.loadall` | 0건 |
+  | 같은 명령 + `--all` | 5건 |
+
+- 정확한 대소문자(`svc.loadAll`)로 검색하면 정상입니다. 영향은 도움말의 "Case-insensitive substring" 설명과 달리 결과를 조용히 누락하면서 "정확한 전체"라고 표시한다는 점입니다.
+
+**4. [낮음] 저장 실패 시 임시 DB가 남음**
+- 위치: `store.mjs:13`
+- 재현: roundtrip 불일치를 주입하면 기존 인덱스는 보존되지만, 전체 크기의 `keep.rvx.tmp-<pid>-<uuid>`가 남습니다.
+- 추가로 `synchronous=OFF` 상태에서 fsync 없이 rename하므로, 원자성은 프로세스가 죽는 경우에만 보장됩니다. 전원 차단 시의 내구성은 재현하지 못해 **미확인**입니다.
+
+**5. [낮음] `engines`와 부트스트랩의 최소 버전이 과도하게 엄격함**
+- 위치: `cli.mjs:3`
+- 개발 머신의 패치 버전(`>=24.22.2`)을 그대로 최소 버전으로 써서, Node 24.0~24.22.1은 `--help`부터 거부됩니다. 그 버전들이 실제로 필요한지에 대한 근거는 확인하지 못했습니다(**미확인**).
+
+**6. [낮음] 경계 후보 분류가 일부 출력에만 있음**
+- `boundary` 명령과 평가 `results.json`에는 `resolution`, `conditional`, `effectivePath` 분류가 있습니다.
+- 반면 `context --other`의 `crossLanguage` 후보(`cli-main.mjs:35`)에는 이 필드가 없고, assumptions 문자열만 있습니다.
+- `EVALUATION.md`의 "API boundary 후보 1→96"에는 그중 86건이 conditional(spread로 덮어쓰기 가능)이라는 설명이 함께 있지 않습니다.
+
+## 사용자 확인이 필요한 사항
+
+- **README의 사용자 npx/npm 블록이 바이트 단위로 달라졌습니다.** `readme-preservation.json`에 `byteIdentical:false`로 기록되어 있습니다. 바뀐 내용은 Node 최소 버전, `.rvx` 파일명, 커밋 예시입니다.
+  - "authorizedCorrections"로 표기되어 있지만, 저는 지난 리뷰에서 문서 불일치를 지적했을 뿐 수정을 승인하지 않았습니다. 사용자 본인의 확인이 필요합니다.
+
+## 검토 범위와 제한
+
+- **무결성 검사:** `validateGraph`의 참조 무결성과 의미 SHA 비교가 교체 전에 실행되는 것을 코드와 주입 실험으로 확인했습니다.
+- **증분 갱신:** 구현되지 않았고, 문서도 그렇게 적혀 있습니다.
+- **Understand-Anything:** `UNDERSTAND_ANYTHING_RESEARCH.md` 문서 자체는 정독하지 않았고, 적용된 코드 쪽만 검토했습니다.
+- **Amos 영향:** 1번은 Amos에서 몇 건이 해당되는지 집계하지 않았습니다(**미확인**).

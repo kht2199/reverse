@@ -1,0 +1,443 @@
+{
+  "schemaVersion": 2,
+  "stale": false,
+  "added": [],
+  "changed": [],
+  "deleted": [],
+  "limitations": [
+    "Syntax is observed; resolved imports, local calls, React components and HTTP boundaries are static inferences, not runtime guarantees.",
+    "Java calls resolve only unique unqualified/this methods in the same class. Overloads, receiver types, inheritance, reflection and dependency injection remain unknown.",
+    "Spring literal annotation paths and class prefixes are supported; constants, composed annotations and conditional routing remain unknown. Interface routes are not propagated.",
+    "TypeScript relative imports and local tsconfig paths/baseUrl/extends/references are supported. No external config reads, package exports, Vite aliases or runtime module resolution.",
+    "Gradle/package manifests are inventoried as evidence only, never executed. No dependency graph evaluation or complete dead-code analysis.",
+    "HTTP candidates require axios/fetch or a request config with method/url. Wrappers and dynamic URLs may be missed. Equal literal paths only suggest cross-language boundaries.",
+    "Hidden, dependency/build, generated directories, declaration files, environment/credential-like files and symlinks are excluded. Tracked generated code outside these rules may be included.",
+    "Keyword context is deterministic lexical retrieval, not semantic question answering. Source must be checked before changes."
+  ],
+  "parseErrors": 0,
+  "seedTotal": 46,
+  "unmatchedWords": [],
+  "relations": [
+    {
+      "kind": "import",
+      "from": "src/api/clients/IDCController/addContact.ts",
+      "to": null,
+      "specifier": "@kubb/plugin-client/clients/axios",
+      "line": 6,
+      "evidence": "unknown",
+      "node": "n2264",
+      "reason": "external, excluded, ambiguous config or missing target"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/IDCController/addContact.ts",
+      "to": "src/api/models/IDCController/AddContact.ts",
+      "specifier": "../../models/IDCController/AddContact.ts",
+      "line": 7,
+      "evidence": "inferred",
+      "node": "n2265"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/IDCController/addContact.ts",
+      "to": null,
+      "specifier": "@kubb/plugin-client/clients/axios",
+      "line": 8,
+      "evidence": "unknown",
+      "node": "n2266",
+      "reason": "external, excluded, ambiguous config or missing target"
+    },
+    {
+      "kind": "call",
+      "from": "n2273",
+      "to": null,
+      "file": "src/api/clients/IDCController/addContact.ts",
+      "line": 25,
+      "callee": "request",
+      "evidence": "unknown",
+      "reason": "overload or unknown receiver/target"
+    },
+    {
+      "kind": "call",
+      "from": "n2275",
+      "to": null,
+      "file": "src/api/clients/IDCController/addContact.ts",
+      "line": 25,
+      "callee": "getAddContactUrl(fabId, idcName).url.toString",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n2276",
+      "to": "n2267",
+      "file": "src/api/clients/IDCController/addContact.ts",
+      "line": 25,
+      "callee": "getAddContactUrl",
+      "evidence": "inferred"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/IDCController/addIndicator.ts",
+      "to": null,
+      "specifier": "@kubb/plugin-client/clients/axios",
+      "line": 6,
+      "evidence": "unknown",
+      "node": "n2277",
+      "reason": "external, excluded, ambiguous config or missing target"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/IDCController/addIndicator.ts",
+      "to": "src/api/models/IDCController/AddIndicator.ts",
+      "specifier": "../../models/IDCController/AddIndicator.ts",
+      "line": 7,
+      "evidence": "inferred",
+      "node": "n2278"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/IDCController/addIndicator.ts",
+      "to": null,
+      "specifier": "@kubb/plugin-client/clients/axios",
+      "line": 8,
+      "evidence": "unknown",
+      "node": "n2279",
+      "reason": "external, excluded, ambiguous config or missing target"
+    },
+    {
+      "kind": "call",
+      "from": "n2286",
+      "to": null,
+      "file": "src/api/clients/IDCController/addIndicator.ts",
+      "line": 24,
+      "callee": "request",
+      "evidence": "unknown",
+      "reason": "overload or unknown receiver/target"
+    },
+    {
+      "kind": "call",
+      "from": "n2288",
+      "to": null,
+      "file": "src/api/clients/IDCController/addIndicator.ts",
+      "line": 24,
+      "callee": "getAddIndicatorUrl().url.toString",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n2289",
+      "to": "n2280",
+      "file": "src/api/clients/IDCController/addIndicator.ts",
+      "line": 24,
+      "callee": "getAddIndicatorUrl",
+      "evidence": "inferred"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/IDCController/deleteContact.ts",
+      "to": null,
+      "specifier": "@kubb/plugin-client/clients/axios",
+      "line": 6,
+      "evidence": "unknown",
+      "node": "n2290",
+      "reason": "external, excluded, ambiguous config or missing target"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/IDCController/deleteContact.ts",
+      "to": "src/api/models/IDCController/DeleteContact.ts",
+      "specifier": "../../models/IDCController/DeleteContact.ts",
+      "line": 7,
+      "evidence": "inferred",
+      "node": "n2291"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/IDCController/deleteContact.ts",
+      "to": null,
+      "specifier": "@kubb/plugin-client/clients/axios",
+      "line": 8,
+      "evidence": "unknown",
+      "node": "n2292",
+      "reason": "external, excluded, ambiguous config or missing target"
+    },
+    {
+      "kind": "call",
+      "from": "n2298",
+      "to": null,
+      "file": "src/api/clients/IDCController/deleteContact.ts",
+      "line": 25,
+      "callee": "request",
+      "evidence": "unknown",
+      "reason": "overload or unknown receiver/target"
+    },
+    {
+      "kind": "call",
+      "from": "n2300",
+      "to": null,
+      "file": "src/api/clients/IDCController/deleteContact.ts",
+      "line": 25,
+      "callee": "getDeleteContactUrl(fabId, idcName, empNo).url.toString",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n2301",
+      "to": "n2293",
+      "file": "src/api/clients/IDCController/deleteContact.ts",
+      "line": 25,
+      "callee": "getDeleteContactUrl",
+      "evidence": "inferred"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/IDCController/deleteIndicator.ts",
+      "to": null,
+      "specifier": "@kubb/plugin-client/clients/axios",
+      "line": 6,
+      "evidence": "unknown",
+      "node": "n2302",
+      "reason": "external, excluded, ambiguous config or missing target"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/IDCController/deleteIndicator.ts",
+      "to": "src/api/models/IDCController/DeleteIndicator.ts",
+      "specifier": "../../models/IDCController/DeleteIndicator.ts",
+      "line": 7,
+      "evidence": "inferred",
+      "node": "n2303"
+    }
+  ],
+  "relationsTotal": 4484,
+  "depth": 2,
+  "total": 6437,
+  "truncated": true,
+  "results": [
+    {
+      "id": "n2946",
+      "kind": "import",
+      "name": "@kubb/plugin-client/clients/axios",
+      "file": "src/api/clients/cacheController/evictCache.ts",
+      "line": 6,
+      "hash": "867786c85cff39e98fc7b92e05bd4834dcf01b978f422d96034025bf55803330",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n2947",
+      "kind": "import",
+      "name": "../../models/cacheController/EvictCache.ts",
+      "file": "src/api/clients/cacheController/evictCache.ts",
+      "line": 7,
+      "hash": "867786c85cff39e98fc7b92e05bd4834dcf01b978f422d96034025bf55803330",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n2948",
+      "kind": "import",
+      "name": "@kubb/plugin-client/clients/axios",
+      "file": "src/api/clients/cacheController/evictCache.ts",
+      "line": 8,
+      "hash": "867786c85cff39e98fc7b92e05bd4834dcf01b978f422d96034025bf55803330",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n2949",
+      "kind": "symbol",
+      "name": "getEvictCacheUrl",
+      "file": "src/api/clients/cacheController/evictCache.ts",
+      "line": 10,
+      "hash": "867786c85cff39e98fc7b92e05bd4834dcf01b978f422d96034025bf55803330",
+      "evidence": "observed",
+      "exported": false,
+      "score": 1
+    },
+    {
+      "id": "n2950",
+      "kind": "symbol",
+      "name": "res",
+      "file": "src/api/clients/cacheController/evictCache.ts",
+      "line": 11,
+      "hash": "867786c85cff39e98fc7b92e05bd4834dcf01b978f422d96034025bf55803330",
+      "evidence": "observed",
+      "exported": false,
+      "score": 1
+    },
+    {
+      "id": "n2951",
+      "kind": "symbol",
+      "name": "evictCache",
+      "file": "src/api/clients/cacheController/evictCache.ts",
+      "line": 19,
+      "hash": "867786c85cff39e98fc7b92e05bd4834dcf01b978f422d96034025bf55803330",
+      "evidence": "observed",
+      "exported": true,
+      "score": 1
+    },
+    {
+      "id": "n2952",
+      "kind": "symbol",
+      "name": "{ client: request = fetch, ...requestConfig }",
+      "file": "src/api/clients/cacheController/evictCache.ts",
+      "line": 20,
+      "hash": "867786c85cff39e98fc7b92e05bd4834dcf01b978f422d96034025bf55803330",
+      "evidence": "observed",
+      "exported": false,
+      "score": 1
+    },
+    {
+      "id": "n2953",
+      "kind": "symbol",
+      "name": "res",
+      "file": "src/api/clients/cacheController/evictCache.ts",
+      "line": 24,
+      "hash": "867786c85cff39e98fc7b92e05bd4834dcf01b978f422d96034025bf55803330",
+      "evidence": "observed",
+      "exported": false,
+      "score": 1
+    },
+    {
+      "id": "n2954",
+      "kind": "call",
+      "name": "request",
+      "file": "src/api/clients/cacheController/evictCache.ts",
+      "line": 24,
+      "hash": "867786c85cff39e98fc7b92e05bd4834dcf01b978f422d96034025bf55803330",
+      "evidence": "observed",
+      "owner": "n2953",
+      "score": 1
+    },
+    {
+      "id": "n2955",
+      "kind": "api-candidate",
+      "name": "request",
+      "file": "src/api/clients/cacheController/evictCache.ts",
+      "line": 24,
+      "hash": "867786c85cff39e98fc7b92e05bd4834dcf01b978f422d96034025bf55803330",
+      "evidence": "inferred",
+      "httpMethod": "DELETE",
+      "path": null,
+      "expression": "request<EvictCacheMutationResponse, ResponseErrorConfig<Error>, unknown>({ method : \"DELETE\", url : getEvictCacheUrl(name).url.toString(), ... requestConfig })",
+      "score": 1
+    },
+    {
+      "id": "n2956",
+      "kind": "call",
+      "name": "getEvictCacheUrl(name).url.toString",
+      "file": "src/api/clients/cacheController/evictCache.ts",
+      "line": 24,
+      "hash": "867786c85cff39e98fc7b92e05bd4834dcf01b978f422d96034025bf55803330",
+      "evidence": "observed",
+      "owner": "n2953",
+      "score": 1
+    },
+    {
+      "id": "n2957",
+      "kind": "call",
+      "name": "getEvictCacheUrl",
+      "file": "src/api/clients/cacheController/evictCache.ts",
+      "line": 24,
+      "hash": "867786c85cff39e98fc7b92e05bd4834dcf01b978f422d96034025bf55803330",
+      "evidence": "observed",
+      "owner": "n2953",
+      "score": 1
+    },
+    {
+      "id": "n2958",
+      "kind": "export",
+      "name": "./evictCache.ts",
+      "file": "src/api/clients/cacheController/index.ts",
+      "line": 1,
+      "hash": "d2c368e0e5412cdda71d52cf22a60ba0dadd8c1eb8e4578aeb39abd71e422f51",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n3592",
+      "kind": "export",
+      "name": "./cacheController/evictCache.ts",
+      "file": "src/api/clients/index.ts",
+      "line": 32,
+      "hash": "8a8cd1a4d2a3fe4247521047e3d45772009aa02e5da8b111648ce7fb7beee8fe",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n5613",
+      "kind": "export",
+      "name": "./useEvictCache.ts",
+      "file": "src/api/hooks/cacheController/index.ts",
+      "line": 1,
+      "hash": "91ed8ddb8b01a78c2207a063191dda322258e42206b37890d77908a338a7b9b7",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n5614",
+      "kind": "export",
+      "name": "./useEvictCache.ts",
+      "file": "src/api/hooks/cacheController/index.ts",
+      "line": 2,
+      "hash": "91ed8ddb8b01a78c2207a063191dda322258e42206b37890d77908a338a7b9b7",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n5615",
+      "kind": "export",
+      "name": "./useEvictCache.ts",
+      "file": "src/api/hooks/cacheController/index.ts",
+      "line": 3,
+      "hash": "91ed8ddb8b01a78c2207a063191dda322258e42206b37890d77908a338a7b9b7",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n5616",
+      "kind": "export",
+      "name": "./useEvictCache.ts",
+      "file": "src/api/hooks/cacheController/index.ts",
+      "line": 4,
+      "hash": "91ed8ddb8b01a78c2207a063191dda322258e42206b37890d77908a338a7b9b7",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n5617",
+      "kind": "import",
+      "name": "../../models/cacheController/EvictCache.ts",
+      "file": "src/api/hooks/cacheController/useEvictCache.ts",
+      "line": 6,
+      "hash": "18d034fff2c9088b812e684583380bf4ed8a4776584f295bbd557d7ad6f6a6f6",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n5618",
+      "kind": "import",
+      "name": "@kubb/plugin-client/clients/axios",
+      "file": "src/api/hooks/cacheController/useEvictCache.ts",
+      "line": 7,
+      "hash": "18d034fff2c9088b812e684583380bf4ed8a4776584f295bbd557d7ad6f6a6f6",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 2,
+  "stale": false,
+  "added": [],
+  "changed": [],
+  "deleted": [],
+  "limitations": [
+    "Syntax is observed; resolved imports, local calls, React components and HTTP boundaries are static inferences, not runtime guarantees.",
+    "Java calls resolve only unique unqualified/this methods in the same class. Overloads, receiver types, inheritance, reflection and dependency injection remain unknown.",
+    "Spring literal annotation paths and class prefixes are supported; constants, composed annotations and conditional routing remain unknown. Interface routes are not propagated.",
+    "TypeScript relative imports and local tsconfig paths/baseUrl/extends/references are supported. No external config reads, package exports, Vite aliases or runtime module resolution.",
+    "Gradle/package manifests are inventoried as evidence only, never executed. No dependency graph evaluation or complete dead-code analysis.",
+    "HTTP candidates require axios/fetch or a request config with method/url. Wrappers and dynamic URLs may be missed. Equal literal paths only suggest cross-language boundaries.",
+    "Hidden, dependency/build, generated directories, declaration files, environment/credential-like files and symlinks are excluded. Tracked generated code outside these rules may be included.",
+    "Keyword context is deterministic lexical retrieval, not semantic question answering. Source must be checked before changes."
+  ],
+  "parseErrors": 0,
+  "seedTotal": 13563,
+  "unmatchedWords": [],
+  "relations": [
+    {
+      "kind": "import",
+      "from": "src/api/models/AgvMapResponse.ts",
+      "to": "src/api/models/BufferLocationRow.ts",
+      "specifier": "./BufferLocationRow.ts",
+      "line": 6,
+      "evidence": "inferred",
+      "node": "n8493"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/AgvMapResponse.ts",
+      "to": "src/api/models/FabLocationRow.ts",
+      "specifier": "./FabLocationRow.ts",
+      "line": 7,
+      "evidence": "inferred",
+      "node": "n8494"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/AgvMapResponse.ts",
+      "to": "src/api/models/HostLocationRow.ts",
+      "specifier": "./HostLocationRow.ts",
+      "line": 8,
+      "evidence": "inferred",
+      "node": "n8495"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/AgvMapResponse.ts",
+      "to": "src/api/models/NodeRow.ts",
+      "specifier": "./NodeRow.ts",
+      "line": 9,
+      "evidence": "inferred",
+      "node": "n8496"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AbnormalAlarmStatusDto.ts",
+      "specifier": "./AbnormalAlarmStatusDto.ts",
+      "line": 1,
+      "evidence": "inferred",
+      "node": "n8772"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AbnormalAlarmStatusResponseDto.ts",
+      "specifier": "./AbnormalAlarmStatusResponseDto.ts",
+      "line": 2,
+      "evidence": "inferred",
+      "node": "n8773"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AgentChatDetailDto.ts",
+      "specifier": "./AgentChatDetailDto.ts",
+      "line": 3,
+      "evidence": "inferred",
+      "node": "n8774"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AgentConvSummaryDto.ts",
+      "specifier": "./AgentConvSummaryDto.ts",
+      "line": 4,
+      "evidence": "inferred",
+      "node": "n8775"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AgentIdentityDto.ts",
+      "specifier": "./AgentIdentityDto.ts",
+      "line": 5,
+      "evidence": "inferred",
+      "node": "n8776"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AgentMessageDto.ts",
+      "specifier": "./AgentMessageDto.ts",
+      "line": 6,
+      "evidence": "inferred",
+      "node": "n8777"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AgvMapResponse.ts",
+      "specifier": "./AgvMapResponse.ts",
+      "line": 7,
+      "evidence": "inferred",
+      "node": "n8778"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AgvRailResponse.ts",
+      "specifier": "./AgvRailResponse.ts",
+      "line": 8,
+      "evidence": "inferred",
+      "node": "n8779"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AgvRailSegment.ts",
+      "specifier": "./AgvRailSegment.ts",
+      "line": 9,
+      "evidence": "inferred",
+      "node": "n8780"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AlarmContactCreateRequest.ts",
+      "specifier": "./AlarmContactCreateRequest.ts",
+      "line": 10,
+      "evidence": "inferred",
+      "node": "n8781"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AlarmContactDto.ts",
+      "specifier": "./AlarmContactDto.ts",
+      "line": 11,
+      "evidence": "inferred",
+      "node": "n8782"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AlarmHistoryDto.ts",
+      "specifier": "./AlarmHistoryDto.ts",
+      "line": 12,
+      "evidence": "inferred",
+      "node": "n8783"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AlarmIdentity.ts",
+      "specifier": "./AlarmIdentity.ts",
+      "line": 13,
+      "evidence": "inferred",
+      "node": "n8784"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AlarmSseEvent.ts",
+      "specifier": "./AlarmSseEvent.ts",
+      "line": 14,
+      "evidence": "inferred",
+      "node": "n8785"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AlertDetailResponse.ts",
+      "specifier": "./AlertDetailResponse.ts",
+      "line": 15,
+      "evidence": "inferred",
+      "node": "n8786"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/models/index.ts",
+      "to": "src/api/models/AlertItem.ts",
+      "specifier": "./AlertItem.ts",
+      "line": 16,
+      "evidence": "inferred",
+      "node": "n8787"
+    }
+  ],
+  "relationsTotal": 8184,
+  "depth": 2,
+  "total": 10852,
+  "truncated": true,
+  "results": [
+    {
+      "id": "n13013",
+      "kind": "import",
+      "name": "react",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 1,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 2
+    },
+    {
+      "id": "n13014",
+      "kind": "import",
+      "name": "@/api/models/NodeRow",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 2,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 2
+    },
+    {
+      "id": "n13015",
+      "kind": "import",
+      "name": "@/pages/monitoring/fab-layout/agvRoute",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 3,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 2
+    },
+    {
+      "id": "n13016",
+      "kind": "import",
+      "name": "@/stores/fabLayoutDevStore",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 8,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 2
+    },
+    {
+      "id": "n13017",
+      "kind": "import",
+      "name": "@/stores/fabLayoutStore",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 9,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 2
+    },
+    {
+      "id": "n13018",
+      "kind": "import",
+      "name": "../styles/FabLayoutDevPanel.module.scss",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 10,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 2
+    },
+    {
+      "id": "n13019",
+      "kind": "component",
+      "name": "AgvRailDebugSection",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 19,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "inferred",
+      "exported": true,
+      "score": 2
+    },
+    {
+      "id": "n13020",
+      "kind": "symbol",
+      "name": "selectedKey",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 20,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "exported": false,
+      "score": 2
+    },
+    {
+      "id": "n13021",
+      "kind": "call",
+      "name": "useFabLayoutDevStore",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 20,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "owner": "n13020",
+      "score": 2
+    },
+    {
+      "id": "n13022",
+      "kind": "symbol",
+      "name": "setSelectedKey",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 21,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "exported": false,
+      "score": 2
+    },
+    {
+      "id": "n13023",
+      "kind": "call",
+      "name": "useFabLayoutDevStore",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 21,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "owner": "n13022",
+      "score": 2
+    },
+    {
+      "id": "n13024",
+      "kind": "symbol",
+      "name": "clearOhtAddressDebug",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 22,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "exported": false,
+      "score": 2
+    },
+    {
+      "id": "n13025",
+      "kind": "call",
+      "name": "useFabLayoutDevStore",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 22,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "owner": "n13024",
+      "score": 2
+    },
+    {
+      "id": "n13026",
+      "kind": "symbol",
+      "name": "clearSelectedVehicles",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 23,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "exported": false,
+      "score": 2
+    },
+    {
+      "id": "n13027",
+      "kind": "call",
+      "name": "useFabLayoutStore",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 23,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "owner": "n13026",
+      "score": 2
+    },
+    {
+      "id": "n13028",
+      "kind": "symbol",
+      "name": "clearSelectedAgv",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 24,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "exported": false,
+      "score": 2
+    },
+    {
+      "id": "n13029",
+      "kind": "call",
+      "name": "useFabLayoutStore",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 24,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "owner": "n13028",
+      "score": 2
+    },
+    {
+      "id": "n13030",
+      "kind": "symbol",
+      "name": "clearSelectedStation",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 25,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "exported": false,
+      "score": 2
+    },
+    {
+      "id": "n13031",
+      "kind": "call",
+      "name": "useFabLayoutStore",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 25,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "owner": "n13030",
+      "score": 2
+    },
+    {
+      "id": "n13032",
+      "kind": "symbol",
+      "name": "setSelectedRailcutKey",
+      "file": "src/features/fab-layout/components/AgvRailDebugSection.tsx",
+      "line": 26,
+      "hash": "63832efae4e9c56de54692e3b99546d7eb0f7fdbe8bfbfbb74b0e75925e3a6d1",
+      "evidence": "observed",
+      "exported": false,
+      "score": 2
+    }
+  ]
+}

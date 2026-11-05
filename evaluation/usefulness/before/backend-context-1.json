@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 2,
+  "stale": false,
+  "added": [],
+  "changed": [],
+  "deleted": [],
+  "limitations": [
+    "Syntax is observed; resolved imports, local calls, React components and HTTP boundaries are static inferences, not runtime guarantees.",
+    "Java calls resolve only unique unqualified/this methods in the same class. Overloads, receiver types, inheritance, reflection and dependency injection remain unknown.",
+    "Spring literal annotation paths and class prefixes are supported; constants, composed annotations and conditional routing remain unknown. Interface routes are not propagated.",
+    "TypeScript relative imports and local tsconfig paths/baseUrl/extends/references are supported. No external config reads, package exports, Vite aliases or runtime module resolution.",
+    "Gradle/package manifests are inventoried as evidence only, never executed. No dependency graph evaluation or complete dead-code analysis.",
+    "HTTP candidates require axios/fetch or a request config with method/url. Wrappers and dynamic URLs may be missed. Equal literal paths only suggest cross-language boundaries.",
+    "Hidden, dependency/build, generated directories, declaration files, environment/credential-like files and symlinks are excluded. Tracked generated code outside these rules may be included.",
+    "Keyword context is deterministic lexical retrieval, not semantic question answering. Source must be checked before changes."
+  ],
+  "parseErrors": 0,
+  "seedTotal": 10,
+  "unmatchedWords": [],
+  "relations": [
+    {
+      "kind": "call",
+      "from": "n1724",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 44,
+      "callee": ".getPackageName",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1725",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 45,
+      "callee": ".getPackageName",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1726",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 46,
+      "callee": ".getPackageName",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1727",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 47,
+      "callee": ".getPackageName",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1728",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 48,
+      "callee": ".getPackageName",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1729",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 49,
+      "callee": ".getPackageName",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1731",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 57,
+      "callee": "appProperties.getDatasources",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1732",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 57,
+      "callee": ".stream",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1733",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 58,
+      "callee": ".filter",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1734",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 58,
+      "callee": "DataSourceGroup.from",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1735",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 58,
+      "callee": "ds.getGroup",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1736",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 59,
+      "callee": ".map",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1737",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 60,
+      "callee": ".findFirst",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1738",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 61,
+      "callee": ".orElseThrow",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1739",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 64,
+      "callee": "vendor.setGenerateDdl",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1740",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 68,
+      "callee": "props.setProperty",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1741",
+      "to": "n1749",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 68,
+      "callee": "resolveDialect",
+      "evidence": "inferred"
+    },
+    {
+      "kind": "call",
+      "from": "n1742",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 69,
+      "callee": "props.setProperty",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1743",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 73,
+      "callee": "em.setDataSource",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n1744",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 73,
+      "callee": "hikariDataSources.get",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    }
+  ],
+  "relationsTotal": 2179,
+  "depth": 2,
+  "total": 2446,
+  "truncated": true,
+  "results": [
+    {
+      "id": "n2790",
+      "kind": "method",
+      "name": "getMetrics",
+      "file": "src/main/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringController.java",
+      "line": 33,
+      "hash": "fcb31b372fcbbf6d789a77e44b2c4770ee652fc04c5db0826ca22da948b70ff5",
+      "evidence": "observed",
+      "owner": "n2789",
+      "score": 1
+    },
+    {
+      "id": "n2793",
+      "kind": "call",
+      "name": "customMonitoringService.getMetrics",
+      "file": "src/main/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringController.java",
+      "line": 40,
+      "hash": "fcb31b372fcbbf6d789a77e44b2c4770ee652fc04c5db0826ca22da948b70ff5",
+      "evidence": "observed",
+      "owner": "n2790",
+      "classOwner": "n2789",
+      "score": 1
+    },
+    {
+      "id": "n2915",
+      "kind": "method",
+      "name": "getMetrics",
+      "file": "src/main/java/com/skhynix/amhs/amos/custommonitoring/service/CustomMonitoringService.java",
+      "line": 39,
+      "hash": "c791c811183481b80e6ad59a23aa96f5c9fee897351ab2010408d8ac5d8d8d8f",
+      "evidence": "observed",
+      "owner": "n2914",
+      "score": 1
+    },
+    {
+      "id": "n13013",
+      "kind": "method",
+      "name": "getMetrics_returns_user_metric_list",
+      "file": "src/test/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringControllerTest.java",
+      "line": 31,
+      "hash": "664af05086145892180f8f3735d63d3ab100f2f3355de165952512b89296b9c9",
+      "evidence": "observed",
+      "owner": "n13012",
+      "score": 1
+    },
+    {
+      "id": "n13015",
+      "kind": "call",
+      "name": "customMonitoringService.getMetrics",
+      "file": "src/test/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringControllerTest.java",
+      "line": 33,
+      "hash": "664af05086145892180f8f3735d63d3ab100f2f3355de165952512b89296b9c9",
+      "evidence": "observed",
+      "owner": "n13013",
+      "classOwner": "n13012",
+      "score": 1
+    },
+    {
+      "id": "n13133",
+      "kind": "method",
+      "name": "getMetrics_uses_current_user_id_from_fx_thread_local",
+      "file": "src/test/java/com/skhynix/amhs/amos/custommonitoring/service/CustomMonitoringServiceTest.java",
+      "line": 39,
+      "hash": "82e5f61a593b9f1a773a5ae9c3407313c1a0729fc9023e0c01beb5bc5c337e73",
+      "evidence": "observed",
+      "owner": "n13130",
+      "score": 1
+    },
+    {
+      "id": "n13143",
+      "kind": "call",
+      "name": "service.getMetrics",
+      "file": "src/test/java/com/skhynix/amhs/amos/custommonitoring/service/CustomMonitoringServiceTest.java",
+      "line": 48,
+      "hash": "82e5f61a593b9f1a773a5ae9c3407313c1a0729fc9023e0c01beb5bc5c337e73",
+      "evidence": "observed",
+      "owner": "n13133",
+      "classOwner": "n13130",
+      "score": 1
+    },
+    {
+      "id": "n13149",
+      "kind": "method",
+      "name": "getMetrics_keeps_same_chart_name_and_metric_separate_by_coordinate",
+      "file": "src/test/java/com/skhynix/amhs/amos/custommonitoring/service/CustomMonitoringServiceTest.java",
+      "line": 59,
+      "hash": "82e5f61a593b9f1a773a5ae9c3407313c1a0729fc9023e0c01beb5bc5c337e73",
+      "evidence": "observed",
+      "owner": "n13130",
+      "score": 1
+    },
+    {
+      "id": "n13161",
+      "kind": "call",
+      "name": "service.getMetrics",
+      "file": "src/test/java/com/skhynix/amhs/amos/custommonitoring/service/CustomMonitoringServiceTest.java",
+      "line": 69,
+      "hash": "82e5f61a593b9f1a773a5ae9c3407313c1a0729fc9023e0c01beb5bc5c337e73",
+      "evidence": "observed",
+      "owner": "n13149",
+      "classOwner": "n13130",
+      "score": 1
+    },
+    {
+      "id": "n13388",
+      "kind": "method",
+      "name": "getMetrics_returns_401_when_user_id_missing",
+      "file": "src/test/java/com/skhynix/amhs/amos/custommonitoring/service/CustomMonitoringServiceTest.java",
+      "line": 270,
+      "hash": "82e5f61a593b9f1a773a5ae9c3407313c1a0729fc9023e0c01beb5bc5c337e73",
+      "evidence": "observed",
+      "owner": "n13130",
+      "score": 1
+    },
+    {
+      "id": "n1695",
+      "kind": "package",
+      "name": "com.skhynix.amhs.amos.common.config",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 1,
+      "hash": "29402b65c2115decc90cc5304704d1bbd79c7d621083d52d5a74ca6c6c6cf792",
+      "evidence": "observed"
+    },
+    {
+      "id": "n1696",
+      "kind": "import",
+      "name": "com.skhynix.amhs.amos.common.domain.FabMappingEntity",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 3,
+      "hash": "29402b65c2115decc90cc5304704d1bbd79c7d621083d52d5a74ca6c6c6cf792",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n1697",
+      "kind": "import",
+      "name": "com.skhynix.amhs.amos.common.repository.FabMappingRepository",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 4,
+      "hash": "29402b65c2115decc90cc5304704d1bbd79c7d621083d52d5a74ca6c6c6cf792",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n1698",
+      "kind": "import",
+      "name": "com.skhynix.amhs.amos.config.persistence.AppProperties",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 5,
+      "hash": "29402b65c2115decc90cc5304704d1bbd79c7d621083d52d5a74ca6c6c6cf792",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n1699",
+      "kind": "import",
+      "name": "com.skhynix.amhs.amos.custommonitoring.model.CustomMonitoringUserAttr",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 6,
+      "hash": "29402b65c2115decc90cc5304704d1bbd79c7d621083d52d5a74ca6c6c6cf792",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n1700",
+      "kind": "import",
+      "name": "com.skhynix.amhs.amos.custommonitoring.repository.CustomMonitoringRepository",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 7,
+      "hash": "29402b65c2115decc90cc5304704d1bbd79c7d621083d52d5a74ca6c6c6cf792",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n1701",
+      "kind": "import",
+      "name": "com.skhynix.amhs.amos.datasource.DataSourceGroup",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 8,
+      "hash": "29402b65c2115decc90cc5304704d1bbd79c7d621083d52d5a74ca6c6c6cf792",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n1702",
+      "kind": "import",
+      "name": "com.skhynix.amhs.amos.datasource.DataSourceKey",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 9,
+      "hash": "29402b65c2115decc90cc5304704d1bbd79c7d621083d52d5a74ca6c6c6cf792",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n1703",
+      "kind": "import",
+      "name": "com.skhynix.amhs.amos.domain.agent.AgentConvRepository",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 10,
+      "hash": "29402b65c2115decc90cc5304704d1bbd79c7d621083d52d5a74ca6c6c6cf792",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n1704",
+      "kind": "import",
+      "name": "com.skhynix.amhs.amos.domain.agent.model.AgentConv",
+      "file": "src/main/java/com/skhynix/amhs/amos/common/config/AmosJpaConfig.java",
+      "line": 11,
+      "hash": "29402b65c2115decc90cc5304704d1bbd79c7d621083d52d5a74ca6c6c6cf792",
+      "evidence": "observed",
+      "language": "java"
+    }
+  ]
+}

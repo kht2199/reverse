@@ -1,0 +1,42 @@
+{
+  "engines": {
+    "node": ">=24.22.2"
+  },
+  "files": [
+    "AGENT_GUIDE.md",
+    "DEPENDENCIES.md",
+    "REA.md",
+    "README.md",
+    "bindings.mjs",
+    "cli-main.mjs",
+    "cli.mjs",
+    "context.mjs",
+    "engine.mjs",
+    "enrich.mjs",
+    "package.json",
+    "paths.mjs",
+    "store.mjs"
+  ],
+  "entryCount": 13,
+  "unpackedCliHelp": true,
+  "unpackedIndex": {
+    "out": "/private/var/folders/bm/5kn4tpd90vl3l9j35kk9d6k40000gn/T/reverse-package-final-8vvUdT/index.rvx",
+    "files": 1,
+    "nodes": 2,
+    "errors": 0,
+    "elapsedMs": 5,
+    "rebuildMode": "full",
+    "rebuildMs": 12,
+    "bytes": 61440,
+    "storageVersion": 3,
+    "encodingRevision": 2,
+    "roundtrip": {
+      "verified": true,
+      "integrityIssues": 0,
+      "sourceDigest": "acef8bb8891e6b7b2499fafa7b4cce45bd19e92d14e9717843f1ead9dcbb3104",
+      "restoredDigest": "acef8bb8891e6b7b2499fafa7b4cce45bd19e92d14e9717843f1ead9dcbb3104"
+    }
+  },
+  "dependencySource": "existing local node_modules symlink; no network install",
+  "remoteGitInstallTested": false
+}

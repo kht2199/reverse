@@ -1,0 +1,6 @@
+{
+  "version": "v24.0.0",
+  "status": 0,
+  "officialDigestMatched": true,
+  "scope": "complete fixture regression suite on official Node 24.0.0 arm64 Darwin"
+}

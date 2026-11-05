@@ -1,0 +1,6 @@
+[
+ {"question":"캐시 삭제 API가 어떤 서비스로 이어지나?","query":"evictCache","backend":["config/cache/CacheController.java","config/cache/CacheAdminService.java"],"frontend":[]},
+ {"question":"커스텀 모니터링 지표 조회가 어느 저장소를 사용하는가?","query":"getMetrics","backend":["custommonitoring/api/CustomMonitoringController.java","custommonitoring/service/CustomMonitoringService.java","custommonitoring/repository/CustomMonitoringRepository.java"],"frontend":[]},
+ {"question":"지표 이력 API와 프런트엔드 호출 근거를 찾는다","query":"getMetricHistory","backend":["custommonitoring/api/CustomMonitoringController.java","custommonitoring/service/CustomMonitoringService.java"],"frontend":["src/stores/customMonitoringStore.ts","src/api/clients/customMonitoringController/getCustomMonitoringMetricHistory.ts"]},
+ {"question":"fab layout 조회의 UI hook과 API 서비스는?","query":"fab-layout layout","backend":["fablayout/api/FabLayoutController.java","fablayout/service/FabLayoutService.java"],"frontend":["src/pages/monitoring/fab-layout/useFabLayout.ts"]}
+]

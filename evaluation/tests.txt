@@ -1,16 +1,43 @@
-✔ CST routes use annotations, combine class path/method arrays; local calls remain qualified unknown (37.780333ms)
-✔ TS alias, exports and HTTP positives/negatives (4.065417ms)
-✔ updates, config staleness, deleted files and exclusions (5.790208ms)
-✔ CLI limits, stale strings, bounded expansion, output guard and boundary (3995.490458ms)
-✔ parse failures are explicit; no invented routes from comments or strings (5.118125ms)
-✔ local tsconfig extends works, external/symlink configs are never loaded; ambiguous aliases stay unknown (8.985875ms)
-✔ REA optional plan never installs or executes; missing and present binary paths (717.214541ms)
-✔ all command helps describe source verification and offline stages (3229.972125ms)
-ℹ tests 8
+npm notice run reverse-static-cli@0.1.0 test
+npm notice run node --test
+✔ R1 field lambda/initializer/static/instance blocks preserve shadow evidence without method owner (15.228584ms)
+✔ R2 axios post/put/patch body method/url/spread do not override transport arguments (6.700583ms)
+✔ R3 default search/flow insensitive raw-substring matches equal --all for loadall and svc.loadall (6027.098417ms)
+✔ R4 failed temp DB and sidecars are removed while the prior baseline survives (26.15825ms)
+✔ R5 runtime baseline uses tested Node 24.0.0 floor rather than developer patch (0.165375ms)
+✔ R6 context crossLanguage carries the same conditional classification as boundary (769.417042ms)
+✔ CST routes use annotations, combine class path/method arrays; local calls remain qualified unknown (41.84475ms)
+✔ TS alias, exports and HTTP positives/negatives (6.276959ms)
+✔ updates, config staleness, deleted files and exclusions (10.459791ms)
+✔ CLI limits, stale strings, bounded expansion, output guard and boundary (4207.881333ms)
+✔ parse failures are explicit; no invented routes from comments or strings (6.190458ms)
+✔ local tsconfig extends works, external/symlink configs are never loaded; ambiguous aliases stay unknown (11.476333ms)
+✔ REA optional plan never installs or executes; missing and present binary paths (704.314792ms)
+✔ all command helps describe source verification and offline stages (3449.579ms)
+✔ declared field type chains have evidence; same-arity overloads, shadowing and external receivers stay unknown (5.748375ms)
+✔ URL constant/helper tracing is inert, symbolic paths are labelled, mutable and side-effect helpers unknown (5.084667ms)
+✔ compact storage roundtrip, selective load, smaller than expanded JSON and refresh correctness (137.493708ms)
+✔ all-mode and pagination enumerate exactly every stored node/edge/module, empty differs from unparsed (15418.597166ms)
+✔ H1 lexical destructuring, for-of, catch and destructured locals shadow outer URLs (9.834125ms)
+✔ H2 imported let and mutable/escaping object properties remain unknown (3.558833ms)
+✔ H3 inherited overloads and lambda/catch receivers do not resolve to field declarations (11.207291ms)
+✔ H4 default reverse-call context reaches caller of caller at depth two (802.998417ms)
+✔ M1 default search and flow see all 40 matching files before output paging (799.150583ms)
+✔ M2 400 parse failures return bounded metadata with exact totals (496.060959ms)
+✔ M3 helper arguments cannot substitute identifiers inside outer constant definitions (2.051792ms)
+✔ M4 imported calls shadowed by parameters/destructuring do not link (1.316ms)
+✔ M5 anonymous class methods have distinct owner and never become outer service methods (2.048292ms)
+✔ M6 config spread is a conditional pathname candidate, never an effective literal path (1.01175ms)
+✔ L1 case-alias and symlink output parents inside root are rejected before writing (743.77425ms)
+✔ L2 external imports and imported calls have kind-specific unknown reasons (2.297542ms)
+✔ L3 roundtrip compares actual fields, null/empty presence, proofs and unknown reasons (14.472667ms)
+✔ L4 engines, distributable modules and friendly unsupported-Node startup (33.419834ms)
+✔ UA small improvement: dangling edges fail validation; failed roundtrip leaves prior baseline byte-identical (24.518792ms)
+ℹ tests 33
 ℹ suites 0
-ℹ pass 8
+ℹ pass 33
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 8390.022084
+ℹ duration_ms 24406.064459

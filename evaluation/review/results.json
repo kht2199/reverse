@@ -1,0 +1,259 @@
+{
+  "reviewSource": "evaluation/review/opus-review.txt",
+  "items": {
+    "H1": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "destructured parameter/local, for-of, catch가 outer URL로 오판됨",
+      "change": "declaration identity와 lexical scope binding을 수집한다. initializer 없는 binding도 outer lookup을 막는다."
+    },
+    "H2": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "export let, Object.assign, 다른 파일의 객체 변경이 literal로 오판됨",
+      "change": "import의 const/변경 여부도 검사하고 일반 object property는 escape/heap 효과를 증명하지 못하면 unknown이다. 순수 helper 내부 fresh local object만 허용한다."
+    },
+    "H3": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "상속 overload와 lambda/catch가 필드 메서드로 오판됨",
+      "change": "같은 이름의 inherited method/override 또는 해석 불가 ancestor가 있으면 unknown. lambda/catch 가려짐도 포함한다. 실제 overload type 선택은 미구현이다."
+    },
+    "H4": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "Repo 질문 depth 2의 기본 context에서 Ctl이 빠짐",
+      "change": "선택 로딩 BFS가 incoming call destination도 확장한다. 못 로드한 source 관계도 버리지 않고 근거/부분 범위를 남긴다."
+    },
+    "M1": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "40파일 search/flow가 total 24와 잘림 없음으로 응답",
+      "change": "search/flow의 seed-file cap을 제거했다. query 일치 scope에서 건수 페이징하고 totalIsExact/scopeTruncated를 표시한다. flow는 역방향과 boundary node도 표시한다."
+    },
+    "M2": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "400개 parse failure에서 기본 context가 예산 오류로 실패",
+      "change": "coverage/state 배열은 정확한 Total/Truncated를 남기고 바이트 예산 안의 표본으로 줄인다. --all에는 이 축약이 없다."
+    },
+    "M3": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "helper 인수가 outer const의 동일 이름에 새어 들어감",
+      "change": "평가 환경을 이름이 아닌 binding record로 keying한다. outer const id는 helper parameter id와 다른 declaration이다."
+    },
+    "M4": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "import 함수와 같은 이름의 parameter 호출이 import로 연결됨",
+      "change": "호출 대상도 URL과 동일한 lexical binding으로 검사한다. shadow/mutable/unknown binding은 연결하지 않는다."
+    },
+    "M5": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "익명 클래스 메서드가 outer Svc의 소유로 기록됨",
+      "change": "익명 클래스 별도 type/owner와 상위 타입을 기록한다. outer service의 method 후보로 섞지 않는다."
+    },
+    "M6": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "request config spread가 있는데도 literal로 분류",
+      "change": "pathResolution=conditional, requestOverrideUnknown=true, effectivePath=null로 표시한다. path는 선언 식 후보이며 실제 적용 경로가 아니다."
+    },
+    "L1": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "대소문자 alias로 대상 내부 출력이 가능",
+      "change": "safeOutput은 기존 조상 경로의 dev/inode를 비교한다. index와 rea-plan 모두 case/symlink 별칭을 쓰지 못한다. concurrent path substitution까지 방지하는 보안 경계는 아니다."
+    },
+    "L2": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "Java 외부 import와 React 외부 호출이 overload 이유로 분류",
+      "change": "import/call/global/external/member/shadow 등 종류별 unknown 이유로 분리했다."
+    },
+    "L3": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "count만 같고 candidates/owner/file/callee 존재 의미가 바뀜",
+      "change": "encodingRevision=2에서 필드 존재/빈 값/null을 보존한다. 원본 analyze graph의 의미 SHA와 temp DB 복원 SHA가 같고 참조 무결성이 통과해야만 기존 인덱스를 교체한다."
+    },
+    "L4": {
+      "status": "fixed-awaiting-independent-rereview",
+      "reproducedBefore": true,
+      "regressionPassed": true,
+      "problem": "신규 runtime untracked 및 Node/설치 문서 불일치",
+      "change": "필수 runtime 파일을 stage하고 files allowlist/engines >=24.0.0(실제 Node floor 회귀 확인)/SQLite 이전 bootstrap을 추가했다. 로컬 npm pack 해제 후 help/index 확인. 원격 Git 설치·commit/push는 하지 않았다."
+    }
+  },
+  "repositories": {
+    "backend": {
+      "before": {
+        "sourceFiles": 512,
+        "parseErrors": 0,
+        "nodes": 27279,
+        "edges": 22790,
+        "calls": 18901,
+        "resolvedCalls": 3077,
+        "apis": 0,
+        "pathCandidates": 0,
+        "unknownPaths": 0,
+        "pathClassifications": {},
+        "literalWithOverride": 0,
+        "conditionalWithOverride": 0,
+        "unknownCallReasons": [
+          {
+            "reason": "external, inherited, chained or unresolved receiver/method",
+            "count": 15792
+          },
+          {
+            "reason": "receiver shadowed by parameter/local; no safe binding",
+            "count": 5
+          },
+          {
+            "reason": "ambiguous overload by name/arity",
+            "count": 27
+          }
+        ]
+      },
+      "after": {
+        "sourceFiles": 512,
+        "parseErrors": 0,
+        "nodes": 27284,
+        "edges": 22790,
+        "calls": 18901,
+        "resolvedCalls": 2946,
+        "apis": 0,
+        "pathCandidates": 0,
+        "unknownPaths": 0,
+        "pathClassifications": {},
+        "literalWithOverride": 0,
+        "conditionalWithOverride": 0,
+        "unknownCallReasons": [
+          {
+            "reason": "external, inherited, chained or unresolved receiver/method",
+            "count": 15704
+          },
+          {
+            "reason": "receiver shadowed by parameter/local; no safe binding",
+            "count": 5
+          },
+          {
+            "reason": "ambiguous overload by name/arity",
+            "count": 27
+          },
+          {
+            "reason": "inherited overload/override or unresolved ancestor; method selection unknown",
+            "count": 219
+          }
+        ]
+      },
+      "withdrawnConnections": 131,
+      "newConnections": 0,
+      "bytesBefore": 4206592,
+      "bytesAfter": 4382720,
+      "sourceSnapshotsEqual": true,
+      "integrityIssues": [],
+      "sourceDigest": "5cbf1145d6cccf77366005fa3d47ad38e0473574ad881329536d298e3836e442",
+      "restoredDigest": "5cbf1145d6cccf77366005fa3d47ad38e0473574ad881329536d298e3836e442",
+      "roundtripVerified": true
+    },
+    "frontend": {
+      "before": {
+        "sourceFiles": 1169,
+        "parseErrors": 0,
+        "nodes": 35617,
+        "edges": 25587,
+        "calls": 20620,
+        "resolvedCalls": 4656,
+        "apis": 182,
+        "pathCandidates": 174,
+        "unknownPaths": 8,
+        "pathClassifications": {
+          "legacy-unclassified": 8,
+          "symbolic": 51,
+          "literal": 123
+        },
+        "literalWithOverride": 115,
+        "conditionalWithOverride": 0,
+        "unknownCallReasons": [
+          {
+            "reason": "dynamic receiver, chained expression or unresolved static target",
+            "count": 10222
+          },
+          {
+            "reason": "overload or unknown receiver/target",
+            "count": 5742
+          }
+        ]
+      },
+      "after": {
+        "sourceFiles": 1169,
+        "parseErrors": 0,
+        "nodes": 35617,
+        "edges": 25587,
+        "calls": 20620,
+        "resolvedCalls": 3849,
+        "apis": 182,
+        "pathCandidates": 175,
+        "unknownPaths": 7,
+        "pathClassifications": {
+          "unknown": 7,
+          "conditional": 160,
+          "symbolic": 7,
+          "literal": 8
+        },
+        "literalWithOverride": 0,
+        "conditionalWithOverride": 160,
+        "unknownCallReasons": [
+          {
+            "reason": "unmodelled receiver/property call",
+            "count": 7998
+          },
+          {
+            "reason": "global/external function or ambiguous lexical binding",
+            "count": 2554
+          },
+          {
+            "reason": "external import or unresolved imported function",
+            "count": 4871
+          },
+          {
+            "reason": "shadowing/mutable binding is not a known function declaration",
+            "count": 1290
+          },
+          {
+            "reason": "unresolved or ambiguous function declaration",
+            "count": 58
+          }
+        ]
+      },
+      "withdrawnConnections": 847,
+      "newConnections": 40,
+      "bytesBefore": 5304320,
+      "bytesAfter": 6377472,
+      "sourceSnapshotsEqual": true,
+      "integrityIssues": [],
+      "sourceDigest": "82e8983173065a309b88d21f8f808f4ab27064dab3d7a626ab3de63befea578d",
+      "restoredDigest": "82e8983173065a309b88d21f8f808f4ab27064dab3d7a626ab3de63befea578d",
+      "roundtripVerified": true
+    }
+  },
+  "independentRereview": "pending user Opus session",
+  "incremental": "not implemented; full rebuild",
+  "tokenOrTaskSavingsClaim": false
+}

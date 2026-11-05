@@ -1,0 +1,325 @@
+{
+  "backend": {
+    "roundtrip": {
+      "sourceDigest": "5cbf1145d6cccf77366005fa3d47ad38e0473574ad881329536d298e3836e442",
+      "restoredDigest": "5cbf1145d6cccf77366005fa3d47ad38e0473574ad881329536d298e3836e442",
+      "verified": true,
+      "contract": "materialized-json-v2-exact-fields"
+    },
+    "dump": {
+      "records": 50074,
+      "nodes": 27284,
+      "edges": 22790,
+      "unknownCalls": 15955,
+      "unknownApiPaths": 0,
+      "bytes": 21573159,
+      "tokenEstimate": 5393290,
+      "wallMs": 866
+    },
+    "map": {
+      "modules": 99,
+      "edges": 212,
+      "bytes": 33232,
+      "wallMs": 550
+    },
+    "coverage": {
+      "sourceFiles": 512,
+      "configFiles": 7,
+      "parseFailureFiles": [],
+      "excludedEntries": [
+        {
+          "path": ".git",
+          "kind": "directory",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": ".gitattributes",
+          "kind": "file",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": ".gitignore",
+          "kind": "file",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": ".gitsecret",
+          "kind": "directory",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": ".gradle",
+          "kind": "directory",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": ".superpowers",
+          "kind": "directory",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": "build",
+          "kind": "directory",
+          "reason": "dependency/build/generated/vendor",
+          "descendantsCounted": false
+        },
+        {
+          "path": "datasource-common/build",
+          "kind": "directory",
+          "reason": "dependency/build/generated/vendor",
+          "descendantsCounted": false
+        },
+        {
+          "path": "datasource-core/build",
+          "kind": "directory",
+          "reason": "dependency/build/generated/vendor",
+          "descendantsCounted": false
+        },
+        {
+          "path": "mongo-common/build",
+          "kind": "directory",
+          "reason": "dependency/build/generated/vendor",
+          "descendantsCounted": false
+        },
+        {
+          "path": "node_modules",
+          "kind": "directory",
+          "reason": "dependency/build/generated/vendor",
+          "descendantsCounted": false
+        },
+        {
+          "path": "observability-logging/build",
+          "kind": "directory",
+          "reason": "dependency/build/generated/vendor",
+          "descendantsCounted": false
+        },
+        {
+          "path": "tibco-broker/build",
+          "kind": "directory",
+          "reason": "dependency/build/generated/vendor",
+          "descendantsCounted": false
+        }
+      ],
+      "excludedCounts": [
+        {
+          "reason": "hidden/environment",
+          "count": 6
+        },
+        {
+          "reason": "dependency/build/generated/vendor",
+          "count": 7
+        }
+      ],
+      "excludedDescendants": "not traversed; descendant file counts unknown",
+      "unknownCalls": 15955,
+      "unknownCallReasons": [
+        {
+          "reason": "external, inherited, chained or unresolved receiver/method",
+          "count": 15704
+        },
+        {
+          "reason": "receiver shadowed by parameter/local; no safe binding",
+          "count": 5
+        },
+        {
+          "reason": "ambiguous overload by name/arity",
+          "count": 27
+        },
+        {
+          "reason": "inherited overload/override or unresolved ancestor; method selection unknown",
+          "count": 219
+        }
+      ],
+      "unknownApiPaths": 0,
+      "unknownApiReasons": []
+    }
+  },
+  "frontend": {
+    "roundtrip": {
+      "sourceDigest": "82e8983173065a309b88d21f8f808f4ab27064dab3d7a626ab3de63befea578d",
+      "restoredDigest": "82e8983173065a309b88d21f8f808f4ab27064dab3d7a626ab3de63befea578d",
+      "verified": true,
+      "contract": "materialized-json-v2-exact-fields"
+    },
+    "dump": {
+      "records": 61204,
+      "nodes": 35617,
+      "edges": 25587,
+      "unknownCalls": 16771,
+      "unknownApiPaths": 7,
+      "bytes": 22062092,
+      "tokenEstimate": 5515523,
+      "wallMs": 1125
+    },
+    "map": {
+      "modules": 185,
+      "edges": 375,
+      "bytes": 46024,
+      "wallMs": 583
+    },
+    "coverage": {
+      "sourceFiles": 1169,
+      "configFiles": 4,
+      "parseFailureFiles": [],
+      "excludedEntries": [
+        {
+          "path": ".claude",
+          "kind": "directory",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": ".env.dev",
+          "kind": "file",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": ".env.local",
+          "kind": "file",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": ".env.production",
+          "kind": "file",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": ".git",
+          "kind": "directory",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": ".gitattributes",
+          "kind": "file",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": ".gitignore",
+          "kind": "file",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": ".kubb",
+          "kind": "directory",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": ".superpowers",
+          "kind": "directory",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": "dist",
+          "kind": "directory",
+          "reason": "dependency/build/generated/vendor",
+          "descendantsCounted": false
+        },
+        {
+          "path": "node_modules",
+          "kind": "directory",
+          "reason": "dependency/build/generated/vendor",
+          "descendantsCounted": false
+        },
+        {
+          "path": "src/api/.kubb",
+          "kind": "directory",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        },
+        {
+          "path": "src/types/index.d.ts",
+          "kind": "file",
+          "reason": "declaration file",
+          "descendantsCounted": false
+        },
+        {
+          "path": "src/vite-env.d.ts",
+          "kind": "file",
+          "reason": "declaration file",
+          "descendantsCounted": false
+        },
+        {
+          "path": "test-results/.last-run.json",
+          "kind": "file",
+          "reason": "hidden/environment",
+          "descendantsCounted": false
+        }
+      ],
+      "excludedCounts": [
+        {
+          "reason": "hidden/environment",
+          "count": 11
+        },
+        {
+          "reason": "dependency/build/generated/vendor",
+          "count": 2
+        },
+        {
+          "reason": "declaration file",
+          "count": 2
+        }
+      ],
+      "excludedDescendants": "not traversed; descendant file counts unknown",
+      "unknownCalls": 16771,
+      "unknownCallReasons": [
+        {
+          "reason": "unmodelled receiver/property call",
+          "count": 7998
+        },
+        {
+          "reason": "global/external function or ambiguous lexical binding",
+          "count": 2554
+        },
+        {
+          "reason": "external import or unresolved imported function",
+          "count": 4871
+        },
+        {
+          "reason": "shadowing/mutable binding is not a known function declaration",
+          "count": 1290
+        },
+        {
+          "reason": "unresolved or ambiguous function declaration",
+          "count": 58
+        }
+      ],
+      "unknownApiPaths": 7,
+      "unknownApiReasons": [
+        {
+          "reason": "unsupported function event.request.clone",
+          "count": 1
+        },
+        {
+          "reason": "dynamic template expression",
+          "count": 2
+        },
+        {
+          "reason": "no safe absolute API pathname",
+          "count": 2
+        },
+        {
+          "reason": "unsupported or shadowing parameter binding url",
+          "count": 1
+        },
+        {
+          "reason": "helper has control flow or side effects",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

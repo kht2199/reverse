@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 2,
+  "stale": false,
+  "added": [],
+  "changed": [],
+  "deleted": [],
+  "limitations": [
+    "Syntax is observed; resolved imports, local calls, React components and HTTP boundaries are static inferences, not runtime guarantees.",
+    "Java calls resolve only unique unqualified/this methods in the same class. Overloads, receiver types, inheritance, reflection and dependency injection remain unknown.",
+    "Spring literal annotation paths and class prefixes are supported; constants, composed annotations and conditional routing remain unknown. Interface routes are not propagated.",
+    "TypeScript relative imports and local tsconfig paths/baseUrl/extends/references are supported. No external config reads, package exports, Vite aliases or runtime module resolution.",
+    "Gradle/package manifests are inventoried as evidence only, never executed. No dependency graph evaluation or complete dead-code analysis.",
+    "HTTP candidates require axios/fetch or a request config with method/url. Wrappers and dynamic URLs may be missed. Equal literal paths only suggest cross-language boundaries.",
+    "Hidden, dependency/build, generated directories, declaration files, environment/credential-like files and symlinks are excluded. Tracked generated code outside these rules may be included.",
+    "Keyword context is deterministic lexical retrieval, not semantic question answering. Source must be checked before changes."
+  ],
+  "parseErrors": 0,
+  "seedTotal": 38,
+  "unmatchedWords": [],
+  "relations": [
+    {
+      "kind": "import",
+      "from": "src/api/clients/metricController/getMetricRangeStats.ts",
+      "to": null,
+      "specifier": "@kubb/plugin-client/clients/axios",
+      "line": 6,
+      "evidence": "unknown",
+      "node": "n3821",
+      "reason": "external, excluded, ambiguous config or missing target"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/metricController/getMetricRangeStats.ts",
+      "to": "src/api/models/metricController/GetMetricRangeStats.ts",
+      "specifier": "../../models/metricController/GetMetricRangeStats.ts",
+      "line": 7,
+      "evidence": "inferred",
+      "node": "n3822"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/metricController/getMetricRangeStats.ts",
+      "to": null,
+      "specifier": "@kubb/plugin-client/clients/axios",
+      "line": 8,
+      "evidence": "unknown",
+      "node": "n3823",
+      "reason": "external, excluded, ambiguous config or missing target"
+    },
+    {
+      "kind": "call",
+      "from": "n3829",
+      "to": null,
+      "file": "src/api/clients/metricController/getMetricRangeStats.ts",
+      "line": 25,
+      "callee": "request",
+      "evidence": "unknown",
+      "reason": "overload or unknown receiver/target"
+    },
+    {
+      "kind": "call",
+      "from": "n3831",
+      "to": null,
+      "file": "src/api/clients/metricController/getMetricRangeStats.ts",
+      "line": 25,
+      "callee": "getGetMetricRangeStatsUrl().url.toString",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n3832",
+      "to": "n3824",
+      "file": "src/api/clients/metricController/getMetricRangeStats.ts",
+      "line": 25,
+      "callee": "getGetMetricRangeStatsUrl",
+      "evidence": "inferred"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/metricController/getMetricStats.ts",
+      "to": null,
+      "specifier": "@kubb/plugin-client/clients/axios",
+      "line": 6,
+      "evidence": "unknown",
+      "node": "n3833",
+      "reason": "external, excluded, ambiguous config or missing target"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/metricController/getMetricStats.ts",
+      "to": "src/api/models/metricController/GetMetricStats.ts",
+      "specifier": "../../models/metricController/GetMetricStats.ts",
+      "line": 7,
+      "evidence": "inferred",
+      "node": "n3834"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/metricController/getMetricStats.ts",
+      "to": null,
+      "specifier": "@kubb/plugin-client/clients/axios",
+      "line": 8,
+      "evidence": "unknown",
+      "node": "n3835",
+      "reason": "external, excluded, ambiguous config or missing target"
+    },
+    {
+      "kind": "call",
+      "from": "n3841",
+      "to": null,
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 25,
+      "callee": "request",
+      "evidence": "unknown",
+      "reason": "overload or unknown receiver/target"
+    },
+    {
+      "kind": "call",
+      "from": "n3843",
+      "to": null,
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 25,
+      "callee": "getGetMetricStatsUrl().url.toString",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n3844",
+      "to": "n3836",
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 25,
+      "callee": "getGetMetricStatsUrl",
+      "evidence": "inferred"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/metricController/index.ts",
+      "to": "src/api/clients/metricController/getMetricRangeStats.ts",
+      "specifier": "./getMetricRangeStats.ts",
+      "line": 1,
+      "evidence": "inferred",
+      "node": "n3845"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/clients/metricController/index.ts",
+      "to": "src/api/clients/metricController/getMetricStats.ts",
+      "specifier": "./getMetricStats.ts",
+      "line": 2,
+      "evidence": "inferred",
+      "node": "n3846"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/hooks/metricController/index.ts",
+      "to": "src/api/hooks/metricController/useGetMetricRangeStats.ts",
+      "specifier": "./useGetMetricRangeStats.ts",
+      "line": 1,
+      "evidence": "inferred",
+      "node": "n7370"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/hooks/metricController/index.ts",
+      "to": "src/api/hooks/metricController/useGetMetricStats.ts",
+      "specifier": "./useGetMetricStats.ts",
+      "line": 2,
+      "evidence": "inferred",
+      "node": "n7371"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/hooks/metricController/index.ts",
+      "to": "src/api/hooks/metricController/useGetMetricRangeStats.ts",
+      "specifier": "./useGetMetricRangeStats.ts",
+      "line": 3,
+      "evidence": "inferred",
+      "node": "n7372"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/hooks/metricController/index.ts",
+      "to": "src/api/hooks/metricController/useGetMetricRangeStats.ts",
+      "specifier": "./useGetMetricRangeStats.ts",
+      "line": 4,
+      "evidence": "inferred",
+      "node": "n7373"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/hooks/metricController/index.ts",
+      "to": "src/api/hooks/metricController/useGetMetricRangeStats.ts",
+      "specifier": "./useGetMetricRangeStats.ts",
+      "line": 5,
+      "evidence": "inferred",
+      "node": "n7374"
+    },
+    {
+      "kind": "import",
+      "from": "src/api/hooks/metricController/index.ts",
+      "to": "src/api/hooks/metricController/useGetMetricStats.ts",
+      "specifier": "./useGetMetricStats.ts",
+      "line": 6,
+      "evidence": "inferred",
+      "node": "n7375"
+    }
+  ],
+  "relationsTotal": 50,
+  "depth": 2,
+  "total": 78,
+  "truncated": true,
+  "results": [
+    {
+      "id": "n3833",
+      "kind": "import",
+      "name": "@kubb/plugin-client/clients/axios",
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 6,
+      "hash": "8fbd0af57e6a90c05f8d3d9a3cbd4e03d13a049a4f9d7321ca4c77afa5146b5b",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n3834",
+      "kind": "import",
+      "name": "../../models/metricController/GetMetricStats.ts",
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 7,
+      "hash": "8fbd0af57e6a90c05f8d3d9a3cbd4e03d13a049a4f9d7321ca4c77afa5146b5b",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n3835",
+      "kind": "import",
+      "name": "@kubb/plugin-client/clients/axios",
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 8,
+      "hash": "8fbd0af57e6a90c05f8d3d9a3cbd4e03d13a049a4f9d7321ca4c77afa5146b5b",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n3836",
+      "kind": "symbol",
+      "name": "getGetMetricStatsUrl",
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 10,
+      "hash": "8fbd0af57e6a90c05f8d3d9a3cbd4e03d13a049a4f9d7321ca4c77afa5146b5b",
+      "evidence": "observed",
+      "exported": false,
+      "score": 1
+    },
+    {
+      "id": "n3837",
+      "kind": "symbol",
+      "name": "res",
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 11,
+      "hash": "8fbd0af57e6a90c05f8d3d9a3cbd4e03d13a049a4f9d7321ca4c77afa5146b5b",
+      "evidence": "observed",
+      "exported": false,
+      "score": 1
+    },
+    {
+      "id": "n3838",
+      "kind": "symbol",
+      "name": "getMetricStats",
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 20,
+      "hash": "8fbd0af57e6a90c05f8d3d9a3cbd4e03d13a049a4f9d7321ca4c77afa5146b5b",
+      "evidence": "observed",
+      "exported": true,
+      "score": 1
+    },
+    {
+      "id": "n3839",
+      "kind": "symbol",
+      "name": "{ client: request = fetch, ...requestConfig }",
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 21,
+      "hash": "8fbd0af57e6a90c05f8d3d9a3cbd4e03d13a049a4f9d7321ca4c77afa5146b5b",
+      "evidence": "observed",
+      "exported": false,
+      "score": 1
+    },
+    {
+      "id": "n3840",
+      "kind": "symbol",
+      "name": "res",
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 25,
+      "hash": "8fbd0af57e6a90c05f8d3d9a3cbd4e03d13a049a4f9d7321ca4c77afa5146b5b",
+      "evidence": "observed",
+      "exported": false,
+      "score": 1
+    },
+    {
+      "id": "n3841",
+      "kind": "call",
+      "name": "request",
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 25,
+      "hash": "8fbd0af57e6a90c05f8d3d9a3cbd4e03d13a049a4f9d7321ca4c77afa5146b5b",
+      "evidence": "observed",
+      "owner": "n3840",
+      "score": 1
+    },
+    {
+      "id": "n3842",
+      "kind": "api-candidate",
+      "name": "request",
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 25,
+      "hash": "8fbd0af57e6a90c05f8d3d9a3cbd4e03d13a049a4f9d7321ca4c77afa5146b5b",
+      "evidence": "inferred",
+      "httpMethod": "GET",
+      "path": null,
+      "expression": "request<GetMetricStatsQueryResponse, ResponseErrorConfig<Error>, unknown>({ method : \"GET\", url : getGetMetricStatsUrl().url.toString(), ... requestConfig })",
+      "score": 1
+    },
+    {
+      "id": "n3843",
+      "kind": "call",
+      "name": "getGetMetricStatsUrl().url.toString",
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 25,
+      "hash": "8fbd0af57e6a90c05f8d3d9a3cbd4e03d13a049a4f9d7321ca4c77afa5146b5b",
+      "evidence": "observed",
+      "owner": "n3840",
+      "score": 1
+    },
+    {
+      "id": "n3844",
+      "kind": "call",
+      "name": "getGetMetricStatsUrl",
+      "file": "src/api/clients/metricController/getMetricStats.ts",
+      "line": 25,
+      "hash": "8fbd0af57e6a90c05f8d3d9a3cbd4e03d13a049a4f9d7321ca4c77afa5146b5b",
+      "evidence": "observed",
+      "owner": "n3840",
+      "score": 1
+    },
+    {
+      "id": "n3846",
+      "kind": "export",
+      "name": "./getMetricStats.ts",
+      "file": "src/api/clients/metricController/index.ts",
+      "line": 2,
+      "hash": "452833ff2862e805ddfc923074b5472e587fed57823c676efea9e964b1d4c50f",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n7371",
+      "kind": "export",
+      "name": "./useGetMetricStats.ts",
+      "file": "src/api/hooks/metricController/index.ts",
+      "line": 2,
+      "hash": "4179cec9e4aaf89ae5f229a79571263201ce98bcfb4697d9719294e5839ff739",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n7375",
+      "kind": "export",
+      "name": "./useGetMetricStats.ts",
+      "file": "src/api/hooks/metricController/index.ts",
+      "line": 6,
+      "hash": "4179cec9e4aaf89ae5f229a79571263201ce98bcfb4697d9719294e5839ff739",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n7376",
+      "kind": "export",
+      "name": "./useGetMetricStats.ts",
+      "file": "src/api/hooks/metricController/index.ts",
+      "line": 7,
+      "hash": "4179cec9e4aaf89ae5f229a79571263201ce98bcfb4697d9719294e5839ff739",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n7377",
+      "kind": "export",
+      "name": "./useGetMetricStats.ts",
+      "file": "src/api/hooks/metricController/index.ts",
+      "line": 8,
+      "hash": "4179cec9e4aaf89ae5f229a79571263201ce98bcfb4697d9719294e5839ff739",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n7397",
+      "kind": "import",
+      "name": "../../models/metricController/GetMetricStats.ts",
+      "file": "src/api/hooks/metricController/useGetMetricStats.ts",
+      "line": 6,
+      "hash": "7fa7f730e7cd2ff85c2aaca4de8d0c28eca145d37072ae3772319008d8cd38fa",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n7398",
+      "kind": "import",
+      "name": "@kubb/plugin-client/clients/axios",
+      "file": "src/api/hooks/metricController/useGetMetricStats.ts",
+      "line": 7,
+      "hash": "7fa7f730e7cd2ff85c2aaca4de8d0c28eca145d37072ae3772319008d8cd38fa",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    },
+    {
+      "id": "n7399",
+      "kind": "import",
+      "name": "@tanstack/react-query",
+      "file": "src/api/hooks/metricController/useGetMetricStats.ts",
+      "line": 8,
+      "hash": "7fa7f730e7cd2ff85c2aaca4de8d0c28eca145d37072ae3772319008d8cd38fa",
+      "evidence": "observed",
+      "language": "typescript",
+      "score": 1
+    }
+  ]
+}

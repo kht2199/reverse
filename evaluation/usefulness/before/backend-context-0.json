@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 2,
+  "stale": false,
+  "added": [],
+  "changed": [],
+  "deleted": [],
+  "limitations": [
+    "Syntax is observed; resolved imports, local calls, React components and HTTP boundaries are static inferences, not runtime guarantees.",
+    "Java calls resolve only unique unqualified/this methods in the same class. Overloads, receiver types, inheritance, reflection and dependency injection remain unknown.",
+    "Spring literal annotation paths and class prefixes are supported; constants, composed annotations and conditional routing remain unknown. Interface routes are not propagated.",
+    "TypeScript relative imports and local tsconfig paths/baseUrl/extends/references are supported. No external config reads, package exports, Vite aliases or runtime module resolution.",
+    "Gradle/package manifests are inventoried as evidence only, never executed. No dependency graph evaluation or complete dead-code analysis.",
+    "HTTP candidates require axios/fetch or a request config with method/url. Wrappers and dynamic URLs may be missed. Equal literal paths only suggest cross-language boundaries.",
+    "Hidden, dependency/build, generated directories, declaration files, environment/credential-like files and symlinks are excluded. Tracked generated code outside these rules may be included.",
+    "Keyword context is deterministic lexical retrieval, not semantic question answering. Source must be checked before changes."
+  ],
+  "parseErrors": 0,
+  "seedTotal": 1,
+  "unmatchedWords": [],
+  "relations": [
+    {
+      "kind": "call",
+      "from": "n2257",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 23,
+      "callee": "cacheAdminService.evict",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n2258",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 24,
+      "callee": "ResponseEntity.noContent",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "call",
+      "from": "n2259",
+      "to": null,
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 24,
+      "callee": ".build",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "import",
+      "from": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "to": null,
+      "line": 3,
+      "specifier": "io.swagger.v3.oas.annotations.Operation",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "import",
+      "from": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "to": null,
+      "line": 4,
+      "specifier": "io.swagger.v3.oas.annotations.tags.Tag",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "import",
+      "from": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "to": null,
+      "line": 5,
+      "specifier": "lombok.RequiredArgsConstructor",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "import",
+      "from": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "to": null,
+      "line": 6,
+      "specifier": "org.springframework.http.ResponseEntity",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "import",
+      "from": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "to": null,
+      "line": 7,
+      "specifier": "org.springframework.web.bind.annotation.DeleteMapping",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "import",
+      "from": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "to": null,
+      "line": 8,
+      "specifier": "org.springframework.web.bind.annotation.PathVariable",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "import",
+      "from": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "to": null,
+      "line": 9,
+      "specifier": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    },
+    {
+      "kind": "import",
+      "from": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "to": null,
+      "line": 10,
+      "specifier": "org.springframework.web.bind.annotation.RestController",
+      "evidence": "unknown",
+      "reason": "dynamic receiver, chained expression or unresolved static target"
+    }
+  ],
+  "relationsTotal": 11,
+  "depth": 2,
+  "total": 15,
+  "truncated": false,
+  "results": [
+    {
+      "id": "n2255",
+      "kind": "method",
+      "name": "evictCache",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 20,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "owner": "n2254",
+      "score": 1
+    },
+    {
+      "id": "n2245",
+      "kind": "package",
+      "name": "com.skhynix.amhs.amos.config.cache",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 1,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed"
+    },
+    {
+      "id": "n2246",
+      "kind": "import",
+      "name": "io.swagger.v3.oas.annotations.Operation",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 3,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n2247",
+      "kind": "import",
+      "name": "io.swagger.v3.oas.annotations.tags.Tag",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 4,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n2248",
+      "kind": "import",
+      "name": "lombok.RequiredArgsConstructor",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 5,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n2249",
+      "kind": "import",
+      "name": "org.springframework.http.ResponseEntity",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 6,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n2250",
+      "kind": "import",
+      "name": "org.springframework.web.bind.annotation.DeleteMapping",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 7,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n2251",
+      "kind": "import",
+      "name": "org.springframework.web.bind.annotation.PathVariable",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 8,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n2252",
+      "kind": "import",
+      "name": "org.springframework.web.bind.annotation.RequestMapping",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 9,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n2253",
+      "kind": "import",
+      "name": "org.springframework.web.bind.annotation.RestController",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 10,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "language": "java"
+    },
+    {
+      "id": "n2254",
+      "kind": "type",
+      "name": "CacheController",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 16,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "qualifiedName": "com.skhynix.amhs.amos.config.cache.CacheController"
+    },
+    {
+      "id": "n2256",
+      "kind": "route",
+      "name": "/api/v1/amhs/amos/cache/{name}",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 20,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "inferred",
+      "httpMethod": "DELETE",
+      "path": "/api/v1/amhs/amos/cache/{name}",
+      "annotation": "DeleteMapping",
+      "owner": "n2255"
+    },
+    {
+      "id": "n2257",
+      "kind": "call",
+      "name": "cacheAdminService.evict",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 23,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "owner": "n2255",
+      "classOwner": "n2254"
+    },
+    {
+      "id": "n2258",
+      "kind": "call",
+      "name": "ResponseEntity.noContent",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 24,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "owner": "n2255",
+      "classOwner": "n2254"
+    },
+    {
+      "id": "n2259",
+      "kind": "call",
+      "name": ".build",
+      "file": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java",
+      "line": 24,
+      "hash": "037f63cc6bc49e199568514935d019fb809a611b35f6610ad52b926f98e7d28d",
+      "evidence": "observed",
+      "owner": "n2255",
+      "classOwner": "n2254"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+ "javaPositive":[
+  {"file":"config/cache/CacheController.java","callee":"cacheAdminService.evict","target":"config/cache/CacheAdminService.java","method":"evict"},
+  {"file":"custommonitoring/api/CustomMonitoringController.java","callee":"customMonitoringService.getMetrics","target":"custommonitoring/service/CustomMonitoringService.java","method":"getMetrics"},
+  {"file":"custommonitoring/service/CustomMonitoringService.java","callee":"repository.findChartsByUserId","target":"custommonitoring/repository/CustomMonitoringRepository.java","method":"findChartsByUserId"},
+  {"file":"custommonitoring/service/CustomMonitoringService.java","callee":"fabLayoutMonitoringService.getDetailHistory","target":"domain/monitoring/fab/layout/service/FabLayoutMonitoringService.java","method":"getDetailHistory"},
+  {"file":"fablayout/api/FabLayoutController.java","callee":"service.getLayout","target":"fablayout/service/FabLayoutService.java","method":"getLayout"}
+ ],
+ "javaNegative":[{"file":"config/cache/CacheAdminService.java","callee":"cacheManager.getCache"},{"file":"config/cache/CacheAdminService.java","callee":"cache.clear"},{"file":"config/cache/CacheController.java","callee":"ResponseEntity.noContent"}],
+ "urlPositive":[
+  {"file":"src/api/clients/customMonitoringController/getCustomMonitoringMetricHistory.ts","method":"POST","path":"/api/v1/amhs/amos/custom-monitoring/metrics/history"},
+  {"file":"src/pages/monitoring/fab-layout/useFabLayout.ts","method":"GET","path":"/api/v1/amhs/amos/fab-layout/layout"},
+  {"file":"src/pages/monitoring/fab-layout/useFabLayout.ts","method":"GET","path":"/api/v1/amhs/amos/fab-layout/agv/rails/fabs"},
+  {"file":"src/pages/monitoring/fab-layout/useFabLayout.ts","method":"GET","path":"/api/v1/amhs/amos/fab-layout/ftp/history"},
+  {"file":"src/pages/monitoring/fab-layout/useFabLayout.ts","method":"POST","path":"/api/v1/amhs/amos/fab-layout/ftp/trigger"}
+ ],
+ "urlUnknown":["src/pages/llm/useAgentModels.ts","src/lib/sseStream.ts"],
+ "apiNegative":["menuRoot.getBoundingClientRect","pluginClient","self.clients.claim"]
+}

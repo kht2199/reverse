@@ -1,0 +1,56 @@
+✔ H1 lexical destructuring, for-of, catch and destructured locals shadow outer URLs (9.030833ms)
+✔ H2 imported let and mutable/escaping object properties remain unknown (2.94275ms)
+✔ H3 inherited overloads and lambda/catch receivers do not resolve to field declarations (9.667417ms)
+✔ H4 default reverse-call context reaches caller of caller at depth two (720.769333ms)
+✔ M1 default search and flow see all 40 matching files before output paging (723.159917ms)
+✔ M2 400 parse failures return bounded metadata with exact totals (432.218417ms)
+✔ M3 helper arguments cannot substitute identifiers inside outer constant definitions (1.913083ms)
+✔ M4 imported calls shadowed by parameters/destructuring do not link (1.094042ms)
+✔ M5 anonymous class methods have distinct owner and never become outer service methods (2.081ms)
+✔ M6 config spread is a conditional pathname candidate, never an effective literal path (1.137125ms)
+✖ L1 case-alias and symlink output parents inside root are rejected before writing (343.290542ms)
+✔ L2 external imports and imported calls have kind-specific unknown reasons (1.77375ms)
+✔ L3 roundtrip compares actual fields, null/empty presence, proofs and unknown reasons (5.552334ms)
+✖ L4 engines, distributable modules and friendly unsupported-Node startup (0.149833ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 12
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2617.888667
+
+✖ failing tests:
+
+test at test/review.test.mjs:23:1
+✖ L1 case-alias and symlink output parents inside root are rejected before writing (343.290542ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:23:374)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:26:1
+✖ L4 engines, distributable modules and friendly unsupported-Node startup (0.149833ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'node')
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:26:158)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

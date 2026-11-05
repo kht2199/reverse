@@ -15,5 +15,23 @@
   "overrides": {
     "lodash": "4.18.1",
     "lodash-es": "4.18.1"
-  }
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "files": [
+    "cli.mjs",
+    "cli-main.mjs",
+    "engine.mjs",
+    "enrich.mjs",
+    "bindings.mjs",
+    "context.mjs",
+    "store.mjs",
+    "paths.mjs",
+    "http-shape.mjs",
+    "README.md",
+    "AGENT_GUIDE.md",
+    "REA.md",
+    "DEPENDENCIES.md"
+  ]
 }

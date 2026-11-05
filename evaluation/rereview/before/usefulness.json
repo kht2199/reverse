@@ -1,0 +1,1839 @@
+{
+  "methodology": "Four manually authored questions and source labels, with no independent timestamped pre-registration; development on these questions may bias retrieval results; not a random sample. No complete agent task experiment. tokenEstimate=ceil(UTF-8 bytes/4), not tokenizer measurements.",
+  "phases": {
+    "before": {
+      "boundaryCandidates": [
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/alarm/AlarmController.java:53",
+          "frontend": "src/stores/alertHistoryStore.ts:239",
+          "path": "/api/v1/amhs/amos/alarm/history",
+          "httpMethod": "GET",
+          "resolution": "legacy-unclassified",
+          "symbolic": false,
+          "conditional": false,
+          "effectivePath": null,
+          "requestOverrideUnknown": false
+        }
+      ],
+      "samples": {
+        "javaPositive": [
+          {
+            "file": "config/cache/CacheController.java",
+            "callee": "cacheAdminService.evict",
+            "target": "config/cache/CacheAdminService.java",
+            "method": "evict",
+            "found": false,
+            "line": 23,
+            "proof": [],
+            "unresolved": [
+              "dynamic receiver, chained expression or unresolved static target"
+            ]
+          },
+          {
+            "file": "custommonitoring/api/CustomMonitoringController.java",
+            "callee": "customMonitoringService.getMetrics",
+            "target": "custommonitoring/service/CustomMonitoringService.java",
+            "method": "getMetrics",
+            "found": false,
+            "line": 40,
+            "proof": [],
+            "unresolved": [
+              "dynamic receiver, chained expression or unresolved static target"
+            ]
+          },
+          {
+            "file": "custommonitoring/service/CustomMonitoringService.java",
+            "callee": "repository.findChartsByUserId",
+            "target": "custommonitoring/repository/CustomMonitoringRepository.java",
+            "method": "findChartsByUserId",
+            "found": false,
+            "line": 87,
+            "proof": [],
+            "unresolved": [
+              "dynamic receiver, chained expression or unresolved static target"
+            ]
+          },
+          {
+            "file": "custommonitoring/service/CustomMonitoringService.java",
+            "callee": "fabLayoutMonitoringService.getDetailHistory",
+            "target": "domain/monitoring/fab/layout/service/FabLayoutMonitoringService.java",
+            "method": "getDetailHistory",
+            "found": false,
+            "line": 131,
+            "proof": [],
+            "unresolved": [
+              "dynamic receiver, chained expression or unresolved static target"
+            ]
+          },
+          {
+            "file": "fablayout/api/FabLayoutController.java",
+            "callee": "service.getLayout",
+            "target": "fablayout/service/FabLayoutService.java",
+            "method": "getLayout",
+            "found": false,
+            "line": 126,
+            "proof": [],
+            "unresolved": [
+              "dynamic receiver, chained expression or unresolved static target"
+            ]
+          }
+        ],
+        "javaNegative": [
+          {
+            "file": "config/cache/CacheAdminService.java",
+            "callee": "cacheManager.getCache",
+            "falseConnections": 0
+          },
+          {
+            "file": "config/cache/CacheAdminService.java",
+            "callee": "cache.clear",
+            "falseConnections": 0
+          },
+          {
+            "file": "config/cache/CacheController.java",
+            "callee": "ResponseEntity.noContent",
+            "falseConnections": 0
+          }
+        ],
+        "urlPositive": [
+          {
+            "file": "src/api/clients/customMonitoringController/getCustomMonitoringMetricHistory.ts",
+            "method": "POST",
+            "path": "/api/v1/amhs/amos/custom-monitoring/metrics/history",
+            "found": false
+          },
+          {
+            "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+            "method": "GET",
+            "path": "/api/v1/amhs/amos/fab-layout/layout",
+            "found": false
+          },
+          {
+            "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+            "method": "GET",
+            "path": "/api/v1/amhs/amos/fab-layout/agv/rails/fabs",
+            "found": false
+          },
+          {
+            "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+            "method": "GET",
+            "path": "/api/v1/amhs/amos/fab-layout/ftp/history",
+            "found": false
+          },
+          {
+            "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+            "method": "POST",
+            "path": "/api/v1/amhs/amos/fab-layout/ftp/trigger",
+            "found": false
+          }
+        ],
+        "urlUnknown": [
+          {
+            "file": "src/pages/llm/useAgentModels.ts",
+            "falsePaths": 0
+          },
+          {
+            "file": "src/lib/sseStream.ts",
+            "falsePaths": 0
+          }
+        ],
+        "apiNegative": [
+          {
+            "callee": "menuRoot.getBoundingClientRect",
+            "falseAPIs": 0
+          },
+          {
+            "callee": "pluginClient",
+            "falseAPIs": 0
+          },
+          {
+            "callee": "self.clients.claim",
+            "falseAPIs": 0
+          }
+        ]
+      },
+      "repositories": {
+        "backend": {
+          "bytes": 17147222,
+          "analyzeMs": 3979,
+          "sourceFiles": 512,
+          "parseErrors": 0,
+          "calls": 18901,
+          "resolvedCalls": 1614,
+          "apis": 0,
+          "unknownPaths": 0,
+          "contexts": [
+            {
+              "question": "캐시 삭제 API가 어떤 서비스로 이어지나?",
+              "query": "evictCache",
+              "wanted": 2,
+              "found": 1,
+              "files": [
+                "config/cache/CacheController.java"
+              ],
+              "bytes": 10825,
+              "tokenEstimate": 2707,
+              "wallMs": 499,
+              "truncated": false,
+              "byteTruncated": false
+            },
+            {
+              "question": "커스텀 모니터링 지표 조회가 어느 저장소를 사용하는가?",
+              "query": "getMetrics",
+              "wanted": 3,
+              "found": 2,
+              "files": [
+                "custommonitoring/api/CustomMonitoringController.java",
+                "custommonitoring/service/CustomMonitoringService.java"
+              ],
+              "bytes": 15781,
+              "tokenEstimate": 3946,
+              "wallMs": 441,
+              "truncated": true,
+              "byteTruncated": false
+            },
+            {
+              "question": "지표 이력 API와 프런트엔드 호출 근거를 찾는다",
+              "query": "getMetricHistory",
+              "wanted": 2,
+              "found": 2,
+              "files": [
+                "custommonitoring/api/CustomMonitoringController.java",
+                "custommonitoring/service/CustomMonitoringService.java"
+              ],
+              "bytes": 15792,
+              "tokenEstimate": 3948,
+              "wallMs": 457,
+              "truncated": true,
+              "byteTruncated": false
+            },
+            {
+              "question": "fab layout 조회의 UI hook과 API 서비스는?",
+              "query": "fab-layout layout",
+              "wanted": 2,
+              "found": 1,
+              "files": [
+                "fablayout/api/FabLayoutController.java"
+              ],
+              "bytes": 18380,
+              "tokenEstimate": 4595,
+              "wallMs": 448,
+              "truncated": true,
+              "byteTruncated": false
+            }
+          ]
+        },
+        "frontend": {
+          "bytes": 18631596,
+          "analyzeMs": 4620,
+          "sourceFiles": 1169,
+          "parseErrors": 0,
+          "calls": 20620,
+          "resolvedCalls": 2958,
+          "apis": 182,
+          "unknownPaths": 176,
+          "contexts": [
+            {
+              "question": "캐시 삭제 API가 어떤 서비스로 이어지나?",
+              "query": "evictCache",
+              "wanted": 0,
+              "found": 0,
+              "files": [],
+              "bytes": 14393,
+              "tokenEstimate": 3599,
+              "wallMs": 646,
+              "truncated": true,
+              "byteTruncated": false
+            },
+            {
+              "question": "커스텀 모니터링 지표 조회가 어느 저장소를 사용하는가?",
+              "query": "getMetrics",
+              "wanted": 0,
+              "found": 0,
+              "files": [],
+              "bytes": 14512,
+              "tokenEstimate": 3628,
+              "wallMs": 459,
+              "truncated": true,
+              "byteTruncated": false
+            },
+            {
+              "question": "지표 이력 API와 프런트엔드 호출 근거를 찾는다",
+              "query": "getMetricHistory",
+              "wanted": 2,
+              "found": 0,
+              "files": [],
+              "bytes": 1651,
+              "tokenEstimate": 413,
+              "wallMs": 453,
+              "truncated": false,
+              "byteTruncated": false
+            },
+            {
+              "question": "fab layout 조회의 UI hook과 API 서비스는?",
+              "query": "fab-layout layout",
+              "wanted": 1,
+              "found": 0,
+              "files": [],
+              "bytes": 13443,
+              "tokenEstimate": 3361,
+              "wallMs": 473,
+              "truncated": true,
+              "byteTruncated": false
+            }
+          ]
+        }
+      }
+    },
+    "after": {
+      "boundaryCandidates": [
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/idc/IdcController.java:97",
+          "frontend": "src/api/clients/IDCController/addContact.ts:25",
+          "path": "/api/v1/amhs/amos/idc/{fabId}/{idcName}/contacts",
+          "httpMethod": "POST",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/idc/IdcController.java:40",
+          "frontend": "src/api/clients/IDCController/addIndicator.ts:24",
+          "path": "/api/v1/amhs/amos/idc",
+          "httpMethod": "POST",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/idc/IdcController.java:107",
+          "frontend": "src/api/clients/IDCController/deleteContact.ts:25",
+          "path": "/api/v1/amhs/amos/idc/{fabId}/{idcName}/contacts/{empNo}",
+          "httpMethod": "DELETE",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/idc/IdcController.java:79",
+          "frontend": "src/api/clients/IDCController/deleteIndicator.ts:24",
+          "path": "/api/v1/amhs/amos/idc/{fabId}/{idcName}",
+          "httpMethod": "DELETE",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/idc/IdcController.java:88",
+          "frontend": "src/api/clients/IDCController/getContacts.ts:25",
+          "path": "/api/v1/amhs/amos/idc/{fabId}/{idcName}/contacts",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/idc/IdcController.java:52",
+          "frontend": "src/api/clients/IDCController/getDetail.ts:24",
+          "path": "/api/v1/amhs/amos/idc/{fabId}/{idcName}",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/idc/IdcController.java:27",
+          "frontend": "src/api/clients/IDCController/getList.ts:25",
+          "path": "/api/v1/amhs/amos/idc",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/idc/IdcController.java:27",
+          "frontend": "src/api/clients/IDCController/getList1.ts:25",
+          "path": "/api/v1/amhs/amos/idc",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/idc/IdcController.java:65",
+          "frontend": "src/api/clients/IDCController/updateIndicator.ts:24",
+          "path": "/api/v1/amhs/amos/idc/{fabId}/{idcName}",
+          "httpMethod": "PUT",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/idc/IdcController.java:27",
+          "frontend": "src/api/clients/IDCControllerController/getList.ts:23",
+          "path": "/api/v1/amhs/amos/idc",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/sso/SsoController.java:30",
+          "frontend": "src/api/clients/SSOController/verify.ts:25",
+          "path": "/api/v1/amhs/amos/sso/verify",
+          "httpMethod": "POST",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/voc/VocController.java:81",
+          "frontend": "src/api/clients/VOCController/changeStatus.ts:24",
+          "path": "/api/v1/amhs/amos/voc/{vocId}/status",
+          "httpMethod": "PATCH",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/voc/VocController.java:81",
+          "frontend": "src/api/clients/VOCController/changeVocStatus.ts:24",
+          "path": "/api/v1/amhs/amos/voc/{vocId}/status",
+          "httpMethod": "PATCH",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/voc/VocController.java:55",
+          "frontend": "src/api/clients/VOCController/createVoc.ts:24",
+          "path": "/api/v1/amhs/amos/voc",
+          "httpMethod": "POST",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/voc/VocUploadController.java:65",
+          "frontend": "src/api/clients/VOCController/downloadVocFile.ts:24",
+          "path": "/api/v1/amhs/amos/voc/uploads/files/{year}/{month}/{day}/{storedFilename:.+}",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/voc/VocUploadController.java:51",
+          "frontend": "src/api/clients/VOCController/downloadVocImage.ts:24",
+          "path": "/api/v1/amhs/amos/voc/uploads/images/{year}/{month}/{day}/{storedFilename:.+}",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/voc/VocController.java:44",
+          "frontend": "src/api/clients/VOCController/getDetail1.ts:24",
+          "path": "/api/v1/amhs/amos/voc/{vocId}",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/voc/VocController.java:31",
+          "frontend": "src/api/clients/VOCController/getList.ts:25",
+          "path": "/api/v1/amhs/amos/voc",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/voc/VocController.java:44",
+          "frontend": "src/api/clients/VOCController/getVocDetail.ts:24",
+          "path": "/api/v1/amhs/amos/voc/{vocId}",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/voc/VocController.java:31",
+          "frontend": "src/api/clients/VOCController/getVocs.ts:25",
+          "path": "/api/v1/amhs/amos/voc",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/voc/VocController.java:67",
+          "frontend": "src/api/clients/VOCController/updateAssignee.ts:24",
+          "path": "/api/v1/amhs/amos/voc/{vocId}/assignee",
+          "httpMethod": "PATCH",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/voc/VocController.java:67",
+          "frontend": "src/api/clients/VOCController/updateVocAssignee.ts:24",
+          "path": "/api/v1/amhs/amos/voc/{vocId}/assignee",
+          "httpMethod": "PATCH",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/voc/VocUploadController.java:45",
+          "frontend": "src/api/clients/VOCController/uploadVocFile.ts:25",
+          "path": "/api/v1/amhs/amos/voc/uploads/files",
+          "httpMethod": "POST",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/voc/VocUploadController.java:37",
+          "frontend": "src/api/clients/VOCController/uploadVocImage.ts:25",
+          "path": "/api/v1/amhs/amos/voc/uploads/images",
+          "httpMethod": "POST",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/agent/AgentChatController.java:42",
+          "frontend": "src/api/clients/agentChatController/getAgentChatDetail.ts:24",
+          "path": "/api/v1/amhs/amos/agent/chats/{threadId}",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/agent/AgentChatController.java:30",
+          "frontend": "src/api/clients/agentChatController/getAgentChats.ts:25",
+          "path": "/api/v1/amhs/amos/agent/chats",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/agent/AgentChatHistoryIngestController.java:50",
+          "frontend": "src/api/clients/agentChatHistoryIngestController/recordAgentResponseMessage.ts:24",
+          "path": "/api/v1/amhs/amos/agent/chats/{threadId}/messages/agent",
+          "httpMethod": "POST",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/agent/AgentChatHistoryIngestController.java:32",
+          "frontend": "src/api/clients/agentChatHistoryIngestController/recordAgentUserMessage.ts:25",
+          "path": "/api/v1/amhs/amos/agent/chats/{threadId}/messages/user",
+          "httpMethod": "POST",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/agent/AgentIdentityController.java:54",
+          "frontend": "src/api/clients/agentIdentityController/getAgentIdentity.ts:25",
+          "path": "/api/v1/amhs/amos/agent/me",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/alarm/AlarmController.java:53",
+          "frontend": "src/api/clients/alarmController/getAlarmHistory.ts:25",
+          "path": "/api/v1/amhs/amos/alarm/history",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/alarm/AlarmController.java:38",
+          "frontend": "src/api/clients/alarmController/getTodayAlarmHistory.ts:25",
+          "path": "/api/v1/amhs/amos/alarm",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/alarm/AlarmController.java:96",
+          "frontend": "src/api/clients/alarmController/stream1.ts:25",
+          "path": "/api/v1/amhs/amos/alarm/stream",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/alarm/AlarmController.java:96",
+          "frontend": "src/api/clients/alarmController/stream2.ts:25",
+          "path": "/api/v1/amhs/amos/alarm/stream",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/config/cache/CacheController.java:20",
+          "frontend": "src/api/clients/cacheController/evictCache.ts:24",
+          "path": "/api/v1/amhs/amos/cache/{name}",
+          "httpMethod": "DELETE",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/common/controller/CommonController.java:29",
+          "frontend": "src/api/clients/commonController/getFabMappings.ts:25",
+          "path": "/api/v1/amhs/amos/fabs/mappings",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/common/controller/CommonController.java:42",
+          "frontend": "src/api/clients/commonController/getMenus.ts:25",
+          "path": "/api/v1/amhs/amos/menus",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringController.java:53",
+          "frontend": "src/api/clients/customMonitoringController/getCustomMonitoringMetricComboRecommendations.ts:25",
+          "path": "/api/v1/amhs/amos/custom-monitoring/metrics/recommendations/combos",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringController.java:72",
+          "frontend": "src/api/clients/customMonitoringController/getCustomMonitoringMetricHistory.ts:25",
+          "path": "/api/v1/amhs/amos/custom-monitoring/metrics/history",
+          "httpMethod": "POST",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringController.java:43",
+          "frontend": "src/api/clients/customMonitoringController/getCustomMonitoringMetricRecommendations.ts:25",
+          "path": "/api/v1/amhs/amos/custom-monitoring/metrics/recommendations",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringController.java:33",
+          "frontend": "src/api/clients/customMonitoringController/getCustomMonitoringMetrics.ts:25",
+          "path": "/api/v1/amhs/amos/custom-monitoring/metrics",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/custommonitoring/api/CustomMonitoringController.java:83",
+          "frontend": "src/api/clients/customMonitoringController/replaceCustomMonitoringMetrics.ts:25",
+          "path": "/api/v1/amhs/amos/custom-monitoring/metrics",
+          "httpMethod": "PUT",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:347",
+          "frontend": "src/api/clients/fabLayoutController/evictAgvMapCache.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/agv/map/cache",
+          "httpMethod": "DELETE",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:323",
+          "frontend": "src/api/clients/fabLayoutController/getAgvMap.ts:25",
+          "path": "/api/v1/amhs/amos/fab-layout/agv/map",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:330",
+          "frontend": "src/api/clients/fabLayoutController/getAgvRailSupportedFabs.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/agv/rails/fabs",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:336",
+          "frontend": "src/api/clients/fabLayoutController/getAgvRails.ts:25",
+          "path": "/api/v1/amhs/amos/fab-layout/agv/rails",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:121",
+          "frontend": "src/api/clients/fabLayoutController/getFabLayout.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/layout",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:133",
+          "frontend": "src/api/clients/fabLayoutController/getFabStations.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/stations",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:104",
+          "frontend": "src/api/clients/fabLayoutController/getFtpHistory.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/ftp/history",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:111",
+          "frontend": "src/api/clients/fabLayoutController/getFtpStatus.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/ftp/status",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:151",
+          "frontend": "src/api/clients/fabLayoutController/getHidZones.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/hid-zones",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:259",
+          "frontend": "src/api/clients/fabLayoutController/getVehicleDetail.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/vehicles/{vehicleId}/detail",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:159",
+          "frontend": "src/api/clients/fabLayoutController/postOhtRaw.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/oht-raw",
+          "httpMethod": "POST",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:141",
+          "frontend": "src/api/clients/fabLayoutController/reloadFabLayout.ts:25",
+          "path": "/api/v1/amhs/amos/fab-layout/layout/reload",
+          "httpMethod": "POST",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:311",
+          "frontend": "src/api/clients/fabLayoutController/streamAgvTibco.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/agv/stream",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:355",
+          "frontend": "src/api/clients/fabLayoutController/streamConveyorTibco.ts:25",
+          "path": "/api/v1/amhs/amos/fab-layout/conveyor/stream",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:280",
+          "frontend": "src/api/clients/fabLayoutController/streamHidoff.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/hidoff/stream",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:270",
+          "frontend": "src/api/clients/fabLayoutController/streamRailcut.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/railcut/stream",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:172",
+          "frontend": "src/api/clients/fabLayoutController/streamVehicles.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/stream",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:84",
+          "frontend": "src/api/clients/fabLayoutController/triggerFtpDownload.ts:24",
+          "path": "/api/v1/amhs/amos/fab-layout/ftp/trigger",
+          "httpMethod": "POST",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/fab/layout/controller/FabLayoutMonitoringController.java:50",
+          "frontend": "src/api/clients/fabLayoutMonitoringController/getDetailHistory.ts:25",
+          "path": "/api/v1/amhs/amos/fab/layout/getDetailHistory",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/fab/layout/controller/FabLayoutMonitoringController.java:30",
+          "frontend": "src/api/clients/fabLayoutMonitoringController/getFabLayoutDetailAlarm.ts:25",
+          "path": "/api/v1/amhs/amos/fab/layout/getDetailAlarm",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/fab/layout/controller/FabLayoutMonitoringController.java:72",
+          "frontend": "src/api/clients/fabLayoutMonitoringController/getFabLayoutDetailCategoryList.ts:25",
+          "path": "/api/v1/amhs/amos/fab/layout/getDetailCatgList",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/fab/layout/controller/FabLayoutMonitoringController.java:50",
+          "frontend": "src/api/clients/fabLayoutMonitoringController/getFabLayoutDetailHistory.ts:25",
+          "path": "/api/v1/amhs/amos/fab/layout/getDetailHistory",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/fab/layout/controller/FabLayoutMonitoringController.java:88",
+          "frontend": "src/api/clients/fabLayoutMonitoringController/getFabLayoutDetailIndexList.ts:25",
+          "path": "/api/v1/amhs/amos/fab/layout/getDetailIndexList",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/fab/status/controller/FabStatusMonitoringController.java:27",
+          "frontend": "src/api/clients/fabStatusMonitoringController/getAbnormalAlarmStatus.ts:25",
+          "path": "/api/v1/amhs/amos/fab/status/{fabId}/AbnormalAlarmStatus",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/fab/status/controller/FabStatusMonitoringController.java:115",
+          "frontend": "src/api/clients/fabStatusMonitoringController/getAlarmSummary.ts:25",
+          "path": "/api/v1/amhs/amos/fab/status/{fabId}/getAlarmSummary",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/fab/status/controller/FabStatusMonitoringController.java:67",
+          "frontend": "src/api/clients/fabStatusMonitoringController/getCurrentQueueCount.ts:25",
+          "path": "/api/v1/amhs/amos/fab/status/{fabId}/CurrentQueueCount",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/fab/status/controller/FabStatusMonitoringController.java:79",
+          "frontend": "src/api/clients/fabStatusMonitoringController/getLoadTransportTime.ts:25",
+          "path": "/api/v1/amhs/amos/fab/status/{fabId}/LoadTransportTime",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/fab/status/controller/FabStatusMonitoringController.java:103",
+          "frontend": "src/api/clients/fabStatusMonitoringController/getMcs.ts:25",
+          "path": "/api/v1/amhs/amos/fab/status/{fabId}/Mcs",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/fab/status/controller/FabStatusMonitoringController.java:55",
+          "frontend": "src/api/clients/fabStatusMonitoringController/getQueueStatus.ts:25",
+          "path": "/api/v1/amhs/amos/fab/status/{fabId}/QueueStatus",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/fab/status/controller/FabStatusMonitoringController.java:91",
+          "frontend": "src/api/clients/fabStatusMonitoringController/getStockRate.ts:25",
+          "path": "/api/v1/amhs/amos/fab/status/{fabId}/StockRate",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/fab/status/controller/FabStatusMonitoringController.java:43",
+          "frontend": "src/api/clients/fabStatusMonitoringController/getVhlUtil.ts:25",
+          "path": "/api/v1/amhs/amos/fab/status/{fabId}/VhlUil",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/llm/LlmMessageProxyController.java:61",
+          "frontend": "src/api/clients/llmMessageProxyControllerController/streamLlmMessage.ts:25",
+          "path": "/api/v1/amhs/amos/llm/chat/stream",
+          "httpMethod": "POST",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/llm/LlmModelsProxyController.java:36",
+          "frontend": "src/api/clients/llmModelsProxyControllerController/getLlmModels.ts:24",
+          "path": "/api/v1/amhs/amos/llm/models",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/main/controller/MainMonitoringController.java:38",
+          "frontend": "src/api/clients/mainController/getTransferTotalStatus.ts:25",
+          "path": "/api/v1/amhs/amos/main/transferTotalStatus",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/main/controller/MainMonitoringController.java:84",
+          "frontend": "src/api/clients/mainMonitoringController/getMainFactoryFabMetrics.ts:25",
+          "path": "/api/v1/amhs/amos/main/{factoryName}/metrics",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/main/controller/MainMonitoringController.java:52",
+          "frontend": "src/api/clients/mainMonitoringController/getMainOhtUsage.ts:25",
+          "path": "/api/v1/amhs/amos/main/ohtUsage",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/main/controller/MainMonitoringController.java:66",
+          "frontend": "src/api/clients/mainMonitoringController/getMainTransferStore.ts:25",
+          "path": "/api/v1/amhs/amos/main/transferStore",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/main/controller/MainMonitoringController.java:38",
+          "frontend": "src/api/clients/mainMonitoringController/getTransferTotalStatus.ts:25",
+          "path": "/api/v1/amhs/amos/main/transferTotalStatus",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/port/PortController.java:59",
+          "frontend": "src/api/clients/portController/stream.ts:32",
+          "path": "/api/v1/amhs/amos/port/stream",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/port/PortController.java:59",
+          "frontend": "src/api/clients/portController/stream1.ts:32",
+          "path": "/api/v1/amhs/amos/port/stream",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/server/api/ServerMonitoringController.java:61",
+          "frontend": "src/api/clients/serverMonitoringController/getJobRequestProcessingTime.ts:27",
+          "path": "/api/v1/amhs/amos/monitoring/server/job-request-processing-time",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/server/api/ServerMonitoringController.java:81",
+          "frontend": "src/api/clients/serverMonitoringController/getMcsTsActiveThreads.ts:27",
+          "path": "/api/v1/amhs/amos/monitoring/server/mcs-ts-active-threads",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/monitoring/server/api/ServerMonitoringController.java:31",
+          "frontend": "src/api/clients/serverMonitoringController/getMesMcsMcpServerAnomaly.ts:29",
+          "path": "/api/v1/amhs/amos/monitoring/server/mes-mcs-mcp",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/usersettings/api/UserSettingsController.java:25",
+          "frontend": "src/api/clients/userSettingsController/getFavoriteFab.ts:25",
+          "path": "/api/v1/amhs/amos/user-settings/favorite-fab",
+          "httpMethod": "GET",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/usersettings/api/UserSettingsController.java:35",
+          "frontend": "src/api/clients/userSettingsController/saveFavoriteFab.ts:25",
+          "path": "/api/v1/amhs/amos/user-settings/favorite-fab",
+          "httpMethod": "PUT",
+          "resolution": "conditional",
+          "symbolic": false,
+          "conditional": true,
+          "effectivePath": null,
+          "requestOverrideUnknown": true
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/alarm/AlarmController.java:38",
+          "frontend": "src/features/main/hooks/useAlarmStream.ts:232",
+          "path": "/api/v1/amhs/amos/alarm",
+          "httpMethod": "GET",
+          "resolution": "symbolic",
+          "symbolic": true,
+          "conditional": false,
+          "effectivePath": null,
+          "requestOverrideUnknown": false
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/usersettings/api/UserSettingsController.java:25",
+          "frontend": "src/features/user-settings/api/favoriteFabApi.ts:18",
+          "path": "/api/v1/amhs/amos/user-settings/favorite-fab",
+          "httpMethod": "GET",
+          "resolution": "literal",
+          "symbolic": false,
+          "conditional": false,
+          "effectivePath": "/api/v1/amhs/amos/user-settings/favorite-fab",
+          "requestOverrideUnknown": false
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/usersettings/api/UserSettingsController.java:35",
+          "frontend": "src/features/user-settings/api/favoriteFabApi.ts:26",
+          "path": "/api/v1/amhs/amos/user-settings/favorite-fab",
+          "httpMethod": "PUT",
+          "resolution": "literal",
+          "symbolic": false,
+          "conditional": false,
+          "effectivePath": "/api/v1/amhs/amos/user-settings/favorite-fab",
+          "requestOverrideUnknown": false
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:121",
+          "frontend": "src/pages/monitoring/fab-layout/useFabLayout.ts:13",
+          "path": "/api/v1/amhs/amos/fab-layout/layout",
+          "httpMethod": "GET",
+          "resolution": "symbolic",
+          "symbolic": true,
+          "conditional": false,
+          "effectivePath": null,
+          "requestOverrideUnknown": false
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:330",
+          "frontend": "src/pages/monitoring/fab-layout/useFabLayout.ts:27",
+          "path": "/api/v1/amhs/amos/fab-layout/agv/rails/fabs",
+          "httpMethod": "GET",
+          "resolution": "symbolic",
+          "symbolic": true,
+          "conditional": false,
+          "effectivePath": null,
+          "requestOverrideUnknown": false
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:336",
+          "frontend": "src/pages/monitoring/fab-layout/useFabLayout.ts:37",
+          "path": "/api/v1/amhs/amos/fab-layout/agv/rails",
+          "httpMethod": "GET",
+          "resolution": "symbolic",
+          "symbolic": true,
+          "conditional": false,
+          "effectivePath": null,
+          "requestOverrideUnknown": false
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:111",
+          "frontend": "src/pages/monitoring/fab-layout/useFabLayout.ts:52",
+          "path": "/api/v1/amhs/amos/fab-layout/ftp/status",
+          "httpMethod": "GET",
+          "resolution": "symbolic",
+          "symbolic": true,
+          "conditional": false,
+          "effectivePath": null,
+          "requestOverrideUnknown": false
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:104",
+          "frontend": "src/pages/monitoring/fab-layout/useFabLayout.ts:65",
+          "path": "/api/v1/amhs/amos/fab-layout/ftp/history",
+          "httpMethod": "GET",
+          "resolution": "symbolic",
+          "symbolic": true,
+          "conditional": false,
+          "effectivePath": null,
+          "requestOverrideUnknown": false
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/fablayout/api/FabLayoutController.java:84",
+          "frontend": "src/pages/monitoring/fab-layout/useFabLayout.ts:80",
+          "path": "/api/v1/amhs/amos/fab-layout/ftp/trigger",
+          "httpMethod": "POST",
+          "resolution": "symbolic",
+          "symbolic": true,
+          "conditional": false,
+          "effectivePath": null,
+          "requestOverrideUnknown": false
+        },
+        {
+          "backend": "src/main/java/com/skhynix/amhs/amos/domain/alarm/AlarmController.java:53",
+          "frontend": "src/stores/alertHistoryStore.ts:239",
+          "path": "/api/v1/amhs/amos/alarm/history",
+          "httpMethod": "GET",
+          "resolution": "literal",
+          "symbolic": false,
+          "conditional": false,
+          "effectivePath": "/api/v1/amhs/amos/alarm/history",
+          "requestOverrideUnknown": false
+        }
+      ],
+      "samples": {
+        "javaPositive": [
+          {
+            "file": "config/cache/CacheController.java",
+            "callee": "cacheAdminService.evict",
+            "target": "config/cache/CacheAdminService.java",
+            "method": "evict",
+            "found": true,
+            "line": 23,
+            "targetLine": 17,
+            "proof": [
+              {
+                "node": "n2356",
+                "role": "declared-receiver-type"
+              },
+              {
+                "node": "n2301",
+                "role": "declared-type"
+              },
+              {
+                "node": "n2303",
+                "role": "method-declaration"
+              }
+            ],
+            "unresolved": []
+          },
+          {
+            "file": "custommonitoring/api/CustomMonitoringController.java",
+            "callee": "customMonitoringService.getMetrics",
+            "target": "custommonitoring/service/CustomMonitoringService.java",
+            "method": "getMetrics",
+            "found": true,
+            "line": 40,
+            "targetLine": 39,
+            "proof": [
+              {
+                "node": "n2914",
+                "role": "declared-receiver-type"
+              },
+              {
+                "node": "n3048",
+                "role": "declared-type"
+              },
+              {
+                "node": "n3052",
+                "role": "method-declaration"
+              }
+            ],
+            "unresolved": []
+          },
+          {
+            "file": "custommonitoring/service/CustomMonitoringService.java",
+            "callee": "repository.findChartsByUserId",
+            "target": "custommonitoring/repository/CustomMonitoringRepository.java",
+            "method": "findChartsByUserId",
+            "found": false,
+            "line": 87,
+            "proof": [],
+            "unresolved": [
+              "inherited overload/override or unresolved ancestor; method selection unknown"
+            ]
+          },
+          {
+            "file": "custommonitoring/service/CustomMonitoringService.java",
+            "callee": "fabLayoutMonitoringService.getDetailHistory",
+            "target": "domain/monitoring/fab/layout/service/FabLayoutMonitoringService.java",
+            "method": "getDetailHistory",
+            "found": false,
+            "line": 131,
+            "proof": [],
+            "unresolved": [
+              "ambiguous overload by name/arity"
+            ]
+          },
+          {
+            "file": "fablayout/api/FabLayoutController.java",
+            "callee": "service.getLayout",
+            "target": "fablayout/service/FabLayoutService.java",
+            "method": "getLayout",
+            "found": true,
+            "line": 126,
+            "targetLine": 98,
+            "proof": [
+              {
+                "node": "n8862",
+                "role": "declared-receiver-type"
+              },
+              {
+                "node": "n10811",
+                "role": "declared-type"
+              },
+              {
+                "node": "n10861",
+                "role": "method-declaration"
+              }
+            ],
+            "unresolved": []
+          }
+        ],
+        "javaNegative": [
+          {
+            "file": "config/cache/CacheAdminService.java",
+            "callee": "cacheManager.getCache",
+            "falseConnections": 0
+          },
+          {
+            "file": "config/cache/CacheAdminService.java",
+            "callee": "cache.clear",
+            "falseConnections": 0
+          },
+          {
+            "file": "config/cache/CacheController.java",
+            "callee": "ResponseEntity.noContent",
+            "falseConnections": 0
+          }
+        ],
+        "urlPositive": [
+          {
+            "file": "src/api/clients/customMonitoringController/getCustomMonitoringMetricHistory.ts",
+            "method": "POST",
+            "path": "/api/v1/amhs/amos/custom-monitoring/metrics/history",
+            "found": true,
+            "line": 25,
+            "proof": [
+              {
+                "file": "src/api/clients/customMonitoringController/getCustomMonitoringMetricHistory.ts",
+                "line": 11
+              },
+              {
+                "file": "src/api/clients/customMonitoringController/getCustomMonitoringMetricHistory.ts",
+                "line": 12
+              },
+              {
+                "file": "src/api/clients/customMonitoringController/getCustomMonitoringMetricHistory.ts",
+                "line": 25
+              }
+            ],
+            "assumptions": [
+              "spread request config may override method/url"
+            ]
+          },
+          {
+            "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+            "method": "GET",
+            "path": "/api/v1/amhs/amos/fab-layout/layout",
+            "found": true,
+            "line": 13,
+            "proof": [
+              {
+                "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+                "line": 7
+              },
+              {
+                "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+                "line": 13
+              }
+            ],
+            "assumptions": [
+              "environment origin/base prefix unverified"
+            ]
+          },
+          {
+            "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+            "method": "GET",
+            "path": "/api/v1/amhs/amos/fab-layout/agv/rails/fabs",
+            "found": true,
+            "line": 27,
+            "proof": [
+              {
+                "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+                "line": 7
+              },
+              {
+                "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+                "line": 27
+              }
+            ],
+            "assumptions": [
+              "environment origin/base prefix unverified"
+            ]
+          },
+          {
+            "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+            "method": "GET",
+            "path": "/api/v1/amhs/amos/fab-layout/ftp/history",
+            "found": true,
+            "line": 65,
+            "proof": [
+              {
+                "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+                "line": 7
+              },
+              {
+                "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+                "line": 65
+              }
+            ],
+            "assumptions": [
+              "environment origin/base prefix unverified"
+            ]
+          },
+          {
+            "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+            "method": "POST",
+            "path": "/api/v1/amhs/amos/fab-layout/ftp/trigger",
+            "found": true,
+            "line": 80,
+            "proof": [
+              {
+                "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+                "line": 7
+              },
+              {
+                "file": "src/pages/monitoring/fab-layout/useFabLayout.ts",
+                "line": 80
+              }
+            ],
+            "assumptions": [
+              "environment origin/base prefix unverified"
+            ]
+          }
+        ],
+        "urlUnknown": [
+          {
+            "file": "src/pages/llm/useAgentModels.ts",
+            "falsePaths": 0
+          },
+          {
+            "file": "src/lib/sseStream.ts",
+            "falsePaths": 0
+          }
+        ],
+        "apiNegative": [
+          {
+            "callee": "menuRoot.getBoundingClientRect",
+            "falseAPIs": 0
+          },
+          {
+            "callee": "pluginClient",
+            "falseAPIs": 0
+          },
+          {
+            "callee": "self.clients.claim",
+            "falseAPIs": 0
+          }
+        ]
+      },
+      "repositories": {
+        "backend": {
+          "bytes": 4374528,
+          "analyzeMs": 6977,
+          "sourceFiles": 512,
+          "parseErrors": 0,
+          "calls": 18901,
+          "resolvedCalls": 2946,
+          "apis": 0,
+          "unknownPaths": 0,
+          "contexts": [
+            {
+              "question": "캐시 삭제 API가 어떤 서비스로 이어지나?",
+              "query": "evictCache",
+              "wanted": 2,
+              "found": 2,
+              "files": [
+                "config/cache/CacheController.java",
+                "config/cache/CacheAdminService.java"
+              ],
+              "bytes": 15960,
+              "tokenEstimate": 3990,
+              "wallMs": 835,
+              "truncated": true,
+              "byteTruncated": true,
+              "loadCoverage": {
+                "selectedFiles": 80,
+                "totalFiles": 519,
+                "omittedFiles": 119,
+                "partial": true,
+                "selection": {
+                  "mode": "query-and-references",
+                  "seedFileBudget": 24,
+                  "expandedFileBudget": 80,
+                  "reason": "default metadata-ranked seed/expansion budgets; --all disables scope budgets"
+                }
+              },
+              "relationsTruncated": true
+            },
+            {
+              "question": "커스텀 모니터링 지표 조회가 어느 저장소를 사용하는가?",
+              "query": "getMetrics",
+              "wanted": 3,
+              "found": 2,
+              "files": [
+                "custommonitoring/api/CustomMonitoringController.java",
+                "custommonitoring/service/CustomMonitoringService.java"
+              ],
+              "bytes": 15718,
+              "tokenEstimate": 3930,
+              "wallMs": 622,
+              "truncated": true,
+              "byteTruncated": true,
+              "loadCoverage": {
+                "selectedFiles": 71,
+                "totalFiles": 519,
+                "omittedFiles": 0,
+                "partial": false,
+                "selection": {
+                  "mode": "query-and-references",
+                  "seedFileBudget": 24,
+                  "expandedFileBudget": 80,
+                  "reason": "default metadata-ranked seed/expansion budgets; --all disables scope budgets"
+                }
+              },
+              "relationsTruncated": true
+            },
+            {
+              "question": "지표 이력 API와 프런트엔드 호출 근거를 찾는다",
+              "query": "getMetricHistory",
+              "wanted": 2,
+              "found": 2,
+              "files": [
+                "custommonitoring/api/CustomMonitoringController.java",
+                "custommonitoring/service/CustomMonitoringService.java"
+              ],
+              "bytes": 15636,
+              "tokenEstimate": 3909,
+              "wallMs": 768,
+              "truncated": true,
+              "byteTruncated": true,
+              "loadCoverage": {
+                "selectedFiles": 80,
+                "totalFiles": 519,
+                "omittedFiles": 81,
+                "partial": true,
+                "selection": {
+                  "mode": "query-and-references",
+                  "seedFileBudget": 24,
+                  "expandedFileBudget": 80,
+                  "reason": "default metadata-ranked seed/expansion budgets; --all disables scope budgets"
+                }
+              },
+              "relationsTruncated": true
+            },
+            {
+              "question": "fab layout 조회의 UI hook과 API 서비스는?",
+              "query": "fab-layout layout",
+              "wanted": 2,
+              "found": 2,
+              "files": [
+                "fablayout/api/FabLayoutController.java",
+                "fablayout/service/FabLayoutService.java"
+              ],
+              "bytes": 15252,
+              "tokenEstimate": 3813,
+              "wallMs": 826,
+              "truncated": true,
+              "byteTruncated": true,
+              "loadCoverage": {
+                "selectedFiles": 80,
+                "totalFiles": 519,
+                "omittedFiles": 196,
+                "partial": true,
+                "selection": {
+                  "mode": "query-and-references",
+                  "seedFileBudget": 24,
+                  "expandedFileBudget": 80,
+                  "reason": "default metadata-ranked seed/expansion budgets; --all disables scope budgets"
+                }
+              },
+              "relationsTruncated": true
+            }
+          ]
+        },
+        "frontend": {
+          "bytes": 6369280,
+          "analyzeMs": 2475,
+          "sourceFiles": 1169,
+          "parseErrors": 0,
+          "calls": 20620,
+          "resolvedCalls": 3849,
+          "apis": 182,
+          "unknownPaths": 7,
+          "contexts": [
+            {
+              "question": "캐시 삭제 API가 어떤 서비스로 이어지나?",
+              "query": "evictCache",
+              "wanted": 0,
+              "found": 0,
+              "files": [],
+              "bytes": 15963,
+              "tokenEstimate": 3991,
+              "wallMs": 934,
+              "truncated": true,
+              "byteTruncated": true,
+              "loadCoverage": {
+                "selectedFiles": 80,
+                "totalFiles": 1173,
+                "omittedFiles": 453,
+                "partial": true,
+                "selection": {
+                  "mode": "query-and-references",
+                  "seedFileBudget": 24,
+                  "expandedFileBudget": 80,
+                  "reason": "default metadata-ranked seed/expansion budgets; --all disables scope budgets"
+                }
+              },
+              "relationsTruncated": true
+            },
+            {
+              "question": "커스텀 모니터링 지표 조회가 어느 저장소를 사용하는가?",
+              "query": "getMetrics",
+              "wanted": 0,
+              "found": 0,
+              "files": [],
+              "bytes": 15427,
+              "tokenEstimate": 3857,
+              "wallMs": 893,
+              "truncated": true,
+              "byteTruncated": true,
+              "loadCoverage": {
+                "selectedFiles": 80,
+                "totalFiles": 1173,
+                "omittedFiles": 415,
+                "partial": true,
+                "selection": {
+                  "mode": "query-and-references",
+                  "seedFileBudget": 24,
+                  "expandedFileBudget": 80,
+                  "reason": "default metadata-ranked seed/expansion budgets; --all disables scope budgets"
+                }
+              },
+              "relationsTruncated": true
+            },
+            {
+              "question": "지표 이력 API와 프런트엔드 호출 근거를 찾는다",
+              "query": "getMetricHistory",
+              "wanted": 2,
+              "found": 2,
+              "files": [
+                "src/stores/customMonitoringStore.ts",
+                "src/api/clients/customMonitoringController/getCustomMonitoringMetricHistory.ts"
+              ],
+              "bytes": 15607,
+              "tokenEstimate": 3902,
+              "wallMs": 934,
+              "truncated": true,
+              "byteTruncated": true,
+              "loadCoverage": {
+                "selectedFiles": 80,
+                "totalFiles": 1173,
+                "omittedFiles": 476,
+                "partial": true,
+                "selection": {
+                  "mode": "query-and-references",
+                  "seedFileBudget": 24,
+                  "expandedFileBudget": 80,
+                  "reason": "default metadata-ranked seed/expansion budgets; --all disables scope budgets"
+                }
+              },
+              "relationsTruncated": true
+            },
+            {
+              "question": "fab layout 조회의 UI hook과 API 서비스는?",
+              "query": "fab-layout layout",
+              "wanted": 1,
+              "found": 1,
+              "files": [
+                "src/pages/monitoring/fab-layout/useFabLayout.ts"
+              ],
+              "bytes": 15474,
+              "tokenEstimate": 3869,
+              "wallMs": 1004,
+              "truncated": true,
+              "byteTruncated": true,
+              "loadCoverage": {
+                "selectedFiles": 80,
+                "totalFiles": 1173,
+                "omittedFiles": 382,
+                "partial": true,
+                "selection": {
+                  "mode": "query-and-references",
+                  "seedFileBudget": 24,
+                  "expandedFileBudget": 80,
+                  "reason": "default metadata-ranked seed/expansion budgets; --all disables scope budgets"
+                }
+              },
+              "relationsTruncated": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}

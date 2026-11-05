@@ -1,0 +1,338 @@
+✖ H1 lexical destructuring, for-of, catch and destructured locals shadow outer URLs (11.476125ms)
+✖ H2 imported let and mutable/escaping object properties remain unknown (3.199292ms)
+✖ H3 inherited overloads and lambda/catch receivers do not resolve to field declarations (9.141292ms)
+✖ H4 default reverse-call context reaches caller of caller at depth two (721.198708ms)
+✖ M1 default search and flow see all 40 matching files before output paging (713.654292ms)
+✖ M2 400 parse failures return bounded metadata with exact totals (445.313542ms)
+✖ M3 helper arguments cannot substitute identifiers inside outer constant definitions (1.84725ms)
+✖ M4 imported calls shadowed by parameters/destructuring do not link (1.217083ms)
+✖ M5 anonymous class methods have distinct owner and never become outer service methods (1.842542ms)
+✖ M6 config spread is a conditional pathname candidate, never an effective literal path (0.784375ms)
+✖ L1 case-alias and symlink output parents inside root are rejected before writing (362.779167ms)
+✖ L2 external imports and imported calls have kind-specific unknown reasons (2.39375ms)
+✖ L3 roundtrip compares actual fields, null/empty presence, proofs and unknown reasons (7.113625ms)
+✖ L4 engines, distributable modules and friendly unsupported-Node startup (0.203459ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 0
+ℹ fail 14
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2648.551625
+
+✖ failing tests:
+
+test at test/review.test.mjs:13:1
+✖ H1 lexical destructuring, for-of, catch and destructured locals shadow outer URLs (11.476125ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(apis(analyze(root)).every(n=>n.path===null))
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:13:314)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:14:1
+✖ H2 imported let and mutable/escaping object properties remain unknown (3.199292ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(apis(analyze(root)).every(n=>n.path===null))
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:14:430)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:15:1
+✖ H3 inherited overloads and lambda/catch receivers do not resolve to field declarations (9.141292ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(es.every(e=>!e.to))
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:15:626)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:16:1
+✖ H4 default reverse-call context reaches caller of caller at depth two (721.198708ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  -   'Ctl.java',
+      'Repo.java',
+      'Svc.java'
+    ]
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:16:581)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'Repo.java', 'Svc.java' ],
+    expected: [ 'Ctl.java', 'Repo.java', 'Svc.java' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:17:1
+✖ M1 default search and flow see all 40 matching files before output paging (713.654292ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  24 !== 40
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:17:437)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 24,
+    expected: 40,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:18:1
+✖ M2 400 parse failures return bounded metadata with exact totals (445.313542ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  undefined !== 400
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:18:404)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:19:1
+✖ M3 helper arguments cannot substitute identifiers inside outer constant definitions (1.84725ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '/api/items/{id}'
+  - '/api/items/static'
+                ^
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:19:248)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '/api/items/{id}',
+    expected: '/api/items/static',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:20:1
+✖ M4 imported calls shadowed by parameters/destructuring do not link (1.217083ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(db.edges.filter(e=>e.callee==='fetchUser').every(e=>!e.to))
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:20:301)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:21:1
+✖ M5 anonymous class methods have distinct owner and never become outer service methods (1.842542ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(owner.anonymous)
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:21:388)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:22:1
+✖ M6 config spread is a conditional pathname candidate, never an effective literal path (0.784375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'literal'
+  - 'conditional'
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:22:228)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'literal',
+    expected: 'conditional',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:23:1
+✖ L1 case-alias and symlink output parents inside root are rejected before writing (362.779167ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:23:374)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:24:1
+✖ L2 external imports and imported calls have kind-specific unknown reasons (2.39375ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(db.edges.find(e=>e.specifier==='external.Service').reason.includes('import'))
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:24:245)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:25:1
+✖ L3 roundtrip compares actual fields, null/empty presence, proofs and unknown reasons (7.113625ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      {
+        evidence: 'observed',
+        file: 'x.ts',
+        hash: '32252d9143398011c925c7959ea075138316acbe53dd327034048f5fea3ad520',
+  ...
+        name: 'external',
+  -     owner: null
+      },
+      {
+        evidence: 'observed',
+        file: 'x.ts',
+        hash: '32252d9143398011c925c7959ea075138316acbe53dd327034048f5fea3ad520',
+  ...
+        name: 'unknownCall',
+  -     owner: null
+      },
+      {
+        evidence: 'observed',
+        exported: false,
+        file: 'x.ts',
+  
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:25:678)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { id: 'n0', file: 'x.ts', line: 1, hash: '32252d9143398011c925c7959ea075138316acbe53dd327034048f5fea3ad520', kind: 'import', name: 'external', evidence: 'observed', language: 'typescript' }, { id: 'n1', file: 'x.ts', line: 1, hash: '32252d9143398011c925c7959ea075138316acbe53dd327034048f5fea3ad520', kind: 'call', name: 'unknownCall', evidence: 'observed' }, { id: 'n2', file: 'x.ts', line: 1, hash: '32252d9143398011c925c7959ea075138316acbe53dd327034048f5fea3ad520', kind: 'symbol', name: 'x1', evidence: 'observed', exported: false } ],
+    expected: [ { id: 'n0', kind: 'import', name: 'external', file: 'x.ts', line: 1, hash: '32252d9143398011c925c7959ea075138316acbe53dd327034048f5fea3ad520', evidence: 'observed', language: 'typescript', owner: null }, { id: 'n1', kind: 'call', name: 'unknownCall', file: 'x.ts', line: 1, hash: '32252d9143398011c925c7959ea075138316acbe53dd327034048f5fea3ad520', evidence: 'observed', owner: null }, { id: 'n2', kind: 'symbol', name: 'x1', file: 'x.ts', line: 1, hash: '32252d9143398011c925c7959ea075138316acbe53dd327034048f5fea3ad520', evidence: 'observed', exported: false } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at test/review.test.mjs:26:1
+✖ L4 engines, distributable modules and friendly unsupported-Node startup (0.203459ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'node')
+      at TestContext.<anonymous> (file:///Volumes/DAS/projects/reverse/test/review.test.mjs:26:158)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
